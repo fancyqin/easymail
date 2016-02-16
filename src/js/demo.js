@@ -32,6 +32,12 @@ $(function(){
 
     um.setContent(text);
 
+    um.addListener('contentChange',function(um){
+        var inner = this.getContent();
+        $('#mail-txt').html(inner);
+    })
+
+
 
     //window.um = UM.getEditor('container', {
     //    /* 传入配置参数,可配参数列表看umeditor.config.js */
