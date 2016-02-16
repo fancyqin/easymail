@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/demo.css">
+
+    <link rel="stylesheet" href="../src/js/lib/umeditor/themes/default/css/umeditor.css">
+
+</head>
+<body>
+<div class="wrap">
+    <header>I'm the header!</header>
+    <div class="content">
+        <div class="main demo-wrap">
+            <div class="demo-sider">
+                <div class="ctrl-box">
+                    <form action="">
+                        <div class="form-item">
+                            <h4 class="form-title">邮件主题</h4>
+                            <div class="form-fill">
+                                <input type="text"/>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <h4 class="form-title">WEB版地址</h4>
+                            <div class="form-fill">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <button class="btn" type="sumbit">导出</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="mod-box">
+                    <div class="mod-edit mod-banner">
+                        <div class="form-item">
+                            <h4 class="form-title">banner图片url地址</h4>
+                            <div class="form-fill">
+                                <input type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mod-edit mod-text">
+                        <div class="form-item">
+                            <h4 class="form-title">文本内容</h4>
+                            <script id="container" name="content" type="text/plain" style="width:360px;height:50px;"></script>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="demo">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td bgcolor="#ebebeb">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="700">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                            <tr>
+                                                <td style="padding:20px 0px 15px">
+                                                    <img
+                                                            alt="www.made-in-china.com" border="0" height="44"
+                                                            src="http://edm.focuschina.com:80/MICEN/2015/3/logo.png"
+                                                            width="212"/></td>
+                                                <td align="right"
+                                                    style="padding-bottom:15px; font-size:12px; color:#888; font-family:Arial; line-height:12px"
+                                                    valign="bottom">
+                                                    Can't see any images? - <a
+                                                        style="text-decoration:underline; color:#555;">Click to View</a>.
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#FFFFFF">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                            <tr class="mod">
+                                                <td align="left" height="450" style="background:#ebebeb;font-size:30px;"
+                                                    valign="middle">
+                                                    <div class="mod-space" data-type="banner">
+                                                        <img
+                                                                alt="" border="0" height="450"
+                                                                src="http://design.vemic.com:2222/700x450"
+                                                                style="vertical-align:top;"
+                                                                title="Wish You a Happy Impressive Halloween"
+                                                                width="700"/>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="mod">
+                                                <td style="padding:40px 40px 0;">
+                                                    <div class="mod-space" id="mail-txt" data-type="text">
+                                                        <p style="margin: 10px 0; font-family:Arial; font-size:16px; line-height:27px; font-weight: bolder; color:#222; ">
+                                                            Dear #{userName},</p>
+                                                        <p style="margin: 10px 0;font-family:Arial; font-size:14px; line-height:24px; color:#555; ">
+                                                            Straddling the line between fall and winter, Halloween, is coming again.</p>
+                                                        <p style="margin: 10px 0;font-family:Arial; font-size:14px; line-height:24px; color:#555; ">
+                                                            It is a time of celebration commonly including activities such as trick or treating, attending costume parties, carving Jack-o’-lanterns, bonfires, apple bobbing, visiting haunted attractions, playing pranks, telling scary stories, and watching horror films.</p>
+                                                        <p style="margin: 10px 0;font-family:Arial; font-size:14px; line-height:24px; color:#555; ">
+                                                            The creatures of the night are waiting. No matter what kind of spooky surprises or Halloween activities you will have this year, <a href="http://www.made-in-china.com/"
+                                                                style="text-decoration:none; color:#246bb3;">Made-in-China.com</a> wish you a happy impressive Halloween.</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="mod">
+                                                <td style="padding:0 40px;">
+                                                    <div class="mod-space" data-type="prod4">
+                                                        <table border="0" cellpadding="0" cellspacing="0"
+                                                               width="100%">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td style="padding:0px 0px 20px 0px;font-family:Arial; font-size:16px; line-height:27px; font-weight: bolder; color:#222; ">
+                                                                    Halloween Gifts & Crafts
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <table cellpadding="0" cellspacing="0"
+                                                                           border="0" width="100%">
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td width="160" align="left">
+                                                                                <a href="http://www.made-in-china.com/productdirectory.do?subaction=hunt&style=b&mode=and&code=0&comProvince=nolimit&order=0&isOpenCorrection=1&word=Inflatable+Pumpkin+Lantern">
+                                                                                    <img src="http://edm.focuschina.com:80/MICEN/2015/10/3244-pic1.png"
+                                                                                         border="0" width="140"
+                                                                                         height="140">
+                                                                                </a>
+                                                                            </td>
+                                                                            <td width="160" align="left">
+                                                                                <a href="http://www.made-in-china.com/productdirectory.do?subaction=hunt&style=b&mode=and&code=0&comProvince=nolimit&order=0&isOpenCorrection=1&word=halloween+mask">
+                                                                                    <img src="http://edm.focuschina.com:80/MICEN/2015/10/3244-pic2.png"
+                                                                                         border="0" width="140"
+                                                                                         height="140">
+                                                                                </a>
+                                                                            </td>
+                                                                            <td width="160" align="left">
+                                                                                <a href="http://www.made-in-china.com/productdirectory.do?subaction=hunt&style=b&mode=and&code=0&comProvince=nolimit&order=0&isOpenCorrection=1&word=halloween+costume">
+                                                                                    <img src="http://edm.focuschina.com:80/MICEN/2015/10/3244-pic3.png"
+                                                                                         border="0" width="140"
+                                                                                         height="140">
+                                                                                </a>
+                                                                            </td>
+                                                                            <td width="140">
+                                                                                <a href="http://www.made-in-china.com/productdirectory.do?subaction=hunt&style=b&mode=and&code=0&comProvince=nolimit&order=0&isOpenCorrection=1&word=halloween+hat">
+                                                                                    <img src="http://edm.focuschina.com:80/MICEN/2015/10/3244-pic4.png"
+                                                                                         border="0" width="140"
+                                                                                         height="140">
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="padding:40px 0px">
+                                                                    <table border="0" cellpadding="0"
+                                                                           cellspacing="0">
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td style="padding-right:10px;">
+                                                                                <a href="http://www.made-in-china.com/Arts-Crafts-Catalog/Halloween-Gifts-Crafts.html"
+                                                                                   style=" color:#fff"> <img
+                                                                                        alt="View More"
+                                                                                        border="0" height="40"
+                                                                                        src="http://edm.focuschina.com:80/MICEN/2015/3/pro-btn-more.png"
+                                                                                        title=" View More"
+                                                                                        width="127"></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                </td>
+                                            </tr>
+                                            <tr class="mod">
+                                                <td style="border-top:1px solid #ebebeb; padding:20px 40px;background:#fff;">
+                                                    <table border="0" cellpadding="0" cellspacing="0"
+                                                           width="100%">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td valign="middle">
+                                                                <table cellpadding="0" cellspacing="0"
+                                                                       border="0" width="100%">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td style="padding:0px 0px 5px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">
+                                                                            Please also feel free to <a
+                                                                                href="http://www.made-in-china.com/aboutus/contact"
+                                                                                style="text-decoration:none; color:#246bb3;">contact
+                                                                            us</a>.
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="padding:0px 0px 5px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">
+                                                                            <table cellpadding="0"
+                                                                                   cellspacing="0"
+                                                                                   border="0">
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td width="70"
+                                                                                        style="padding:0px 0px 0px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">
+                                                                                        Follow us:
+                                                                                    </td>
+                                                                                    <td width="25"><a
+                                                                                            href="http://bit.ly/facebook_mic"><img
+                                                                                            alt=""
+                                                                                            border="0"
+                                                                                            height="16"
+                                                                                            src="http://edm.focuschina.com:80/MICEN/2013/9/light_and_bed-p14.gif"
+                                                                                            width="17"></a>
+                                                                                    </td>
+                                                                                    <td width="25"><a
+                                                                                            href="http://bit.ly/twitter_mic"><img
+                                                                                            alt=""
+                                                                                            border="0"
+                                                                                            height="16"
+                                                                                            src="http://edm.focuschina.com:80/MICEN/2013/9/light_and_bed-p13.gif"
+                                                                                            width="17"></a>
+                                                                                    </td>
+                                                                                    <td width="25"><a
+                                                                                            href="http://bit.ly/googleplus_mic"><img
+                                                                                            alt=""
+                                                                                            border="0"
+                                                                                            height="16"
+                                                                                            src="http://edm.focuschina.com:80/MICEN/2013/9/light_and_bed-p15.gif"
+                                                                                            width="17"></a>
+                                                                                    </td>
+                                                                                    <td width="25"><a
+                                                                                            href="http://bit.ly/linkedin_mic"><img
+                                                                                            alt=""
+                                                                                            border="0"
+                                                                                            height="16"
+                                                                                            src="http://edm.focuschina.com:80/MICEN/2014/9/linkin.gif"
+                                                                                            width="17"></a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="padding:0px 0px 0px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">
+                                                                            To your success, <a
+                                                                                href="http://www.made-in-china.com/"
+                                                                                style="text-decoration:none; color:#246bb3;">Made-in-China.com</a>.
+                                                                        </td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                            <td width="141">
+                                                                <table cellpadding="0" cellspacing="0"
+                                                                       border="0" width="100%">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td style="padding:0px 0px 5px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">
+                                                                            Made-in-China app
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="padding:0px 0px 10px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">
+                                                                            <a href="https://play.google.com/store/apps/details?id=com.micen.buyers.activity&amp;hl=en">
+                                                                                <img src="http://edm.focuschina.com:80/MICEN/2015/7/app-ad.png"
+                                                                                     border="0" width="141"
+                                                                                     height="35"
+                                                                                     alt="Get it on Google play"
+                                                                                     title="Get it on Google play">
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="padding:0px 0px 0px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">
+                                                                            <a href="https://itunes.apple.com/us/app/made-in-china-for-buyer/id554038220?ls=1&amp;mt=8">
+                                                                                <img src="http://edm.focuschina.com:80/MICEN/2015/7/app-os.png"
+                                                                                     border="0" width="141"
+                                                                                     height="35"
+                                                                                     alt="Download on the App Store"
+                                                                                     title="Download on the App Store">
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:20px 20px 40px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                            <tr>
+                                                <td style="padding-bottom:10px;font-size:12px;font-family:Arial; color:#888; line-height:20px; text-align:center;">
+                                                    The reason for this email is that you have registered
+                                                    Made-in-China.com.<br/>
+                                                    If you do not wish to receive future service-related email, please
+                                                    click to <a href="#{backHref_var}"
+                                                                style="text-decoration:underline; color:#555;">unsubscribe</a>.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-bottom:10px;font-size:12px;font-family:Arial; color:#888; line-height:20px; text-align:center;">
+                                                    Made-in-China.com guarantees that we only send the promotion and
+                                                    service emails. We will protect your privacy.<br/>
+                                                    Please add the <a href="mailto:Mail-en@e.Made-in-China.com"
+                                                                      style="text-decoration:underline; color:#555;">Mail-en@e.Made-in-China.com</a>
+                                                    as a contact in order to receive the special offer and service mail.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-bottom:10px;font-size:12px;font-family:Arial; color:#888; line-height:20px; text-align:center;">
+                                                    Find reliable suppliers audited by SGS - <a
+                                                        href="http://www.made-in-china.com/audited-suppliers/for-buyers/"
+                                                        style="color:#888;text-decoration:none;">Audited Supplier</a>.
+                                                    Browse <a
+                                                        href="http://www.made-in-china.com/audited-suppliers/for-buyers/browse-audit-reports.html"
+                                                        style="color:#888;text-decoration:none;">Audit Report</a>.<br/>
+                                                    Site Access: <a href="http://www.made-in-china.com/prod/catlist/"
+                                                                    style="color:#888;text-decoration:none;">Search
+                                                    Products &amp; Suppliers</a> | <a
+                                                        href="http://membercenter.made-in-china.com/trade-service/quotation-request.html"
+                                                        style="color:#888;text-decoration:none;">Post Sourcing
+                                                    Request</a> | <a
+                                                        href="http://membercenter.made-in-china.com/catalogalert.do?xcase=subscrib"
+                                                        style="color:#888;text-decoration:none;">Alert</a> | <a
+                                                        href="http://www.made-in-china.com/help/faq/"
+                                                        style="color:#888;text-decoration:none;">FAQ</a> | <a
+                                                        href="http://www.made-in-china.com/trademessenger/"
+                                                        style="color:#888;text-decoration:none;">TradeMessenger</a> | <a
+                                                        href="http://membercenter.made-in-china.com/logon.do?xcase=getBackPassword"
+                                                        style="color:#888;text-decoration:none;">Forgot
+                                                    Password</a><br/>
+                                                    Multi-Language: <a href="http://es.made-in-china.com/"
+                                                                       style="color:#888;text-decoration:none;">Español</a>
+                                                    | <a href="http://pt.made-in-china.com/"
+                                                         style="color:#888;text-decoration:none;">Português</a> | <a
+                                                        href="http://fr.made-in-china.com/"
+                                                        style="color:#888;text-decoration:none;">Français</a> | <a
+                                                        href="http://ru.made-in-china.com/"
+                                                        style="color:#888;text-decoration:none;">Русский язык</a> | <a
+                                                        href="http://www.made-in-china.com/multi-language/"
+                                                        style="color:#888;text-decoration:none;">More</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-size:12px;font-family:Arial; color:#888; line-height:20px; text-align:center;">
+                                                    Copyright © 2015 <a href="http://www.focuschina.com/html_en/"
+                                                                        style="color:#888;text-decoration:none;">Focus
+                                                    Technology Co., Ltd.</a> All rights reserved.
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <footer>I'm the fucking footer</footer>
+</div>
+
+
+<script type="text/javascript" src="../src/js/lib/jquery/jquery.js"></script>
+
+<!-- 配置文件 -->
+<script type="text/javascript" src="../src/js/lib/umeditor/umeditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="../src/js/lib/umeditor/umeditor.js"></script>
+<!-- 语言包文件 -->
+<script type="text/javascript" src="../src/js/lib/umeditor/lang/zh-cn/zh-cn.js"></script>
+
+<script type="text/javascript" src="../src/js/demo.js"></script>
+</body>
+</html>
