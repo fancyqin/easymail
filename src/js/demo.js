@@ -54,7 +54,7 @@ $(function () {
             ]
         };
         var um = UM.getEditor(placeholderID, settings);
-        var text = box.html();
+        var text = box.html().trim();
         um.setContent(text);
         um.addListener('contentChange', function (um) {
             var inner = this.getContent();
@@ -117,6 +117,6 @@ $(function () {
 
 
 
-    demoLoad(['festival-banner', 'festival-inner', 'festival-prod4-title','festival-prodImg-1','festival-prodImg-2','festival-prodImg-3','festival-prodImg-4']);
+    demoLoad(['festival-banner', 'festival-inner', 'festival-prod4-title','festival-prodImg-1','festival-prodImg-2','festival-prodImg-3','festival-prodImg-4','festival-btn']);
 
 });
