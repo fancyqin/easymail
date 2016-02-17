@@ -1,13 +1,6 @@
 $(function () {
 
 
-
-
-
-
-
-
-
     function demoLoad(name) {
         var num = name.length;
         if (num > 0) {
@@ -55,6 +48,7 @@ $(function () {
         };
         var um = UM.getEditor(placeholderID, settings);
         var text = box.html().trim();
+        text = text.replace(/\s+|\n/g, " ").replace(/>\s</g,"><");
         um.setContent(text);
         um.addListener('contentChange', function (um) {
             var inner = this.getContent();
@@ -106,17 +100,15 @@ $(function () {
     }
 
 
-
     var $WEBUrl = $('#WEBUrl');
     var $inputWEBUrl = $('#inputWEBUrl');
     $inputWEBUrl.val($WEBUrl.attr('href'))
-    $inputWEBUrl.change(function(){
+    $inputWEBUrl.change(function () {
         var val = $inputWEBUrl.val();
-        $WEBUrl.attr('href',val)
+        $WEBUrl.attr('href', val)
     });
 
 
-
-    demoLoad(['festival-banner', 'festival-inner', 'festival-prod4-title','festival-prodImg-1','festival-prodImg-2','festival-prodImg-3','festival-prodImg-4','festival-btn']);
+    demoLoad(['festival-banner', 'festival-inner', 'festival-prod4-title', 'festival-prodImg-1', 'festival-prodImg-2', 'festival-prodImg-3', 'festival-prodImg-4', 'festival-btn']);
 
 });
