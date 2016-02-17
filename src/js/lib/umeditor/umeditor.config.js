@@ -202,13 +202,16 @@
 
         //fontfamily
         //字体设置
-//        ,'fontfamily':[
-//              { name: 'songti', val: '宋体,SimSun'},
-//          ]
+        ,'fontfamily':[
+            { name: 'songti', val: '宋体,SimSun'},
+            { name:'yahei',val:'微软雅黑,Microsoft YaHei'},
+            { name:'arial',val:'arial, helvetica,sans-serif'},
+            { name:'verdana',val:'Verdana'}
+          ]
 
         //fontsize
         //字号
-        //,'fontsize':[10, 11, 12, 14, 16, 18, 20, 24, 36]
+        ,'fontsize':[12, 14, 16, 18, 20, 24, 36]
 
         //paragraph
         //段落格式 值留空时支持多语言自动识别，若配置，则以配置值为准

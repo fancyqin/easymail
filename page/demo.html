@@ -25,7 +25,7 @@
                         <div class="form-item">
                             <h4 class="form-title">WEB版地址</h4>
                             <div class="form-fill">
-                                <input type="text">
+                                <input id="inputWEBUrl" type="text">
                             </div>
                         </div>
                         <div class="form-item">
@@ -36,9 +36,32 @@
                 <div class="mod-box">
                     <div class="mod-edit mod-banner">
                         <div class="form-item">
-                            <h4 class="form-title">banner图片url地址</h4>
-                            <div class="form-fill">
-                                <input type="text">
+                            <h4 class="form-title">banner图片</h4>
+                            <div id="festival-banner">
+                                <div class="form-imgbox">
+                                    <h5 class="form-title-s">图片url</h5>
+                                    <div class="form-fill">
+                                        <input class="imgSrc" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-imgbox">
+                                    <h5 class="form-title-s">图片title</h5>
+                                    <div class="form-fill">
+                                        <input class="imgTitle" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-imgbox">
+                                    <h5 class="form-title-s">图片alt</h5>
+                                    <div class="form-fill">
+                                        <input class="imgAlt" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-imgbox">
+                                    <h5 class="form-title-s">链接地址</h5>
+                                    <div class="form-fill">
+                                        <input class="imgLink" type="text" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -46,7 +69,130 @@
                     <div class="mod-edit mod-text">
                         <div class="form-item">
                             <h4 class="form-title">文本内容</h4>
-                            <script id="container" name="content" type="text/plain" style="width:360px;height:50px;"></script>
+                            <script id="festival-inner" name="content" type="text/plain" style="width:360px;height:50px;"></script>
+                        </div>
+                    </div>
+
+                    <div class="mod-edit mod-4-img">
+                        <div class="form-item">
+                            <h4 class="form-title">标题文字</h4>
+                            <script id="festival-prod4-title" name="content" type="text/plain" style="width:360px;height:50px;"></script>
+                        </div>
+                        <div class="form-item">
+                            <h4 class="form-title">产品图片1</h4>
+                            <div id="festival-prodImg-1">
+                                <div class="form-imgbox">
+                                    <h5 class="form-title-s">图片url</h5>
+                                    <div class="form-fill">
+                                        <input class="imgSrc" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-imgbox">
+                                    <h5 class="form-title-s">图片title</h5>
+                                    <div class="form-fill">
+                                        <input class="imgTitle" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-imgbox">
+                                    <h5 class="form-title-s">图片alt</h5>
+                                    <div class="form-fill">
+                                        <input class="imgAlt" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-imgbox">
+                                    <h5 class="form-title-s">链接地址</h5>
+                                    <div class="form-fill">
+                                        <input class="imgLink" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <h4 class="form-title">产品图片2</h4>
+                            <div id="festival-prodImg-2">
+                                <div class="form-imgbox">
+                                    <h5 class="form-title-s">图片url</h5>
+                                    <div class="form-fill">
+                                        <input class="imgSrc" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-imgbox">
+                                    <h5 class="form-title-s">图片title</h5>
+                                    <div class="form-fill">
+                                        <input class="imgTitle" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-imgbox">
+                                    <h5 class="form-title-s">图片alt</h5>
+                                    <div class="form-fill">
+                                        <input class="imgAlt" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-imgbox">
+                                    <h5 class="form-title-s">链接地址</h5>
+                                    <div class="form-fill">
+                                        <input class="imgLink" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <h4 class="form-title">产品图片3</h4>
+                            <div id="festival-prodImg-3">
+                                <div class="form-imgbox">
+                                    <h5 class="form-title-s">图片url</h5>
+                                    <div class="form-fill">
+                                        <input class="imgSrc" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-imgbox">
+                                    <h5 class="form-title-s">图片title</h5>
+                                    <div class="form-fill">
+                                        <input class="imgTitle" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-imgbox">
+                                    <h5 class="form-title-s">图片alt</h5>
+                                    <div class="form-fill">
+                                        <input class="imgAlt" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-imgbox">
+                                    <h5 class="form-title-s">链接地址</h5>
+                                    <div class="form-fill">
+                                        <input class="imgLink" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <h4 class="form-title">产品图片4</h4>
+                            <div id="festival-prodImg-4">
+                                <div class="form-imgbox">
+                                    <h5 class="form-title-s">图片url</h5>
+                                    <div class="form-fill">
+                                        <input class="imgSrc" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-imgbox">
+                                    <h5 class="form-title-s">图片title</h5>
+                                    <div class="form-fill">
+                                        <input class="imgTitle" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-imgbox">
+                                    <h5 class="form-title-s">图片alt</h5>
+                                    <div class="form-fill">
+                                        <input class="imgAlt" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-imgbox">
+                                    <h5 class="form-title-s">链接地址</h5>
+                                    <div class="form-fill">
+                                        <input class="imgLink" type="text" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -65,7 +211,7 @@
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                             <tbody>
                                             <tr>
-                                                <td style="padding:20px 0px 15px">
+                                                <td style="padding:20px 0 15px">
                                                     <img
                                                             alt="www.made-in-china.com" border="0" height="44"
                                                             src="http://edm.focuschina.com:80/MICEN/2015/3/logo.png"
@@ -73,7 +219,7 @@
                                                 <td align="right"
                                                     style="padding-bottom:15px; font-size:12px; color:#888; font-family:Arial; line-height:12px"
                                                     valign="bottom">
-                                                    Can't see any images? - <a
+                                                    Can't see any images? - <a id="WEBUrl" href="http://www.made-in-china.com"
                                                         style="text-decoration:underline; color:#555;">Click to View</a>.
                                                 </td>
                                             </tr>
@@ -88,7 +234,7 @@
                                             <tr class="mod">
                                                 <td align="left" height="450" style="background:#ebebeb;font-size:30px;"
                                                     valign="middle">
-                                                    <div class="mod-space" data-type="banner">
+                                                    <div id="aaa" class="mod-space" data-type="img" data-name="festival-banner">
                                                         <img
                                                                 alt="" border="0" height="450"
                                                                 src="http://design.vemic.com:2222/700x450"
@@ -99,8 +245,8 @@
                                                 </td>
                                             </tr>
                                             <tr class="mod">
-                                                <td style="padding:40px 40px 0;">
-                                                    <div class="mod-space" id="mail-txt" data-type="text">
+                                                <td style="padding:40px;">
+                                                    <div class="mod-space" data-type="richTxt" data-name="festival-inner">
                                                         <p style="margin: 10px 0; font-family:Arial; font-size:16px; line-height:27px; font-weight: bolder; color:#222; ">
                                                             Dear #{userName},</p>
                                                         <p style="margin: 10px 0;font-family:Arial; font-size:14px; line-height:24px; color:#555; ">
@@ -115,78 +261,89 @@
                                             </tr>
                                             <tr class="mod">
                                                 <td style="padding:0 40px;">
-                                                    <div class="mod-space" data-type="prod4">
-                                                        <table border="0" cellpadding="0" cellspacing="0"
-                                                               width="100%">
-                                                            <tbody>
-                                                            <tr>
-                                                                <td style="padding:0px 0px 20px 0px;font-family:Arial; font-size:16px; line-height:27px; font-weight: bolder; color:#222; ">
-                                                                    Halloween Gifts & Crafts
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <table cellpadding="0" cellspacing="0"
-                                                                           border="0" width="100%">
-                                                                        <tbody>
-                                                                        <tr>
-                                                                            <td width="160" align="left">
+                                                    <table border="0" cellpadding="0" cellspacing="0"
+                                                           width="100%">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td style="padding:0 0 20px 0;">
+                                                                <div class="mod-space" data-type="richTxt" data-name="festival-prod4-title">
+                                                                    <p style="font-family:Arial; font-size:16px; line-height:27px; font-weight: bolder; color:#222; ">Halloween Gifts & Crafts</p>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <table cellpadding="0" cellspacing="0"
+                                                                       border="0" width="100%">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td width="160" align="left">
+                                                                            <div class="mod-space" data-type="img" data-name="festival-prodImg-1">
                                                                                 <a href="http://www.made-in-china.com/productdirectory.do?subaction=hunt&style=b&mode=and&code=0&comProvince=nolimit&order=0&isOpenCorrection=1&word=Inflatable+Pumpkin+Lantern">
                                                                                     <img src="http://edm.focuschina.com:80/MICEN/2015/10/3244-pic1.png"
                                                                                          border="0" width="140"
                                                                                          height="140">
                                                                                 </a>
-                                                                            </td>
-                                                                            <td width="160" align="left">
+                                                                            </div>
+
+                                                                        </td>
+                                                                        <td width="160" align="left">
+                                                                            <div class="mod-space" data-type="img" data-name="festival-prodImg-2">
                                                                                 <a href="http://www.made-in-china.com/productdirectory.do?subaction=hunt&style=b&mode=and&code=0&comProvince=nolimit&order=0&isOpenCorrection=1&word=halloween+mask">
                                                                                     <img src="http://edm.focuschina.com:80/MICEN/2015/10/3244-pic2.png"
                                                                                          border="0" width="140"
                                                                                          height="140">
                                                                                 </a>
-                                                                            </td>
-                                                                            <td width="160" align="left">
+                                                                            </div>
+
+                                                                        </td>
+                                                                        <td width="160" align="left">
+                                                                            <div class="mod-space" data-type="img" data-name="festival-prodImg-3">
                                                                                 <a href="http://www.made-in-china.com/productdirectory.do?subaction=hunt&style=b&mode=and&code=0&comProvince=nolimit&order=0&isOpenCorrection=1&word=halloween+costume">
                                                                                     <img src="http://edm.focuschina.com:80/MICEN/2015/10/3244-pic3.png"
                                                                                          border="0" width="140"
                                                                                          height="140">
                                                                                 </a>
-                                                                            </td>
-                                                                            <td width="140">
+                                                                            </div>
+
+                                                                        </td>
+                                                                        <td width="140">
+                                                                            <div class="mod-space" data-type="img" data-name="festival-prodImg-4">
                                                                                 <a href="http://www.made-in-china.com/productdirectory.do?subaction=hunt&style=b&mode=and&code=0&comProvince=nolimit&order=0&isOpenCorrection=1&word=halloween+hat">
                                                                                     <img src="http://edm.focuschina.com:80/MICEN/2015/10/3244-pic4.png"
                                                                                          border="0" width="140"
                                                                                          height="140">
                                                                                 </a>
-                                                                            </td>
-                                                                        </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td align="center" style="padding:40px 0px">
-                                                                    <table border="0" cellpadding="0"
-                                                                           cellspacing="0">
-                                                                        <tbody>
-                                                                        <tr>
-                                                                            <td style="padding-right:10px;">
-                                                                                <a href="http://www.made-in-china.com/Arts-Crafts-Catalog/Halloween-Gifts-Crafts.html"
-                                                                                   style=" color:#fff"> <img
-                                                                                        alt="View More"
-                                                                                        border="0" height="40"
-                                                                                        src="http://edm.focuschina.com:80/MICEN/2015/3/pro-btn-more.png"
-                                                                                        title=" View More"
-                                                                                        width="127"></a>
-                                                                            </td>
-                                                                        </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
+                                                                            </div>
 
+                                                                        </td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center" style="padding:40px 0px">
+                                                                <table border="0" cellpadding="0"
+                                                                       cellspacing="0">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td style="padding-right:10px;">
+                                                                            <a href="http://www.made-in-china.com/Arts-Crafts-Catalog/Halloween-Gifts-Crafts.html"
+                                                                               style=" color:#fff"> <img
+                                                                                    alt="View More"
+                                                                                    border="0" height="40"
+                                                                                    src="http://edm.focuschina.com:80/MICEN/2015/3/pro-btn-more.png"
+                                                                                    title=" View More"
+                                                                                    width="127"></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
                                                 </td>
                                             </tr>
                                             <tr class="mod">
@@ -383,7 +540,6 @@
                 </table>
             </div>
         </div>
-
     </div>
     <footer>I'm the fucking footer</footer>
 </div>
