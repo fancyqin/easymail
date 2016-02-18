@@ -16,6 +16,8 @@ $(function () {
                     case 'richTxt':
                         newEditor(box, thisName);
                         break;
+                    case 'btn':
+                        newBtn(box,place)
                 }
             }
         }
@@ -25,7 +27,7 @@ $(function () {
     function newEditor(box, placeholderID) {
         var settings = {
             toolbar: [
-                'undo redo',//撤销
+                'undo redo', //撤销
                 '|',
                 'bold', //加粗
                 'italic', //斜体
@@ -100,9 +102,55 @@ $(function () {
     }
 
 
+    function btnTplSet(box,place,tplData){
+        var tplIdName =  place.attr('id') + "-tpl";
+        var tpl = $("#"+tplIdName).html();
+        var tplItem = template(tpl, tplData);
+        box.find('.btnWrap').html("").append(tplItem);
+    }
+
+    function newBtn(box,place){
+        var link = 'http://';
+        var text = "I'm a button";
+        var _width = '150px';
+        var tplData = {
+            btnLink:link,
+            btnTxt:text,
+            btnWidth: _width
+        };
+        btnTplSet(box,place,tplData);
+
+        var $btn = box.find('.btnBase');
+        var btnTxt = $btn.text().trim();
+        var btnLink = $btn.attr('href');
+
+        var $inputTxt = place.find('.btnTxt');
+        var $inputLink = place.find('.btnLink');
+
+        $inputTxt.val(btnTxt);
+        $inputLink.val(btnLink);
+
+        $inputTxt.blur(function(){
+            var val = $(this).val();
+            $btn.text(val);
+            var newWidth = $btn[0].offsetWidth + 'px';
+            tplData.btnTxt = val;
+            tplData.btnWidth =newWidth;
+            btnTplSet(box,place,tplData);
+        });
+        $inputLink.blur(function(){
+            var val = $(this).val();
+            //$btn.attr('href',val);
+            tplData.btnLink = val;
+            btnTplSet(box,place,tplData);
+        });
+
+    }
+
+
     var $WEBUrl = $('#WEBUrl');
     var $inputWEBUrl = $('#inputWEBUrl');
-    $inputWEBUrl.val($WEBUrl.attr('href'))
+    $inputWEBUrl.val($WEBUrl.attr('href'));
     $inputWEBUrl.change(function () {
         var val = $inputWEBUrl.val();
         $WEBUrl.attr('href', val)
