@@ -157,6 +157,25 @@ $(function () {
     });
 
 
+    //exportMail
+
+    $('#exportMail').click(function(){
+        var $mailTitle = $('#mailTitle');
+        var mailTable = $('.demo .demo-fixed').html().trim();
+        var codePop = $('.code-pop')
+        if ($mailTitle.val() ===''){
+            alert('邮件主题不能为空')
+        }
+        else {
+            codePop.show();
+            $('#codeCopy').val(mailTable);
+        }
+        codePop.find('.close').click(function(){codePop.hide()});
+    });
+
+
+
+
     demoLoad(['festival-banner', 'festival-inner', 'festival-prod4-title', 'festival-prodImg-1', 'festival-prodImg-2', 'festival-prodImg-3', 'festival-prodImg-4', 'festival-btn']);
 
 });
