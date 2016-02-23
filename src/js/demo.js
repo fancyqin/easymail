@@ -13,8 +13,12 @@ $(function () {
                     case 'img':
                         newImg(box, place);
                         break;
+                    case 'txt':
+                        newTxt(box,place);
+                        break;
                     case 'richTxt':
-                        newEditor(box, thisName);
+                        var EditorId = thisName+'-edit';
+                        newEditor(box, EditorId);
                         break;
                     case 'btn':
                         newBtn(box,place)
@@ -55,6 +59,10 @@ $(function () {
         um.addListener('contentChange', function (um) {
             var inner = this.getContent();
             box.html(inner);
+            var $links = box.find('a');
+            if ($links){
+                $links.css({color:'#246bb3',textDecoration:'none'})
+            }
         })
     }
 
@@ -75,17 +83,20 @@ $(function () {
 
 
         var $link = box.find('a');
+        var $inputLink = place.find('.imgLink');
         if ($link.length > 0) {
             var linkUrl = $link.attr('href');
-            var $inputLink = place.find('.imgLink');
             $inputLink.val(linkUrl);
-
-            $inputLink.blur(function () {
-                var val = $(this).val();
-                $link.attr('href', val);
-            })
-
         }
+        $inputLink.blur(function () {
+            var val = $(this).val();
+            var img = $img.prop('outerHTML');
+            box.html('');
+            box.html('<a href="'+ val +'">'+ img +'</a>');
+
+            $link.attr('href', val);
+
+        });
         $inputSrc.blur(function () {
             var val = $(this).val();
             $img.attr('src', val);
@@ -110,9 +121,12 @@ $(function () {
     }
 
     function newBtn(box,place){
-        var link = 'http://';
-        var text = "I'm a button";
-        var _width = '150px';
+
+        var btnDetail = box.find('.btnDetail');
+        var btnVal = JSON.parse(btnDetail.val());
+        var link = btnVal.link;
+        var text = btnVal.title;
+        var _width = btnVal.width;
         var tplData = {
             btnLink:link,
             btnTxt:text,
@@ -134,17 +148,39 @@ $(function () {
             var val = $(this).val();
             $btn.text(val);
             var newWidth = $btn[0].offsetWidth + 'px';
+
             tplData.btnTxt = val;
+            btnVal.title = val;
             tplData.btnWidth =newWidth;
+            btnVal.width = newWidth;
+
+            btnDetail.val(JSON.stringify(btnVal));
             btnTplSet(box,place,tplData);
         });
         $inputLink.blur(function(){
             var val = $(this).val();
             //$btn.attr('href',val);
+
             tplData.btnLink = val;
+            btnVal.link = val;
+
+            btnDetail.val(JSON.stringify(btnVal));
             btnTplSet(box,place,tplData);
         });
 
+    }
+
+
+    function newTxt(box,place){
+        var $txtBox = box.find('.txtBox');
+        var txt = $txtBox.text().trim();
+        var $inputTxt = place.find('.inputTxt');
+        $inputTxt.val(txt);
+
+        $inputTxt.blur(function(){
+            var val = $inputTxt.val();
+            $txtBox.text(val);
+        })
     }
 
 
@@ -161,18 +197,28 @@ $(function () {
 
     $('#exportMail').click(function(){
         var $mailTitle = $('#mailTitle');
-        var mailTable = $('.demo .demo-fixed').html().trim();
-        var codePop = $('.code-pop')
-        if ($mailTitle.val() ===''){
+        var mailTitle = $mailTitle.val();
+        var mailTable = $('#tableInner').html().trim().replace(/\s+|\n/g, " ").replace(/>\s</g,"><");
+        var htmlCode = '<html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>'+mailTitle+'</title></head><body>'+mailTable+'</body></html>'
+        var codePop = $('.code-pop');
+        if (mailTitle ===''){
             alert('邮件主题不能为空')
         }
         else {
             codePop.show();
-            $('#codeCopy').val(mailTable);
+            $('#codeCopy').val(htmlCode);
         }
         codePop.find('.close').click(function(){codePop.hide()});
     });
 
+
+
+    $('.mod-space').click(function(){
+        var id = $(this).attr('data-name');
+        var $thisBox = $('#'+id).parents('.form-item:first');
+        $('.form-item').removeClass('open');
+        $thisBox.addClass('open');
+    });
 
 
 
