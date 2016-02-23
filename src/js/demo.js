@@ -14,19 +14,21 @@ $(function () {
                         newImg(box, place);
                         break;
                     case 'txt':
-                        newTxt(box,place);
+                        newTxt(box, place);
                         break;
                     case 'richTxt':
-                        var EditorId = thisName+'-edit';
+                        var EditorId = thisName + '-edit';
                         newEditor(box, EditorId);
                         break;
                     case 'btn':
-                        newBtn(box,place)
+                        newBtn(box, place)
                 }
             }
         }
     }
 
+
+    //富文本
 
     function newEditor(box, placeholderID) {
         var settings = {
@@ -54,18 +56,20 @@ $(function () {
         };
         var um = UM.getEditor(placeholderID, settings);
         var text = box.html().trim();
-        text = text.replace(/\s+|\n/g, " ").replace(/>\s</g,"><");
+        text = text.replace(/\s+|\n/g, " ").replace(/>\s</g, "><");
         um.setContent(text);
         um.addListener('contentChange', function (um) {
             var inner = this.getContent();
             box.html(inner);
             var $links = box.find('a');
-            if ($links){
-                $links.css({color:'#246bb3',textDecoration:'none'})
+            if ($links) {
+                $links.css({color: '#246bb3', textDecoration: 'none'})
             }
         })
     }
 
+
+    //图片
 
     function newImg(box, place) {
         var $img = box.find('img');
@@ -91,10 +95,11 @@ $(function () {
         $inputLink.blur(function () {
             var val = $(this).val();
             var img = $img.prop('outerHTML');
-            box.html('');
-            box.html('<a href="'+ val +'">'+ img +'</a>');
-
-            $link.attr('href', val);
+            isHttp($inputLink, function () {
+                box.html('');
+                box.html('<a href="' + val + '">' + img + '</a>');
+                $link.attr('href', val);
+            });
 
         });
         $inputSrc.blur(function () {
@@ -113,14 +118,18 @@ $(function () {
     }
 
 
-    function btnTplSet(box,place,tplData){
-        var tplIdName =  place.attr('id') + "-tpl";
-        var tpl = $("#"+tplIdName).html();
+    //按钮设置模板
+
+    function btnTplSet(box, place, tplData) {
+        var tplIdName = place.attr('id') + "-tpl";
+        var tpl = $("#" + tplIdName).html();
         var tplItem = template(tpl, tplData);
         box.find('.btnWrap').html("").append(tplItem);
     }
 
-    function newBtn(box,place){
+    //按钮
+
+    function newBtn(box, place) {
 
         var btnDetail = box.find('.btnDetail');
         var btnVal = JSON.parse(btnDetail.val());
@@ -128,11 +137,11 @@ $(function () {
         var text = btnVal.title;
         var _width = btnVal.width;
         var tplData = {
-            btnLink:link,
-            btnTxt:text,
+            btnLink: link,
+            btnTxt: text,
             btnWidth: _width
         };
-        btnTplSet(box,place,tplData);
+        btnTplSet(box, place, tplData);
 
         var $btn = box.find('.btnBase');
         var btnTxt = $btn.text().trim();
@@ -144,82 +153,111 @@ $(function () {
         $inputTxt.val(btnTxt);
         $inputLink.val(btnLink);
 
-        $inputTxt.blur(function(){
+        $inputTxt.blur(function () {
             var val = $(this).val();
             $btn.text(val);
             var newWidth = $btn[0].offsetWidth + 'px';
 
             tplData.btnTxt = val;
             btnVal.title = val;
-            tplData.btnWidth =newWidth;
+            tplData.btnWidth = newWidth;
             btnVal.width = newWidth;
 
             btnDetail.val(JSON.stringify(btnVal));
-            btnTplSet(box,place,tplData);
+            btnTplSet(box, place, tplData);
         });
-        $inputLink.blur(function(){
+        $inputLink.blur(function () {
             var val = $(this).val();
             //$btn.attr('href',val);
 
-            tplData.btnLink = val;
-            btnVal.link = val;
+            isHttp($inputLink, function () {
+                tplData.btnLink = val;
+                btnVal.link = val;
 
-            btnDetail.val(JSON.stringify(btnVal));
-            btnTplSet(box,place,tplData);
+                btnDetail.val(JSON.stringify(btnVal));
+                btnTplSet(box, place, tplData);
+            })
+
+
         });
 
     }
 
+    //文本
 
-    function newTxt(box,place){
+    function newTxt(box, place) {
         var $txtBox = box.find('.txtBox');
         var txt = $txtBox.text().trim();
         var $inputTxt = place.find('.inputTxt');
         $inputTxt.val(txt);
 
-        $inputTxt.blur(function(){
+        $inputTxt.blur(function () {
             var val = $inputTxt.val();
             $txtBox.text(val);
         })
     }
 
 
+    //WEB版地址
+
     var $WEBUrl = $('#WEBUrl');
     var $inputWEBUrl = $('#inputWEBUrl');
     $inputWEBUrl.val($WEBUrl.attr('href'));
-    $inputWEBUrl.change(function () {
-        var val = $inputWEBUrl.val();
-        $WEBUrl.attr('href', val)
+    $inputWEBUrl.blur(function () {
+        isHttp($inputWEBUrl, function () {
+            $WEBUrl.attr('href', val);
+        })
+
     });
 
 
-    //exportMail
+    //导出html
 
-    $('#exportMail').click(function(){
+    $('#exportMail').click(function () {
         var $mailTitle = $('#mailTitle');
         var mailTitle = $mailTitle.val();
-        var mailTable = $('#tableInner').html().trim().replace(/\s+|\n/g, " ").replace(/>\s</g,"><");
-        var htmlCode = '<html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>'+mailTitle+'</title></head><body>'+mailTable+'</body></html>'
+        var mailTable = $('#tableInner').html().trim().replace(/\s+|\n/g, " ").replace(/>\s</g, "><");
+        var htmlCode = '<html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>' + mailTitle + '</title></head><body>' + mailTable + '</body></html>'
         var codePop = $('.code-pop');
-        if (mailTitle ===''){
+        if (mailTitle === '') {
             alert('邮件主题不能为空')
         }
         else {
             codePop.show();
             $('#codeCopy').val(htmlCode);
         }
-        codePop.find('.close').click(function(){codePop.hide()});
+        codePop.find('.close').click(function () {
+            codePop.hide()
+        });
     });
 
 
+    //切换mod
 
-    $('.mod-space').click(function(){
+    $('.mod-space').click(function () {
         var id = $(this).attr('data-name');
-        var $thisBox = $('#'+id).parents('.form-item:first');
+        var $thisBox = $('#' + id).parents('.form-item:first');
         $('.form-item').removeClass('open');
         $thisBox.addClass('open');
     });
 
+
+    //
+    function isHttp(input, cb) {
+        var val = input.val();
+        var httpReg = /^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})).?)(?::\d{2,5})?(?:[/?#]\S*)?$/i;
+        input.removeClass('error');
+        if (val) {
+            if (!httpReg.test(val)) {
+                alert('请输入正确的地址');
+                input.addClass('error').focus();
+            } else {
+                input.removeClass('error');
+                return cb;
+            }
+        }
+
+    }
 
 
     demoLoad(['festival-banner', 'festival-inner', 'festival-prod4-title', 'festival-prodImg-1', 'festival-prodImg-2', 'festival-prodImg-3', 'festival-prodImg-4', 'festival-btn']);
