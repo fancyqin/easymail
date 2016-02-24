@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>节日邮件模板</title>
     <link rel="stylesheet" href="../src/css/demo.css">
 
     <link rel="stylesheet" href="../src/js/lib/umeditor/themes/default/css/umeditor.css">
@@ -10,7 +10,10 @@
 </head>
 <body>
 <div class="wrap demo-edit">
-    <header>I'm the header!</header>
+    <header>
+        <h1>Mail Maker</h1>
+        <div class="demo-name">节日模板</div>
+    </header>
     <div class="content">
         <div class="demo-wrap cf">
             <div class="demo-sider">
@@ -18,14 +21,12 @@
                     <div class="ctrl-box">
                         <div class="form-item">
                             <h4 class="form-title">邮件主题</h4>
-
                             <div class="form-fill">
                                 <input id="mailTitle" type="text"/>
                             </div>
                         </div>
                         <div class="form-item">
                             <h4 class="form-title">WEB版地址</h4>
-
                             <div class="form-fill">
                                 <input id="inputWEBUrl" type="text">
                             </div>
@@ -39,206 +40,43 @@
                         <div class="mod-edit mod-banner">
                             <div class="form-item">
                                 <h4 class="form-title">banner图片</h4>
-
-                                <div id="festival-banner">
-                                    <div class="form-box">
-                                        <label class="form-title-s">图片url</label>
-
-                                        <div class="form-fill">
-                                            <input title="dd" class="imgSrc" type="text"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-box">
-                                        <label class="form-title-s">图片title</label>
-
-                                        <div class="form-fill">
-                                            <input class="imgTitle" type="text"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-box">
-                                        <label class="form-title-s">图片alt</label>
-
-                                        <div class="form-fill">
-                                            <input class="imgAlt" type="text"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-box">
-                                        <label class="form-title-s">链接地址</label>
-
-                                        <div class="form-fill">
-                                            <input class="imgLink" type="text"/>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div id="festival-banner"></div>
                             </div>
                         </div>
-
                         <div class="mod-edit mod-text">
                             <div class="form-item">
                                 <h4 class="form-title">文本内容</h4>
                                 <div id="festival-inner">
-                                    <script id="festival-inner-edit" name="content" type="text/plain"
-                                            style="width:360px;height:50px;"></script>
+                                    <script id="festival-inner-edit" name="content" type="text/plain" style="width:360px;height:50px;"></script>
                                 </div>
-
                             </div>
                         </div>
-
                         <div class="mod-edit mod-4-img">
                             <div class="form-item">
                                 <h4 class="form-title">标题文字</h4>
-                                <div id="festival-prod4-title">
-                                    <div class="form-fill">
-                                        <textarea class="inputTxt"></textarea>
-                                    </div>
-                                </div>
-
+                                <div id="festival-prod4-title"></div>
                             </div>
                             <div class="form-item">
                                 <h4 class="form-title">产品图片1</h4>
-
-                                <div id="festival-prodImg-1">
-                                    <div class="form-box">
-                                        <label class="form-title-s">图片url</label>
-
-                                        <div class="form-fill">
-                                            <input class="imgSrc" type="text"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-box">
-                                        <label class="form-title-s">图片title</label>
-
-                                        <div class="form-fill">
-                                            <input class="imgTitle" type="text"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-box">
-                                        <label class="form-title-s">图片alt</label>
-
-                                        <div class="form-fill">
-                                            <input class="imgAlt" type="text"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-box">
-                                        <label class="form-title-s">链接地址</label>
-
-                                        <div class="form-fill">
-                                            <input class="imgLink" type="text"/>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div id="festival-prodImg-1"></div>
                             </div>
                             <div class="form-item">
                                 <h4 class="form-title">产品图片2</h4>
-
-                                <div id="festival-prodImg-2">
-                                    <div class="form-box">
-                                        <label class="form-title-s">图片url</label>
-
-                                        <div class="form-fill">
-                                            <input class="imgSrc" type="text"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-box">
-                                        <label class="form-title-s">图片title</label>
-
-                                        <div class="form-fill">
-                                            <input class="imgTitle" type="text"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-box">
-                                        <label class="form-title-s">图片alt</label>
-
-                                        <div class="form-fill">
-                                            <input class="imgAlt" type="text"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-box">
-                                        <label class="form-title-s">链接地址</label>
-
-                                        <div class="form-fill">
-                                            <input class="imgLink" type="text"/>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div id="festival-prodImg-2"></div>
                             </div>
                             <div class="form-item">
                                 <h4 class="form-title">产品图片3</h4>
-                                <div id="festival-prodImg-3">
-                                    <div class="form-box">
-                                        <label class="form-title-s">图片url</label>
-                                        <div class="form-fill">
-                                            <input class="imgSrc" type="text"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-box">
-                                        <label class="form-title-s">图片title</label>
-                                        <div class="form-fill">
-                                            <input class="imgTitle" type="text"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-box">
-                                        <label class="form-title-s">图片alt</label>
-                                        <div class="form-fill">
-                                            <input class="imgAlt" type="text"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-box">
-                                        <label class="form-title-s">链接地址</label>
-                                        <div class="form-fill">
-                                            <input class="imgLink" type="text"/>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div id="festival-prodImg-3"></div>
                             </div>
                             <div class="form-item">
                                 <h4 class="form-title">产品图片4</h4>
-                                <div id="festival-prodImg-4">
-                                    <div class="form-box">
-                                        <label class="form-title-s">图片url</label>
-                                        <div class="form-fill">
-                                            <input class="imgSrc" type="text"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-box">
-                                        <label class="form-title-s">图片title</label>
-                                        <div class="form-fill">
-                                            <input class="imgTitle" type="text"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-box">
-                                        <label class="form-title-s">图片alt</label>
-                                        <div class="form-fill">
-                                            <input class="imgAlt" type="text"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-box">
-                                        <label class="form-title-s">链接地址</label>
-                                        <div class="form-fill">
-                                            <input class="imgLink" type="text"/>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div id="festival-prodImg-4"></div>
                             </div>
                             <div class="form-item">
                                 <h4 class="form-title">按钮</h4>
-                                <div id="festival-btn">
-                                    <div class="form-box">
-                                        <label class="form-title-s">按钮文字</label>
-                                        <div class="form-fill">
-                                            <input class="btnTxt" type="text"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-box">
-                                        <label class="form-title-s">按钮链接</label>
-                                        <div class="form-fill">
-                                            <input class="btnLink" type="text"/>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div id="festival-btn"></div>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
@@ -298,10 +136,10 @@
                                                     </td>
                                                 </tr>
                                                 <tr class="mod">
-                                                    <td style="padding:40px;">
+                                                    <td style="padding:40px; font-family:Arial; font-size:16px; line-height:24px; color:#555;">
                                                         <div class="mod-space" data-type="richTxt"
                                                              data-name="festival-inner">
-                                                            <p style="margin: 10px 0; font-family:Arial; font-size:16px; line-height:27px; font-weight: bolder; color:#222; ">
+                                                            <p style="margin: 10px 0; font-family:Arial; font-size:16px; line-height:27px; font-weight: bold; color:#222; ">
                                                                 Dear #{userName},</p>
 
                                                             <p style="margin: 10px 0;font-family:Arial; font-size:14px; line-height:24px; color:#555; ">
@@ -669,16 +507,66 @@
     </div>
 </div>
 
+<script type="text/html" id="imgPlaceTpl">
+    <div class="form-box">
+        <label class="form-title-s">图片url</label>
+        <div class="form-fill">
+            <input class="imgSrc" type="text"/>
+        </div>
+    </div>
+    <div class="form-box">
+        <label class="form-title-s">图片title</label>
+        <div class="form-fill">
+            <input class="imgTitle" type="text"/>
+        </div>
+    </div>
+    <div class="form-box">
+        <label class="form-title-s">图片alt</label>
+        <div class="form-fill">
+            <input class="imgAlt" type="text"/>
+        </div>
+    </div>
+    <div class="form-box">
+        <label class="form-title-s">链接地址</label>
+        <div class="form-fill">
+            <input class="imgLink" type="text"/>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="btnPlaceTpl">
+    <div class="form-box">
+        <label class="form-title-s">按钮文字</label>
+        <div class="form-fill">
+            <input class="btnTxt" type="text"/>
+        </div>
+    </div>
+    <div class="form-box">
+        <label class="form-title-s">按钮链接</label>
+        <div class="form-fill">
+            <input class="btnLink" type="text"/>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="txtPlaceTpl">
+    <div class="form-fill">
+        <textarea class="inputTxt"></textarea>
+    </div>
+</script>
+
+
 <script type="text/javascript" src="../src/js/lib/jquery/jquery.js"></script>
 <script type="text/javascript" src="../src/js/lib/template/template.js"></script>
 
-<!-- 配置文件 -->
 <script type="text/javascript" src="../src/js/lib/umeditor/umeditor.config.js"></script>
-<!-- 编辑器源码文件 -->
 <script type="text/javascript" src="../src/js/lib/umeditor/umeditor.js"></script>
-<!-- 语言包文件 -->
 <script type="text/javascript" src="../src/js/lib/umeditor/lang/zh-cn/zh-cn.js"></script>
 
 <script type="text/javascript" src="../src/js/demo.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $.demoLoad(['festival-banner', 'festival-inner', 'festival-prod4-title', 'festival-prodImg-1', 'festival-prodImg-2', 'festival-prodImg-3', 'festival-prodImg-4', 'festival-btn']);
+    })
+</script>
 </body>
 </html>

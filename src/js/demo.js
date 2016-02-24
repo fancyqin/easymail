@@ -1,32 +1,35 @@
 $(function () {
 
 
-    function demoLoad(name) {
-        var num = name.length;
-        if (num > 0) {
-            for (var i = 0; i < num; i++) {
-                var thisName = name[i];
-                var box = $(".mod-space[data-name=" + thisName + "]");
-                var type = box.attr('data-type');
-                var place = $('#' + thisName);
-                switch (type) {
-                    case 'img':
-                        newImg(box, place);
-                        break;
-                    case 'txt':
-                        newTxt(box, place);
-                        break;
-                    case 'richTxt':
-                        var EditorId = thisName + '-edit';
-                        newEditor(box, EditorId);
-                        break;
-                    case 'btn':
-                        newBtn(box, place)
+    $.extend({
+        'demoLoad':function(name){
+            var num = name.length;
+            if (num > 0) {
+                for (var i = 0; i < num; i++) {
+                    var thisName = name[i];
+                    var box = $(".mod-space[data-name=" + thisName + "]");
+                    var type = box.attr('data-type');
+                    var place = $('#' + thisName);
+                    switch (type) {
+                        case 'img':
+                            newImg(box, place);
+                            break;
+                        case 'txt':
+                            newTxt(box, place);
+                            break;
+                        case 'richTxt':
+                            var EditorId = thisName + '-edit';
+                            newEditor(box, EditorId);
+                            break;
+                        case 'btn':
+                            newBtn(box, place);
+                            break;
+                    }
                 }
             }
         }
-    }
-
+    });
+    
 
     //富文本
 
@@ -72,6 +75,10 @@ $(function () {
     //图片
 
     function newImg(box, place) {
+        var imgTpl = $("#imgPlaceTpl").html();
+        var tplPlace = template(imgTpl);
+        place.append(tplPlace);
+
         var $img = box.find('img');
         var imgSrc = $img.attr('src');
         var imgTitle = $img.attr('title');
@@ -118,18 +125,25 @@ $(function () {
     }
 
 
-    //按钮设置模板
 
-    function btnTplSet(box, place, tplData) {
-        var tplIdName = place.attr('id') + "-tpl";
-        var tpl = $("#" + tplIdName).html();
-        var tplItem = template(tpl, tplData);
-        box.find('.btnWrap').html("").append(tplItem);
-    }
 
     //按钮
 
     function newBtn(box, place) {
+
+        //设置按钮编辑模板
+        var btnTpl = $("#btnPlaceTpl").html();
+        var tplPlace = template(btnTpl);
+        place.append(tplPlace);
+
+
+        //设置按钮模板
+        function btnTplSet(box, place, tplData) {
+            var tplIdName = place.attr('id') + "-tpl";
+            var tpl = $("#" + tplIdName).html();
+            var tplItem = template(tpl, tplData);
+            box.find('.btnWrap').html("").append(tplItem);
+        }
 
         var btnDetail = box.find('.btnDetail');
         var btnVal = JSON.parse(btnDetail.val());
@@ -186,6 +200,11 @@ $(function () {
     //文本
 
     function newTxt(box, place) {
+
+        var txtTpl = $("#txtPlaceTpl").html();
+        var tplPlace = template(txtTpl);
+        place.append(tplPlace);
+
         var $txtBox = box.find('.txtBox');
         var txt = $txtBox.text().trim();
         var $inputTxt = place.find('.inputTxt');
@@ -204,6 +223,7 @@ $(function () {
     var $inputWEBUrl = $('#inputWEBUrl');
     $inputWEBUrl.val($WEBUrl.attr('href'));
     $inputWEBUrl.blur(function () {
+        var val = $(this).val();
         isHttp($inputWEBUrl, function () {
             $WEBUrl.attr('href', val);
         })
@@ -242,7 +262,7 @@ $(function () {
     });
 
 
-    //
+    //校验网址
     function isHttp(input, cb) {
         var val = input.val();
         var httpReg = /^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})).?)(?::\d{2,5})?(?:[/?#]\S*)?$/i;
@@ -253,13 +273,13 @@ $(function () {
                 input.addClass('error').focus();
             } else {
                 input.removeClass('error');
-                return cb;
+                cb();
             }
         }
 
     }
 
 
-    demoLoad(['festival-banner', 'festival-inner', 'festival-prod4-title', 'festival-prodImg-1', 'festival-prodImg-2', 'festival-prodImg-3', 'festival-prodImg-4', 'festival-btn']);
+    
 
 });
