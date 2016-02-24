@@ -1,80 +1,8 @@
-@import "lib/_normalize";
-
-body {
-    font: 12px/1.5 Arial, 'Microsoft Yahei', sans-serif;
-}
-
-ul, ol {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
-    padding: 0;
-}
-
-.cf:before, .cf:after {
-    content: "";
-    display: table;
-}
-
-.cf:after {
-    clear: both;
-}
-
-.cf {
-    *zoom: 1;
-}
-
-:focus{
-    outline: none;
-}
+@import "common/_layout";
 
 .wrap {
 
 }
-
-.demo-edit{
-    header {
-        width: 100%;
-        position: absolute;
-        top:0;
-        height: 59px;
-        line-height: 60px;
-        font-size: 20px;
-        border-bottom: 1px solid #ccc;
-        background: #fff;
-        h1{
-            float: left;
-            padding-left: 20px;
-            text-transform: uppercase;
-        }
-        .demo-name{
-            float: left;
-            color: #666;
-            padding-left: 150px;
-            font-size: 20px;
-        }
-    }
-    footer {
-        width: 100%;
-        position: absolute;
-        bottom:0;
-        height: 59px;
-        line-height: 59px;
-        border-top: 1px solid #ccc;
-        background: #fff;
-    }
-    .content{
-        position: absolute;
-        width:100%;
-        top: 60px;
-        bottom: 60px;
-    }
-}
-
 
 .demo-wrap {
     position: relative;
@@ -90,7 +18,7 @@ h1, h2, h3, h4, h5, h6, p {
         width: 400px;
         margin-right: -1px;
         border-right: 1px solid #ccc;
-        background: #F3FAFF;
+        background: #F4EAD5;
         .ctrl-box {
             //background: #ebebeb;
             width: 360px;
@@ -111,6 +39,9 @@ h1, h2, h3, h4, h5, h6, p {
         vertical-align: top;
         overflow: hidden;
         background: #ebebeb;
+        .demo-fixed{
+            overflow-x: auto;
+        }
     }
     .demo-fixed{
         height:100%;
@@ -172,7 +103,7 @@ h1, h2, h3, h4, h5, h6, p {
     border: 1px solid #ccc;
 }
 .btn-main{
-    background: #E64545;
+    background: #9E7C72;
     color: #fff;
     border: 0;
 }
@@ -198,7 +129,7 @@ h1, h2, h3, h4, h5, h6, p {
     z-index: 1;
 }
 .mod-space:hover:before {
-    border: 3px dashed #E64545;
+    border: 3px dashed #9E7C72;
 }
 
 
@@ -233,7 +164,7 @@ h1, h2, h3, h4, h5, h6, p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,.6);
+    background: rgba(198, 198, 198, 0.5);
     z-index:1000;
     display: none;
     .code{
@@ -243,11 +174,11 @@ h1, h2, h3, h4, h5, h6, p {
         right: 0;
         bottom: 0;
         margin: auto;
-        width:600px;
-        height: 700px;
+        width:500px;
+        height: 600px;
         background: #fff;
         padding: 30px;
-        border-radius: 10px;
+        border: 1px solid #acacac;
         .close{
             position: absolute;
             display: block;
@@ -263,8 +194,8 @@ h1, h2, h3, h4, h5, h6, p {
         }
         textarea{
             box-sizing: border-box;
-            width: 600px;
-            height: 700px;
+            width: 500px;
+            height: 600px;
             border: 1px solid #ccc;
             border-radius: 3px;
             padding: 10px;
