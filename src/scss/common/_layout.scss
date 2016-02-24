@@ -65,6 +65,37 @@ header {
         font-size: 20px;
         font-weight: bold;
     }
+    .nav{
+        float: right;
+        ul{
+            margin-top: 18px;
+        }
+        li{
+            float: left;
+            min-width: 90px;
+            box-sizing: border-box;
+            height:24px;
+            line-height:22px;
+            border: 1px solid #F4EAD5;
+            margin-right: 16px;
+            font-size: 12px;
+            border-radius: 12px;
+            color: #9E7C72;
+            text-align: center;
+            a{
+                color: #F4EAD5;
+                text-decoration: none;
+            }
+        }
+        .current{
+            background: #F4EAD5;
+            line-height:24px;
+            a{
+                color: #9E7C72;
+            }
+        }
+
+    }
 }
 
 footer {
