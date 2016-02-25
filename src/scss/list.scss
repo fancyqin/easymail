@@ -1,0 +1,65 @@
+@import "common/_layout";
+
+.mail-wrap{
+    padding: 20px;
+    .mail-ctrl{
+        text-align: center;
+        margin-bottom: 20px;
+        .btn{
+            position: relative;
+            width: 360px;
+            height:60px;
+            line-height: 60px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 30px;
+            overflow: hidden;
+            &:before{
+                content: '';
+                position: absolute;
+                width: 120px;
+                height: 30px;
+                left: 380px;
+                top: 15px;
+                background: #F4EAD5;
+                transform: rotate(-45deg);
+                transition: all .4s;
+            }
+            &:hover:before{
+                transform: translate(-500px) rotate(-45deg);
+            }
+        }
+    }
+    .mail-title{
+        font-size: 24px;
+        color: #9E7C72;
+    }
+    .mail-box{
+        .select-month{
+            padding: 10px 0;
+            select{
+                width: 200px;
+                height: 30px;
+                padding-left: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+        }
+        .m-table{
+            width: 100%;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            td,th{
+                text-align: left;
+                padding: 10px;
+                border:1px solid #ccc;
+            }
+            th{
+                background: #F4EAD5;
+            }
+            tr:nth-child(2n + 1){
+                background: #f2f2f2;
+            }
+        }
+    }
+}

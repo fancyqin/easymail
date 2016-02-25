@@ -4,15 +4,32 @@
     <meta charset="UTF-8">
     <title>专题邮件模板</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton" type="text/css">
-    <link rel="stylesheet" href="../src/css/demo.css">
-    <link rel="stylesheet" href="../src/js/lib/umeditor/themes/default/css/umeditor.css">
+    <link rel="stylesheet" href="../../src/css/demo.css">
+    <link rel="stylesheet" href="../../src/js/lib/umeditor/themes/default/css/umeditor.css">
 
 </head>
 <body>
 <div class="wrap demo-edit">
+    <svg class="hidden" viewBox="0 0 150 60">
+        <defs>
+            <clippath id="cp_up">
+                <polygon id="cp_poly_up" points="0,0 150,0 150,60" />
+            </clippath>
+            <clippath id="cp_down">
+                <polygon id="cp_poly_down" points="0,0 0,60 150,60" />
+            </clippath>
+        </defs>
+    </svg>
     <header>
-        <h1 class="logo"><a href="">Mail Maker</a></h1>
-        <div class="demo-name">专题模板</div>
+        <h1 class="logo"><a class="link--urpi" href="" data-letters="Mail Maker">Mail Maker</a></h1>
+        <div class="demo-name">节日模板</div>
+        <div class="nav">
+            <ul>
+                <li><a href="../list.html">邮件列表</a></li>
+                <li><a href="../choose-demo.html">选择模板</a></li>
+                <li class="current"><a href="">邮件制作</a></li>
+            </ul>
+        </div>
     </header>
     <div class="content">
         <div class="demo-wrap cf">
@@ -544,14 +561,14 @@
     </div>
 </script>
 
-<script type="text/javascript" src="../src/js/lib/jquery/jquery.js"></script>
-<script type="text/javascript" src="../src/js/lib/template/template.js"></script>
+<script type="text/javascript" src="../../src/js/lib/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../src/js/lib/template/template.js"></script>
 
-<script type="text/javascript" src="../src/js/lib/umeditor/umeditor.config.js"></script>
-<script type="text/javascript" src="../src/js/lib/umeditor/umeditor.js"></script>
-<script type="text/javascript" src="../src/js/lib/umeditor/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript" src="../../src/js/lib/umeditor/umeditor.config.js"></script>
+<script type="text/javascript" src="../../src/js/lib/umeditor/umeditor.js"></script>
+<script type="text/javascript" src="../../src/js/lib/umeditor/lang/zh-cn/zh-cn.js"></script>
 
-<script type="text/javascript" src="../src/js/demo.js"></script>
+<script type="text/javascript" src="../../src/js/demo.js"></script>
 
 <script type="text/javascript">
     $(function(){

@@ -9,6 +9,11 @@ ul, ol {
     list-style: none;
 }
 
+a{
+    color: #5c9dff;
+    text-decoration: none;
+}
+
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
@@ -51,6 +56,58 @@ header {
         font-size: 32px;
         font-family: 'Anton',Impact, Arial, sans-serif;
         font-weight: normal;
+        .link--urpi {
+            display: inline-block;
+            position: relative;
+            -webkit-transition: color 0s 0.5s;
+            transition: color 0s 0.5s;
+        }
+
+        .link--urpi:hover {
+            color: transparent;
+            -webkit-transition: none;
+            transition: none;
+        }
+
+        .link--urpi::before,
+        .link--urpi::after {
+            content: attr(data-letters);
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #F4EAD5;
+            overflow: hidden;
+            -webkit-backface-visibility: hidden;
+            -webkit-transition: color 0.5s, -webkit-transform 0.5s;
+            transition: color 0.5s, transform 0.5s;
+        }
+
+        .link--urpi::before {
+            -webkit-clip-path: url(#cp_up);
+            clip-path: url(#cp_up);
+        }
+
+        .link--urpi::after {
+            -webkit-clip-path: url(#cp_down);
+            clip-path: url(#cp_down);
+        }
+
+        .link--urpi:hover::before,
+        .link--urpi:hover::after {
+            color: #fff;
+            -webkit-transition: color 0.5s, -webkit-transform 0.5s;
+            transition: color 0.5s, transform 0.5s;
+        }
+
+        .link--urpi:hover::before {
+            -webkit-transform: translate3d(4px,1px,0);
+            transform: translate3d(4px,1px,0);
+        }
+
+        .link--urpi:hover::after {
+            -webkit-transform: translate3d(-4px,-1px,0);
+            transform: translate3d(-4px,-1px,0);
+        }
         a{
             color: #F4EAD5;
             text-decoration: none;
@@ -60,13 +117,13 @@ header {
         }
     }
     .demo-name {
-        float: left;
-        padding-left: 20px;
+        float: right;
+        padding-right: 20px;
         font-size: 20px;
         font-weight: bold;
     }
     .nav{
-        float: right;
+        float: left;
         ul{
             margin-top: 18px;
         }
@@ -77,12 +134,13 @@ header {
             height:24px;
             line-height:22px;
             border: 1px solid #F4EAD5;
-            margin-right: 16px;
+            margin-right: 10px;
             font-size: 12px;
             border-radius: 12px;
             color: #9E7C72;
             text-align: center;
             a{
+                display: block;
                 color: #F4EAD5;
                 text-decoration: none;
             }
@@ -102,8 +160,8 @@ footer {
     width: 100%;
     position: absolute;
     bottom: 0;
-    height: 59px;
-    line-height: 59px;
+    height: 29px;
+    line-height: 29px;
     border-top: 1px solid #ccc;
     background: #9E7C72;
     text-align: center;
@@ -118,5 +176,56 @@ footer {
     position: absolute;
     width: 100%;
     top: 60px;
-    bottom: 60px;
+    bottom: 30px;
+    overflow: auto;
+}
+
+.btn {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 80px;
+    height: 24px;
+    line-height: 24px;
+    background: #fff;
+    color: #333;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+}
+.btn-main{
+    background: #9E7C72;
+    color: #fff;
+    border: 0;
+}
+.pager{
+    padding: 20px 0;
+    text-align: center;
+    a{
+        display: inline-block;
+        min-width: 10px;
+        height: 24px;
+        line-height: 24px;
+        border: 1px solid #ccc;
+        text-align: center;
+        padding: 0 7px;
+        color: #666;
+        border-radius: 15px;
+        margin: 0 2px;
+    }
+    a:hover{
+        border:1px solid #9E7C72;
+        color: #9E7C72;
+    }
+    a.on{
+        color: #fff;
+        background: #9E7C72;
+        border: 1px solid #9E7C72;
+    }
+}
+.hidden{
+    width:0;
+    height:0;
+    overflow: hidden;
+    position: absolute;
 }
