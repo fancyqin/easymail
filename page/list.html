@@ -8,10 +8,18 @@
 </head>
 <body>
 <div class="wrap">
+    <svg class="hidden" viewBox="-200 0 350 60">
+        <defs>
+            <clipPath id="cp_up">
+                <polygon id="cp_poly_up" points="-200,0 350,0 350,60"></polygon>
+            </clipPath>
+            <clipPath id="cp_down">
+                <polygon id="cp_poly_down" points="-200,0 0,60 350,60"></polygon>
+            </clipPath>
+        </defs>
+    </svg>
     <header>
-        <h1 class="logo">
-            <a href="">Mail Maker</a>
-        </h1>
+        <h1 class="logo"><a class="link" href="" data-letters="Mail Maker">Mail Maker</a></h1>
         <div class="nav">
             <ul>
                 <li class="current"><a href="">邮件列表</a></li>

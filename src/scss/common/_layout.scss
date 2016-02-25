@@ -56,21 +56,21 @@ header {
         font-size: 32px;
         font-family: 'Anton',Impact, Arial, sans-serif;
         font-weight: normal;
-        .link--urpi {
+        .link {
             display: inline-block;
             position: relative;
             -webkit-transition: color 0s 0.5s;
             transition: color 0s 0.5s;
         }
 
-        .link--urpi:hover {
+        .link:hover {
             color: transparent;
             -webkit-transition: none;
             transition: none;
         }
 
-        .link--urpi::before,
-        .link--urpi::after {
+        .link::before,
+        .link::after {
             content: attr(data-letters);
             position: absolute;
             top: 0;
@@ -82,31 +82,31 @@ header {
             transition: color 0.5s, transform 0.5s;
         }
 
-        .link--urpi::before {
+        .link::before {
             -webkit-clip-path: url(#cp_up);
             clip-path: url(#cp_up);
         }
 
-        .link--urpi::after {
+        .link::after {
             -webkit-clip-path: url(#cp_down);
             clip-path: url(#cp_down);
         }
 
-        .link--urpi:hover::before,
-        .link--urpi:hover::after {
+        .link:hover::before,
+        .link:hover::after {
             color: #fff;
             -webkit-transition: color 0.5s, -webkit-transform 0.5s;
             transition: color 0.5s, transform 0.5s;
         }
 
-        .link--urpi:hover::before {
-            -webkit-transform: translate3d(4px,1px,0);
-            transform: translate3d(4px,1px,0);
+        .link:hover::before {
+            -webkit-transform: translate3d(1px,1px,0);
+            transform: translate3d(1px,1px,0);
         }
 
-        .link--urpi:hover::after {
-            -webkit-transform: translate3d(-4px,-1px,0);
-            transform: translate3d(-4px,-1px,0);
+        .link:hover::after {
+            -webkit-transform: translate3d(-1px,-1px,0);
+            transform: translate3d(-1px,-1px,0);
         }
         a{
             color: #F4EAD5;
