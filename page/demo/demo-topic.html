@@ -10,24 +10,25 @@
 </head>
 <body>
 <div class="wrap demo-edit">
-    <svg class="hidden" viewBox="-200 0 350 60">
-        <defs>
-            <clipPath id="cp_up">
-                <polygon id="cp_poly_up" points="-200,0 350,0 350,60"></polygon>
-            </clipPath>
-            <clipPath id="cp_down">
-                <polygon id="cp_poly_down" points="-200,0 0,60 350,60"></polygon>
-            </clipPath>
-        </defs>
-    </svg>
     <header>
-        <h1 class="logo"><a class="link" href="" data-letters="Mail Maker">Mail Maker</a></h1>
-        <div class="demo-name">节日模板</div>
+        <svg class="hidden" viewBox="-200 0 350 60">
+            <defs>
+                <clipPath id="cp_up">
+                    <polygon id="cp_poly_up" points="-200,0 350,0 350,60"></polygon>
+                </clipPath>
+                <clipPath id="cp_down">
+                    <polygon id="cp_poly_down" points="-200,0 0,60 350,60"></polygon>
+                </clipPath>
+            </defs>
+        </svg>
+        <div class="logo-wrap">
+            <h1 class="logo"><a class="link" href="" data-letters="Mail Maker">Mail Maker</a></h1>
+            <div class="demo-name">专题模板</div>
+        </div>
         <div class="nav">
             <ul>
                 <li><a href="../list.html">邮件列表</a></li>
-                <li><a href="../choose-demo.html">选择模板</a></li>
-                <li class="current"><a href="">邮件制作</a></li>
+                <li><a href="../choose-demo.html">制作邮件</a></li>
             </ul>
         </div>
     </header>
@@ -51,7 +52,7 @@
                             </div>
                         </div>
                         <div class="form-item cf">
-                            <button id="save" class="btn btn-main">暂存</button>
+                            <button id="save" class="btn btn-main">预览邮件</button>
                             <button id="exportMail" class="btn">导出HTML代码</button>
                         </div>
                     </div>
@@ -157,7 +158,7 @@
                                                 <tbody>
                                                 <tr>
                                                     <td style="padding:20px 0px 15px">
-                                                        <a href="http://www.made-in-china.com/"><img alt="www.made-in-china.com" border="0" height="44" src="http://edm.focuschina.com:80/MICEN/2015/3/logo.png" width="212"></a></td>
+                                                        <a href="http://www.made-in-china.com/"><img alt="www.made-in-china.com" border="0" height="44" src="http://edm.made-in-china.com/MICEN/2015/3/logo.png" width="212"></a></td>
                                                     <td align="right" style="padding-bottom:15px; font-size:12px; color:#888; font-family:Arial; line-height:12px" valign="bottom">
                                                         Can't see any images? - <a id="WEBUrl" href="http://edm.made-in-china.com/MICEN/2015/12/3375.htm" style="text-decoration:underline; color:#555;">Click to View</a>.</td>
                                                 </tr>
@@ -169,7 +170,7 @@
                                         <td align="center" valign="middle">
                                             <div class="mod-space" data-type="img" data-name="topic-banner">
                                                 <a href="http://www.made-in-china.com/special/beauty-equipment/" title="Source Beauty Equipment Effectively!">
-                                                    <img alt="Source Beauty Equipment Effectively!" title="Source Beauty Equipment Effectively!" border="0" height="250" src="http://edm.focuschina.com:80/MICEN/2015/12/3375-banner.jpg" style="vertical-align:top;" width="700">
+                                                    <img alt="Source Beauty Equipment Effectively!" title="Source Beauty Equipment Effectively!" border="0" height="250" src="http://edm.made-in-china.com/MICEN/2015/12/3375-banner.jpg" style="vertical-align:top;" width="700">
                                                 </a>
                                             </div>
                                         </td>
@@ -215,16 +216,16 @@
                                                                                                 <tr>
                                                                                                     <td align="center" style="border:1px solid #ebebeb">
                                                                                                         <div class="mod-space" data-type="img" data-name="topic-prodImg-1">
-                                                                                                            <a href="http://www.made-in-china.com/special/beauty-equipment/#special1"><img alt="Multifunction Beauty Equipment RF Cryolipolysis" title="Multifunction Beauty Equipment RF Cryolipolysis" src="http://edm.focuschina.com:80/MICEN/2015/12/3375-pic1.jpg" border="0" width="186" height="186"></a>
+                                                                                                            <a href="http://www.made-in-china.com/special/beauty-equipment/#special1"><img alt="Multifunction Beauty Equipment RF Cryolipolysis" title="Multifunction Beauty Equipment RF Cryolipolysis" src="http://edm.made-in-china.com/MICEN/2015/12/3375-pic1.jpg" border="0" width="186" height="186"></a>
                                                                                                         </div>
                                                                                                     </td>
                                                                                                 </tr>
                                                                                                 <tr>
                                                                                                     <td style="padding:10px 0 20px;font-family:Arial; font-size:12px; line-height:20px;color:#888;">
                                                                                                         <div class="mod-space" data-type="richTxt" data-name="topic-prodTxt-1">
-                                                                                                            <p class="padding:0 0 5px 0;"><a href="http://www.made-in-china.com/special/beauty-equipment/#special1" style="text-decoration:none; color:#246bb3;">Multifunction Beauty Equipment RF Cryolipolysis</a></p>
-                                                                                                            <p class="color:#888;">Machine Color: Customed</p>
-                                                                                                            <p class="color:#888;">Energy of RF: 5~450j/Cm2</p>
+                                                                                                            <p style="font-family:Arial; font-size:12px; line-height:20px;padding:0 0 5px 0;"><a href="http://www.made-in-china.com/special/beauty-equipment/#special1" style="text-decoration:none; color:#246bb3;">Multifunction Beauty Equipment RF Cryolipolysis</a></p>
+                                                                                                            <p style="font-family:Arial; font-size:12px; line-height:20px;color:#888;">Machine Color: Customed</p>
+                                                                                                            <p style="font-family:Arial; font-size:12px; line-height:20px;color:#888;">Energy of RF: 5~450j/Cm2</p>
                                                                                                         </div>
                                                                                                     </td>
                                                                                                 </tr>
@@ -237,16 +238,16 @@
                                                                                                 <tr>
                                                                                                     <td align="center" style="border:1px solid #ebebeb">
                                                                                                         <div class="mod-space" data-type="img" data-name="topic-prodImg-2">
-                                                                                                        <a href="http://www.made-in-china.com/special/beauty-equipment/#special2"><img alt="Skin Beauty Equipment " title="Skin Beauty Equipment " src="http://edm.focuschina.com:80/MICEN/2015/12/3375-pic2.jpg" border="0" width="186" height="186"></a>
+                                                                                                        <a href="http://www.made-in-china.com/special/beauty-equipment/#special2"><img alt="Skin Beauty Equipment " title="Skin Beauty Equipment " src="http://edm.made-in-china.com/MICEN/2015/12/3375-pic2.jpg" border="0" width="186" height="186"></a>
                                                                                                         </div>
                                                                                                     </td>
                                                                                                 </tr>
                                                                                                 <tr>
                                                                                                     <td style="padding:10px 0 20px;font-family:Arial; font-size:12px; line-height:20px;color:#888;">
                                                                                                         <div class="mod-space" data-type="richTxt" data-name="topic-prodTxt-2">
-                                                                                                            <p class="padding:0 0 5px 0;"><a href="http://www.made-in-china.com/special/beauty-equipment/#special2" style="text-decoration:none; color:#246bb3;">Skin Beauty Equipment</a></p>
-                                                                                                            <p class="color:#888;">Portable: Non Portable</p>
-                                                                                                            <p class="color:#888;">Theory: Laser</p>
+                                                                                                            <p style="font-family:Arial; font-size:12px; line-height:20px;padding:0 0 5px 0;"><a href="http://www.made-in-china.com/special/beauty-equipment/#special2" style="text-decoration:none; color:#246bb3;">Skin Beauty Equipment</a></p>
+                                                                                                            <p style="font-family:Arial; font-size:12px; line-height:20px;color:#888;">Portable: Non Portable</p>
+                                                                                                            <p style="font-family:Arial; font-size:12px; line-height:20px;color:#888;">Theory: Laser</p>
                                                                                                         </div>
                                                                                                     </td>
                                                                                                 </tr>
@@ -259,16 +260,16 @@
                                                                                                 <tr>
                                                                                                     <td align="center" style="border:1px solid #ebebeb">
                                                                                                         <div class="mod-space" data-type="img" data-name="topic-prodImg-3">
-                                                                                                        <a href="http://www.made-in-china.com/special/beauty-equipment/#special3"><img alt="192 PCS Laser Diodes Laser Hair Regrowth" title="192 PCS Laser Diodes Laser Hair Regrowth" src="http://edm.focuschina.com:80/MICEN/2015/12/3375-pic3.jpg" border="0" width="186" height="186"></a>
+                                                                                                        <a href="http://www.made-in-china.com/special/beauty-equipment/#special3"><img alt="192 PCS Laser Diodes Laser Hair Regrowth" title="192 PCS Laser Diodes Laser Hair Regrowth" src="http://edm.made-in-china.com/MICEN/2015/12/3375-pic3.jpg" border="0" width="186" height="186"></a>
                                                                                                         </div>
                                                                                                     </td>
                                                                                                 </tr>
                                                                                                 <tr>
                                                                                                     <td style="padding:10px 0 20px;font-family:Arial; font-size:12px; line-height:20px;color:#888;">
                                                                                                         <div class="mod-space" data-type="richTxt" data-name="topic-prodTxt-3">
-                                                                                                            <p class="padding:0 0 5px 0;"><a href="http://www.made-in-china.com/special/beauty-equipment/#special3" style="text-decoration:none; color:#246bb3;">192 PCS Laser Diodes Laser Hair Regrowth</a></p>
-                                                                                                            <p class="color:#888;">Type: Hair Treatment</p>
-                                                                                                            <p class="color:#888;">Gender: Unisex</p>
+                                                                                                            <p style="font-family:Arial; font-size:12px; line-height:20px;padding:0 0 5px 0;"><a href="http://www.made-in-china.com/special/beauty-equipment/#special3" style="text-decoration:none; color:#246bb3;">192 PCS Laser Diodes Laser Hair Regrowth</a></p>
+                                                                                                            <p style="font-family:Arial; font-size:12px; line-height:20px;color:#888;">Type: Hair Treatment</p>
+                                                                                                            <p style="font-family:Arial; font-size:12px; line-height:20px;color:#888;">Gender: Unisex</p>
                                                                                                         </div>
                                                                                                     </td>
                                                                                                 </tr>
@@ -292,16 +293,16 @@
                                                                                                 <tr>
                                                                                                     <td align="center" style="border:1px solid #ebebeb">
                                                                                                         <div class="mod-space" data-type="img" data-name="topic-prodImg-4">
-                                                                                                        <a href="http://www.made-in-china.com/special/beauty-equipment/#special4"><img alt="3D Skin Analyzer System " title="3D Skin Analyzer System " src="http://edm.focuschina.com:80/MICEN/2015/12/3375-pic4.jpg" border="0" width="186" height="186"></a>
+                                                                                                        <a href="http://www.made-in-china.com/special/beauty-equipment/#special4"><img alt="3D Skin Analyzer System " title="3D Skin Analyzer System " src="http://edm.made-in-china.com/MICEN/2015/12/3375-pic4.jpg" border="0" width="186" height="186"></a>
                                                                                                         </div>
                                                                                                     </td>
                                                                                                 </tr>
                                                                                                 <tr>
                                                                                                     <td style="padding:10px 0 20px;font-family:Arial; font-size:12px; line-height:20px;color:#888;">
                                                                                                         <div class="mod-space" data-type="richTxt" data-name="topic-prodTxt-4">
-                                                                                                            <p class="padding:0 0 5px 0;"><a href="http://www.made-in-china.com/special/beauty-equipment/#special4" style="text-decoration:none; color:#246bb3;">3D Skin Analyzer System </a></p>
-                                                                                                            <p class="color:#888;">Portable: Portable</p>
-                                                                                                            <p class="color:#888;">Application: Salon, Home</p>
+                                                                                                            <p style="font-family:Arial; font-size:12px; line-height:20px;padding:0 0 5px 0;"><a href="http://www.made-in-china.com/special/beauty-equipment/#special4" style="text-decoration:none; color:#246bb3;">3D Skin Analyzer System </a></p>
+                                                                                                            <p style="font-family:Arial; font-size:12px; line-height:20px;color:#888;">Portable: Portable</p>
+                                                                                                            <p style="font-family:Arial; font-size:12px; line-height:20px;color:#888;">Application: Salon, Home</p>
                                                                                                         </div>
                                                                                                     </td>
                                                                                                 </tr>
@@ -314,16 +315,16 @@
                                                                                                 <tr>
                                                                                                     <td align="center" style="border:1px solid #ebebeb">
                                                                                                         <div class="mod-space" data-type="img" data-name="topic-prodImg-5">
-                                                                                                        <a href="http://www.made-in-china.com/special/beauty-equipment/#special5"><img alt="New Design Spray Tanning &amp; Body Painting Airbrush Kit (BDA68000) " title="New Design Spray Tanning &amp; Body Painting Airbrush Kit (BDA68000) " src="http://edm.focuschina.com:80/MICEN/2015/12/3375-pic5.jpg" border="0" width="186" height="186"></a>
+                                                                                                        <a href="http://www.made-in-china.com/special/beauty-equipment/#special5"><img alt="New Design Spray Tanning &amp; Body Painting Airbrush Kit (BDA68000) " title="New Design Spray Tanning &amp; Body Painting Airbrush Kit (BDA68000) " src="http://edm.made-in-china.com/MICEN/2015/12/3375-pic5.jpg" border="0" width="186" height="186"></a>
                                                                                                         </div>
                                                                                                     </td>
                                                                                                 </tr>
                                                                                                 <tr>
                                                                                                     <td style="padding:10px 0 20px;font-family:Arial; font-size:12px; line-height:20px;color:#888;">
                                                                                                         <div class="mod-space" data-type="richTxt" data-name="topic-prodTxt-5">
-                                                                                                            <p class="padding:0 0 5px 0;"><a href="http://www.made-in-china.com/special/beauty-equipment/#special5" style="text-decoration:none; color:#246bb3;">New Design Spray Tanning &amp; Body Painting Airbrush Kit (BDA68000)</a></p>
-                                                                                                            <p class="color:#888;">Nozzle Diameter: 0.2-0.6mm</p>
-                                                                                                            <p class="color:#888;">Disposable: Non-Disposable</p>
+                                                                                                            <p style="font-family:Arial; font-size:12px; line-height:20px;padding:0 0 5px 0;"><a href="http://www.made-in-china.com/special/beauty-equipment/#special5" style="text-decoration:none; color:#246bb3;">New Design Spray Tanning &amp; Body Painting Airbrush Kit (BDA68000)</a></p>
+                                                                                                            <p style="font-family:Arial; font-size:12px; line-height:20px;color:#888;">Nozzle Diameter: 0.2-0.6mm</p>
+                                                                                                            <p style="font-family:Arial; font-size:12px; line-height:20px;color:#888;">Disposable: Non-Disposable</p>
                                                                                                         </div>
                                                                                                     </td>
                                                                                                 </tr>
@@ -336,16 +337,16 @@
                                                                                                 <tr>
                                                                                                     <td align="center" style="border:1px solid #ebebeb">
                                                                                                         <div class="mod-space" data-type="img" data-name="topic-prodImg-6">
-                                                                                                        <a href="http://www.made-in-china.com/special/beauty-equipment/#special2"><img alt="808nm Diode Hair Removal " title="808nm Diode Hair Removal " src="http://edm.focuschina.com:80/MICEN/2015/12/3375-pic6.jpg" border="0" width="186" height="186"></a>
+                                                                                                        <a href="http://www.made-in-china.com/special/beauty-equipment/#special2"><img alt="808nm Diode Hair Removal " title="808nm Diode Hair Removal " src="http://edm.made-in-china.com/MICEN/2015/12/3375-pic6.jpg" border="0" width="186" height="186"></a>
                                                                                                         </div>
                                                                                                     </td>
                                                                                                 </tr>
                                                                                                 <tr>
                                                                                                     <td style="padding:10px 0 20px;font-family:Arial; font-size:12px; line-height:20px;color:#888;">
                                                                                                         <div class="mod-space" data-type="richTxt" data-name="topic-prodTxt-6">
-                                                                                                            <p class="padding:0 0 5px 0;"><a href="http://www.made-in-china.com/special/beauty-equipment/#special2" style="text-decoration:none; color:#246bb3;">808nm Diode Hair Removal </a></p>
-                                                                                                            <p class="color:#888;">Power Supply: 400W</p>
-                                                                                                            <p class="color:#888;">Wavelength: 808nm</p>
+                                                                                                            <p style="font-family:Arial; font-size:12px; line-height:20px;padding:0 0 5px 0;"><a href="http://www.made-in-china.com/special/beauty-equipment/#special2" style="text-decoration:none; color:#246bb3;">808nm Diode Hair Removal </a></p>
+                                                                                                            <p style="font-family:Arial; font-size:12px; line-height:20px;color:#888;">Power Supply: 400W</p>
+                                                                                                            <p style="font-family:Arial; font-size:12px; line-height:20px;color:#888;">Wavelength: 808nm</p>
                                                                                                         </div>
                                                                                                     </td>
                                                                                                 </tr>
@@ -420,10 +421,10 @@
                                                                         <tbody>
                                                                         <tr>
                                                                             <td width="70" style="padding:0px 0px 0px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">Follow us:</td>
-                                                                            <td width="25"><a href="http://bit.ly/facebook_mic"><img alt="" border="0" height="16" src="http://edm.focuschina.com:80/MICEN/2013/9/light_and_bed-p14.gif" width="17"></a></td>
-                                                                            <td width="25"><a href="http://bit.ly/twitter_mic"><img alt="" border="0" height="16" src="http://edm.focuschina.com:80/MICEN/2013/9/light_and_bed-p13.gif" width="17"></a></td>
-                                                                            <td width="25"><a href="http://bit.ly/googleplus_mic"><img alt="" border="0" height="16" src="http://edm.focuschina.com:80/MICEN/2013/9/light_and_bed-p15.gif" width="17"></a></td>
-                                                                            <td width="25"><a href="http://bit.ly/linkedin_mic"><img alt="" border="0" height="16" src="http://edm.focuschina.com:80/MICEN/2014/9/linkin.gif" width="17"></a></td>
+                                                                            <td width="25"><a href="http://bit.ly/facebook_mic"><img alt="" border="0" height="16" src="http://edm.made-in-china.com/MICEN/2013/9/light_and_bed-p14.gif" width="17"></a></td>
+                                                                            <td width="25"><a href="http://bit.ly/twitter_mic"><img alt="" border="0" height="16" src="http://edm.made-in-china.com/MICEN/2013/9/light_and_bed-p13.gif" width="17"></a></td>
+                                                                            <td width="25"><a href="http://bit.ly/googleplus_mic"><img alt="" border="0" height="16" src="http://edm.made-in-china.com/MICEN/2013/9/light_and_bed-p15.gif" width="17"></a></td>
+                                                                            <td width="25"><a href="http://bit.ly/linkedin_mic"><img alt="" border="0" height="16" src="http://edm.made-in-china.com/MICEN/2014/9/linkin.gif" width="17"></a></td>
                                                                         </tr>
                                                                         </tbody>
                                                                     </table>
@@ -446,14 +447,14 @@
                                                             <tr>
                                                                 <td style="padding:0px 0px 10px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">
                                                                     <a href="https://play.google.com/store/apps/details?id=com.micen.buyers.activity&amp;hl=en">
-                                                                        <img src="http://edm.focuschina.com:80/MICEN/2015/7/app-ad.png" border="0" width="141" height="35" alt="Get it on Google play" title="Get it on Google play">
+                                                                        <img src="http://edm.made-in-china.com/MICEN/2015/7/app-ad.png" border="0" width="141" height="35" alt="Get it on Google play" title="Get it on Google play">
                                                                     </a>
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td style="padding:0px 0px 0px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">
                                                                     <a href="https://itunes.apple.com/us/app/made-in-china-for-buyer/id554038220?ls=1&amp;mt=8">
-                                                                        <img src="http://edm.focuschina.com:80/MICEN/2015/7/app-os.png" border="0" width="141" height="35" alt="Download on the App Store" title="Download on the App Store">
+                                                                        <img src="http://edm.made-in-china.com/MICEN/2015/7/app-os.png" border="0" width="141" height="35" alt="Download on the App Store" title="Download on the App Store">
                                                                     </a>
                                                                 </td>
                                                             </tr>

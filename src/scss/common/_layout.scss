@@ -1,4 +1,5 @@
 @import "../lib/_normalize";
+
 body {
     font: 12px/1.5 Arial, 'Microsoft Yahei', sans-serif;
 }
@@ -9,7 +10,7 @@ ul, ol {
     list-style: none;
 }
 
-a{
+a {
     color: #5c9dff;
     text-decoration: none;
 }
@@ -32,29 +33,29 @@ h1, h2, h3, h4, h5, h6, p {
     *zoom: 1;
 }
 
-:focus{
+:focus {
     outline: none;
 }
-
-
 
 header {
     width: 100%;
     position: absolute;
-    top:0;
-    height: 59px;
+    top: 0;
+    height: 60px;
     line-height: 60px;
     font-size: 20px;
-    border-bottom: 1px solid #ccc;
     background: #9E7C72;
     color: #F4EAD5;
-    .logo{
+    .logo-wrap{
         float: left;
-        width:380px;
+        width: 380px;
         padding-left: 20px;
+    }
+    .logo {
+        float: left;
         text-transform: uppercase;
         font-size: 32px;
-        font-family: 'Anton',Impact, Arial, sans-serif;
+        font-family: 'Anton', Impact, Arial, sans-serif;
         font-weight: normal;
         .link {
             display: inline-block;
@@ -62,13 +63,11 @@ header {
             -webkit-transition: color 0s 0.5s;
             transition: color 0s 0.5s;
         }
-
         .link:hover {
             color: transparent;
             -webkit-transition: none;
             transition: none;
         }
-
         .link::before,
         .link::after {
             content: attr(data-letters);
@@ -81,76 +80,70 @@ header {
             -webkit-transition: color 0.5s, -webkit-transform 0.5s;
             transition: color 0.5s, transform 0.5s;
         }
-
         .link::before {
             -webkit-clip-path: url(#cp_up);
             clip-path: url(#cp_up);
         }
-
         .link::after {
             -webkit-clip-path: url(#cp_down);
             clip-path: url(#cp_down);
         }
-
         .link:hover::before,
         .link:hover::after {
             color: #fff;
             -webkit-transition: color 0.5s, -webkit-transform 0.5s;
             transition: color 0.5s, transform 0.5s;
         }
-
         .link:hover::before {
-            -webkit-transform: translate3d(1px,1px,0);
-            transform: translate3d(1px,1px,0);
+            -webkit-transform: translate3d(1px, 0, 0);
+            transform: translate3d(1px, 0, 0);
         }
-
         .link:hover::after {
-            -webkit-transform: translate3d(-1px,-1px,0);
-            transform: translate3d(-1px,-1px,0);
+            -webkit-transform: translate3d(-1px, 0, 0);
+            transform: translate3d(-1px, 0, 0);
         }
-        a{
+        a {
             color: #F4EAD5;
             text-decoration: none;
         }
-        a:hover{
+        a:hover {
             color: #fff;
         }
     }
     .demo-name {
-        float: right;
-        padding-right: 20px;
-        font-size: 20px;
-        font-weight: bold;
-    }
-    .nav{
         float: left;
-        ul{
-            margin-top: 18px;
-        }
-        li{
+        padding-left: 20px;
+        font-size: 14px;
+        height: 26px;
+        line-height: 26px;
+        margin: 17px 0 0 20px;
+        border-left: 1px solid #F4EAD5;
+    }
+    .nav {
+        float: left;
+        li {
             float: left;
-            min-width: 90px;
+            min-width: 122px;
             box-sizing: border-box;
-            height:24px;
-            line-height:22px;
-            border: 1px solid #F4EAD5;
-            margin-right: 10px;
-            font-size: 12px;
-            border-radius: 12px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 18px;
             color: #9E7C72;
             text-align: center;
-            a{
+            a {
                 display: block;
+                padding: 0 25px;
                 color: #F4EAD5;
                 text-decoration: none;
+                font-weight: bold;
             }
         }
-        .current{
+        .current {
             background: #F4EAD5;
-            line-height:24px;
             a{
                 color: #9E7C72;
             }
+            //line-height: 24px;
         }
 
     }
@@ -166,7 +159,7 @@ footer {
     background: #9E7C72;
     text-align: center;
     color: #F4EAD5;
-    a{
+    a {
         color: #F4EAD5;
         text-decoration: none;
     }
@@ -193,15 +186,17 @@ footer {
     border: 1px solid #ccc;
     text-decoration: none;
 }
-.btn-main{
+
+.btn-main {
     background: #9E7C72;
     color: #fff;
     border: 0;
 }
-.pager{
+
+.pager {
     padding: 20px 0;
     text-align: center;
-    a{
+    a {
         display: inline-block;
         min-width: 10px;
         height: 24px;
@@ -213,19 +208,20 @@ footer {
         border-radius: 15px;
         margin: 0 2px;
     }
-    a:hover{
-        border:1px solid #9E7C72;
+    a:hover {
+        border: 1px solid #9E7C72;
         color: #9E7C72;
     }
-    a.on{
+    a.on {
         color: #fff;
         background: #9E7C72;
         border: 1px solid #9E7C72;
     }
 }
-.hidden{
-    width:0;
-    height:0;
+
+.hidden {
+    width: 0;
+    height: 0;
     overflow: hidden;
     position: absolute;
 }

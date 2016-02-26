@@ -2,7 +2,7 @@ $(function () {
 
 
     $.extend({
-        'demoLoad':function(name){
+        'demoLoad': function (name) {
             var num = name.length;
             if (num > 0) {
                 for (var i = 0; i < num; i++) {
@@ -29,7 +29,7 @@ $(function () {
             }
         }
     });
-    
+
 
     //富文本
 
@@ -123,8 +123,6 @@ $(function () {
         });
 
     }
-
-
 
 
     //按钮
@@ -231,13 +229,27 @@ $(function () {
     });
 
 
+
+
+    function gethtmlCode() {
+        var mailTitle = $('#mailTitle').val();
+        var mailTable = $('#tableInner').html().trim().replace(/\s+|\n/g, " ").replace(/>\s</g, "><");
+        var htmlCode = '<html>' +
+                            '<head>' +
+                                '<meta content="text/html; charset=utf-8" http-equiv="Content-Type">' +
+                                '<title>' + mailTitle + '</title>' +
+                                '<style type="text/css">body{margin: 0 auto}</style>' +
+                            '</head>' +
+                            '<body>' + mailTable + '</body>' +
+                       '</html>';
+        return htmlCode;
+    }
+
     //导出html
 
     $('#exportMail').click(function () {
-        var $mailTitle = $('#mailTitle');
-        var mailTitle = $mailTitle.val();
-        var mailTable = $('#tableInner').html().trim().replace(/\s+|\n/g, " ").replace(/>\s</g, "><");
-        var htmlCode = '<html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>' + mailTitle + '</title></head><body>' + mailTable + '</body></html>'
+        var mailTitle = $('#mailTitle').val();
+        var htmlCode = gethtmlCode();
         var codePop = $('.code-pop');
         if (mailTitle === '') {
             alert('邮件主题不能为空')
@@ -251,6 +263,12 @@ $(function () {
         });
     });
 
+    $('#save').click(function () {
+        var htmlCode = gethtmlCode();
+        var priew = window.open('', '');
+        priew.document.write(htmlCode);
+
+    });
 
     //切换mod
 
@@ -280,6 +298,11 @@ $(function () {
     }
 
 
-    
+    window.onbeforeunload = function (e) {
+        var msg = '您正准备离开此页，您未保存的编辑数据将会丢失！！！！慎重啊，小主~';
+        e.returnValue = msg;
+        return msg;
+    }
+
 
 });
