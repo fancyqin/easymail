@@ -11,7 +11,10 @@
   "dependencies": {
     "gulp": "^3.9.0",
     "gulp-cli": "^1.1.1",
+    "gulp-content-includer": "0.0.7",
+    "gulp-rename": "^1.2.2",
     "gulp-ruby-sass": "^2.0.6",
-    "gulp-sourcemaps": "^1.6.0"
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-utf8-convert": "0.0.7"
   }
 }

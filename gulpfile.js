@@ -1,4 +1,8 @@
 var gulp = require('gulp');
+
+var contentInclude = require('gulp-content-includer');
+var rename = require('gulp-rename');
+
 var sass = require('gulp-ruby-sass');
 var sourcemaps = require('gulp-sourcemaps');
 
@@ -16,6 +20,16 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('src/css'));
 });
 
+
+
+gulp.task('concat',function() {
+    gulp.src("dev_page/**/*.html")
+        .pipe(contentInclude({
+            includerReg:/<!\-\-include\s+"([^"]+)"\-\->/g
+        }))
+        .pipe(gulp.dest('page/'));
+});
+
 gulp.task('watch', function () {
-    gulp.watch('src/scss/*scss', ['sass']);
+    gulp.watch(['src/scss/*scss','dev_page/**/*.html'], ['sass','concat']);
 });

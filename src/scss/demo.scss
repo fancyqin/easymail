@@ -103,19 +103,33 @@
     * {
         z-index: 0;
     }
-
 }
-.mod-space:before {
+.mod-space::before {
     box-sizing: border-box;
+    display: none;
     content: '';
     position: absolute;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
-}
-.mod-space:hover:before {
     border: 3px dashed #9E7C72;
+}
+.mod-space::after{
+    box-sizing: border-box;
+    display: none;
+    content: attr(data-titlezh);
+    position: absolute;
+    left: 0;
+    top:-21px;
+    z-index: 1;
+    color: #fff;
+    background: #9E7C72;
+    font: 12px/24px Arial,'Microsoft Yahei';
+    padding: 0 5px;
+}
+.mod-space:hover::before,.mod-space:hover::after {
+    display: block;
 }
 
 

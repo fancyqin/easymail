@@ -10,6 +10,9 @@ $(function () {
                     var box = $(".mod-space[data-name=" + thisName + "]");
                     var type = box.attr('data-type');
                     var place = $('#' + thisName);
+
+                    var titleZh = place.siblings('.form-title:first').text();
+                    box.attr('data-titleZh',titleZh);
                     switch (type) {
                         case 'img':
                             newImg(box, place);

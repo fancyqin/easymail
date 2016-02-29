@@ -43,7 +43,6 @@ header {
     top: 0;
     height: 60px;
     line-height: 60px;
-    font-size: 20px;
     background: #9E7C72;
     color: #F4EAD5;
     .logo-wrap{
@@ -146,6 +145,14 @@ header {
             //line-height: 24px;
         }
 
+    }
+    .login-box{
+        float: right;
+        margin-right: 20px;
+        font-size: 14px;
+        a{
+            color: #400F00;
+        }
     }
 }
 
