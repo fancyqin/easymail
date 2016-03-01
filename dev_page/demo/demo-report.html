@@ -44,16 +44,20 @@
                     <div class="ctrl-box">
                         <div class="form-item">
                             <h4 class="form-title">邮件主题</h4>
-
                             <div class="form-fill">
                                 <input id="mailTitle" type="text"/>
                             </div>
                         </div>
                         <div class="form-item">
                             <h4 class="form-title">WEB版地址</h4>
-
                             <div class="form-fill">
                                 <input id="inputWEBUrl" type="text">
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <h4 class="form-title">邮件类型</h4>
+                            <div class="mail-type" id="mailType">
+                                <div class="type cf"><span data-type="2a">2a</span><span data-type="2b">2b</span><span data-type="2c">2c</span></div>
                             </div>
                         </div>
                         <div class="form-item cf">
@@ -144,27 +148,33 @@
                 <div id="tableInner" class="demo-fixed">
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tbody>
-                        <!-- 2A -->
-                        <tr>
-                            <td style="color:#777; padding:5px; text-align:center; font-size:12px; line-height:18px;">
-                                为保证您可以正常接收邮件，请将<a href="mailto:Cservice@e.Made-in-China.com" style="font-family:Arial; font-size:12px; color:#246bb3; text-decoration:none;">Cservice@e.Made-in-China.com</a>加入到您的邮箱联系人中，或将其<a href="http://edm-gudie-cn.made-in-china.com/resource/mail/163.htm" style="font-family:Arial; font-size:12px; color:#246bb3; text-decoration:none;">设置白名单</a>。</td>
-                        </tr>
-                        <!-- 2B -->
+
                         <tr>
                             <td style="background:#ebebeb; ">
+                                <input id="mailHFType" type="hidden" value='{"type":"2a","lang":"cn"}'>
                                 <table align="center" border="0" cellpadding="0" cellspacing="0" width="700">
                                     <tbody>
                                     <tr>
                                         <td>
-                                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tbody>
+                                            <table id="header" border="0" cellpadding="0" cellspacing="0" width="100%">
                                                 <tr>
-                                                    <td style="padding:20px 0px 15px">
-                                                        <a href="http://www.made-in-china.com/"><img alt="中国制造网,Made-in-China.com 弘扬中国制造 促进全球贸易，焦点进出口服务，Focus Imp &amp; Exp Service" border="0" height="45" src="http://edm.made-in-china.com/MICEN/2015/3/logo.jpg" usemap="#Map" width="161"></a></td>
-                                                    <td align="right" style="font-size:12px; color:#666; line-height:16px;font-family:'宋体';padding-bottom:15px; " valign="bottom">
-                                                        如果您无法正常阅读邮件内容，请<a id="WEBUrl" href="http://edm.made-in-china.com/MICEN/2015/12/3327.htm" style="color:#246bb3; text-decoration:none;">点此查看</a>。</td>
+                                                    <td style="color:#777; padding:5px; text-align:center; font-size:12px; line-height:18px;">
+                                                        为保证您可以正常接收邮件，请将<a href="mailto:Cservice@e.Made-in-China.com" style="font-family:Arial; font-size:12px; color:#246bb3; text-decoration:none;">Cservice@e.Made-in-China.com</a>加入到您的邮箱联系人中，或将其<a href="http://edm-gudie-cn.made-in-china.com/resource/mail/163.htm" style="font-family:Arial; font-size:12px; color:#246bb3; text-decoration:none;">设置白名单</a>。</td>
                                                 </tr>
-                                                </tbody>
+                                                <tr>
+                                                    <td>
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td style="padding:20px 0px 15px">
+                                                                    <a href="http://www.made-in-china.com/"><img alt="中国制造网,Made-in-China.com 弘扬中国制造 促进全球贸易，焦点进出口服务，Focus Imp &amp; Exp Service" border="0" height="45" src="http://edm.made-in-china.com/MICEN/2015/3/logo.jpg" usemap="#Map" width="161"></a></td>
+                                                                <td align="right" style="font-size:12px; color:#666; line-height:16px;font-family:'宋体';padding-bottom:15px; " valign="bottom">
+                                                                    如果您无法正常阅读邮件内容，请<a id="WEBUrl" href="http://edm.made-in-china.com/MICEN/2015/12/3327.htm" style="color:#246bb3; text-decoration:none;">点此查看</a>。</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
                                             </table>
                                         </td>
                                     </tr>
@@ -354,24 +364,36 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td align="center" style="font-family:'微软雅黑'; color:#888; padding:20px 0px 0px; line-height:20px; font-size:12px">
-                                            您收到此邮件是因为曾用此邮箱注册为我网的会员，若您今后不想收到此类邮件，请<a href="#{backHref_var}" style="font-size: 12px; color:#555; text-decoration:underline;">点此退订</a>。</td>
-                                    </tr>
-                                    <tr>
-                                        <td align="center" style="font-family:'微软雅黑';color:#888; padding:10px 0px; line-height:20px; font-size:12px">
-                                            快速导航：
-                                            <a href="http://www.made-in-china.com/prod/catlist/" style="color:#888; text-decoration:none;">产品信息</a> |
-                                            <a href="http://sourcing.made-in-china.com/" style="color:#888; text-decoration:none;">求购信息</a> |
-                                            <a href="http://membercenter.made-in-china.com/messagecenter.do?xcase=subscription" style="color:#888; text-decoration:none;">信息速递</a> |
-                                            <a href="http://service.made-in-china.com/" style="color:#888; text-decoration:none;">会员e家</a> |
-                                            <a href="http://www.made-in-china.com/trademessenger/" style="font-family:Arial;color:#888; text-decoration:none;">TradeMessenger</a> |
-                                            <a href="http://www.made-in-china.com/aboutus/contact/" style="color:#888; text-decoration:none;">联系我们</a> |
-                                            <a href="http://membercenter.made-in-china.com/logon.do?xcase=getBackPassword" style="color:#888; text-decoration:none;">找回密码</a><br>
+                                        <td>
+                                            <table id="footer" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td>
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td align="center" style="font-family:'微软雅黑'; color:#888; padding:20px 0px 0px; line-height:20px; font-size:12px">
+                                                                您收到此邮件是因为曾用此邮箱注册为我网的会员，若您今后不想收到此类邮件，请<a href="#{backHref_var}" style="font-size: 12px; color:#555; text-decoration:underline;">点此退订</a>。</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center" style="font-family:'微软雅黑';color:#888; padding:10px 0px; line-height:20px; font-size:12px">
+                                                                快速导航：
+                                                                <a href="http://www.made-in-china.com/prod/catlist/" style="color:#888; text-decoration:none;">产品信息</a> |
+                                                                <a href="http://sourcing.made-in-china.com/" style="color:#888; text-decoration:none;">求购信息</a> |
+                                                                <a href="http://membercenter.made-in-china.com/messagecenter.do?xcase=subscription" style="color:#888; text-decoration:none;">信息速递</a> |
+                                                                <a href="http://service.made-in-china.com/" style="color:#888; text-decoration:none;">会员e家</a> |
+                                                                <a href="http://www.made-in-china.com/trademessenger/" style="font-family:Arial;color:#888; text-decoration:none;">TradeMessenger</a> |
+                                                                <a href="http://www.made-in-china.com/aboutus/contact/" style="color:#888; text-decoration:none;">联系我们</a> |
+                                                                <a href="http://membercenter.made-in-china.com/logon.do?xcase=getBackPassword" style="color:#888; text-decoration:none;">找回密码</a><br>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center" style="font-family:'微软雅黑'; color:#888; padding:0px 0px 10px; line-height:20px; font-size:12px">
+                                                                <font style="font-family:Arial;">Copyright © 2016</font> 焦点科技 版权所有</td>
+                                                        </tr>
+                                                    </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
                                         </td>
-                                    </tr>
-                                    <tr>
-                                        <td align="center" style="font-family:'微软雅黑'; color:#888; padding:0px 0px 10px; line-height:20px; font-size:12px">
-                                            <font style="font-family:Arial;">Copyright © 2016</font> 焦点科技 版权所有</td>
                                     </tr>
                                     </tbody>
                                 </table>

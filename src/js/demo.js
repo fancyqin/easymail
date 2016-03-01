@@ -220,15 +220,13 @@ $(function () {
 
     //WEB版地址
 
-    var $WEBUrl = $('#WEBUrl');
     var $inputWEBUrl = $('#inputWEBUrl');
-    $inputWEBUrl.val($WEBUrl.attr('href'));
+    $inputWEBUrl.val($('#WEBUrl').attr('href'));
     $inputWEBUrl.blur(function () {
         var val = $(this).val();
         isHttp($inputWEBUrl, function () {
-            $WEBUrl.attr('href', val);
+            $('#WEBUrl').attr('href', val);
         })
-
     });
 
 
@@ -305,7 +303,85 @@ $(function () {
         var msg = '您正准备离开此页，您未保存的编辑数据将会丢失！！！！慎重啊，小主~';
         e.returnValue = msg;
         return msg;
+    };
+
+    function changeMailType(){
+        var $mBox = $('#mailType');
+        var $inputMailType = $('#mailHFType');
+        var $type = $mBox.find('.type');
+        var $lang = $mBox.find('.lang');
+        var mailType = JSON.parse($inputMailType.val());
+        function modtype (modType,lang){
+            var lang_header = lang+'_header';
+            var lang_footer = lang+'_footer';
+            var header = modType[lang_header];
+            var footer = modType[lang_footer];
+            var webURL = $inputWEBUrl.val();
+            $('#header').html('').html(header);
+            $('#footer').html('').html(footer);
+
+            $('#WEBUrl').attr('href',webURL)
+        }
+        function setChange(mailType){
+            var Type = mailType.type;
+            var Lang = mailType.lang;
+            var modType;
+            switch (Type){
+                case '1a':
+                    modType = tpl.mail_1a;
+                    $lang.show();
+                    modtype(modType,Lang);
+                    break;
+                case '1b':
+                    $lang.hide();
+                    modType = tpl.mail_1b;
+                    modtype(modType,'en');
+                    break;
+                case '1c':
+                    modType = tpl.mail_1c;
+                    $lang.show();
+                    modtype(modType,Lang);
+                    break;
+                case '2a':
+                    modType = tpl.mail_2a;
+                    modtype(modType,Lang);
+                    break;
+                case '2b':
+                    modType = tpl.mail_2b;
+                    modtype(modType,Lang);
+                    break;
+                case '2c':
+                    modType = tpl.mail_2c;
+                    modtype(modType,Lang);
+                    break;
+            }
+            $type.find('span').removeClass('on').siblings('span[data-type='+ Type +']').addClass('on');
+            $lang.find('span').removeClass('on').siblings('span[data-lang='+ Lang +']').addClass('on');
+        }
+        setChange(mailType);
+
+        $type.on('click','span',function(e){
+            var $target = $(e.target);
+            var typeVal = $target.attr('data-type');
+            mailType.type = typeVal;
+            if (typeVal === '1b'){
+                mailType.lang = 'en';
+            }
+            $inputMailType.val(JSON.stringify(mailType));
+            setChange(mailType);
+        });
+        $lang.on('click','span',function(e){
+            var $target = $(e.target);
+            var langVal = $target.attr('data-lang');
+            mailType.lang = langVal;
+            $inputMailType.val(JSON.stringify(mailType));
+            setChange(mailType);
+        });
     }
+    changeMailType()
+
+
+
 
 
 });

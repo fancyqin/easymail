@@ -23,7 +23,7 @@ gulp.task('sass', function () {
 
 
 gulp.task('concat',function() {
-    gulp.src("dev_page/**/*.html")
+    gulp.src("dev_page/**/[!_]*.html")
         .pipe(contentInclude({
             includerReg:/<!\-\-include\s+"([^"]+)"\-\->/g
         }))

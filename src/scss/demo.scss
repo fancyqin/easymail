@@ -90,6 +90,27 @@
     .error{
         border-color: #f00 !important;
     }
+    .mail-type{
+        .type{
+            margin-bottom: 10px;
+        }
+        span{
+            float: left;
+            height:24px;
+            line-height:24px;
+            border: 1px solid #9E7C72;
+            padding: 0 10px;
+            margin-right: -1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            color: #9E7C72;
+            &.on{
+                background: #9E7C72;
+                color: #F4EAD5;
+
+            }
+        }
+    }
 }
 
 

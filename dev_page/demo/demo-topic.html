@@ -44,16 +44,21 @@
                     <div class="ctrl-box">
                         <div class="form-item">
                             <h4 class="form-title">邮件主题</h4>
-
                             <div class="form-fill">
                                 <input id="mailTitle" type="text"/>
                             </div>
                         </div>
                         <div class="form-item">
                             <h4 class="form-title">WEB版地址</h4>
-
                             <div class="form-fill">
                                 <input id="inputWEBUrl" type="text">
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <h4 class="form-title">邮件类型</h4>
+                            <div class="mail-type" id="mailType">
+                                <div class="type cf"><span data-type="1a">1a</span><span data-type="1b">1b</span><span data-type="1c">1c</span></div>
+                                <div class="lang cf"><span data-lang="en">英</span><span data-lang="ru">俄</span><span data-lang="fr">法</span><span data-lang="es">西</span><span data-lang="pt">葡</span></div>
                             </div>
                         </div>
                         <div class="form-item cf">
@@ -155,11 +160,12 @@
                         <tbody>
                         <tr>
                             <td bgcolor="#ebebeb">
+                                <input id="mailHFType" type="hidden" value='{"type":"1a","lang":"en"}'>
                                 <table align="center" border="0" cellpadding="0" cellspacing="0" width="700">
                                     <tbody>
                                     <tr>
                                         <td>
-                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <table id="header" border="0" cellpadding="0" cellspacing="0" width="100%">
                                                 <tbody>
                                                 <tr>
                                                     <td style="padding:20px 0px 15px">
@@ -408,97 +414,104 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="border-top:1px solid #ebebeb; padding:20px 40px;background:#fff;">
-                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tbody>
+                                        <td>
+                                            <table id="footer" border="0" cellpadding="0" cellspacing="0" width="100%">
                                                 <tr>
-                                                    <td valign="middle">
-                                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                                    <td style="border-top:1px solid #ebebeb; padding:20px 40px;background:#fff;">
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                             <tbody>
                                                             <tr>
-                                                                <td style="padding:0px 0px 5px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">
-                                                                    We hope you can gain more advantages by using Made-in-China.com.
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td style="padding:0px 0px 5px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">
-                                                                    <table cellpadding="0" cellspacing="0" border="0">
+                                                                <td valign="middle">
+                                                                    <table cellpadding="0" cellspacing="0" border="0" width="100%">
                                                                         <tbody>
                                                                         <tr>
-                                                                            <td width="70" style="padding:0px 0px 0px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">Follow us:</td>
-                                                                            <td width="25"><a href="http://bit.ly/facebook_mic"><img alt="" border="0" height="16" src="http://edm.made-in-china.com/MICEN/2013/9/light_and_bed-p14.gif" width="17"></a></td>
-                                                                            <td width="25"><a href="http://bit.ly/twitter_mic"><img alt="" border="0" height="16" src="http://edm.made-in-china.com/MICEN/2013/9/light_and_bed-p13.gif" width="17"></a></td>
-                                                                            <td width="25"><a href="http://bit.ly/googleplus_mic"><img alt="" border="0" height="16" src="http://edm.made-in-china.com/MICEN/2013/9/light_and_bed-p15.gif" width="17"></a></td>
-                                                                            <td width="25"><a href="http://bit.ly/linkedin_mic"><img alt="" border="0" height="16" src="http://edm.made-in-china.com/MICEN/2014/9/linkin.gif" width="17"></a></td>
+                                                                            <td style="padding:0px 0px 5px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">
+                                                                                We hope you can gain more advantages by using Made-in-China.com.
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="padding:0px 0px 5px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">
+                                                                                <table cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tbody>
+                                                                                    <tr>
+                                                                                        <td width="70" style="padding:0px 0px 0px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">Follow us:</td>
+                                                                                        <td width="25"><a href="http://bit.ly/facebook_mic"><img alt="" border="0" height="16" src="http://edm.made-in-china.com/MICEN/2013/9/light_and_bed-p14.gif" width="17"></a></td>
+                                                                                        <td width="25"><a href="http://bit.ly/twitter_mic"><img alt="" border="0" height="16" src="http://edm.made-in-china.com/MICEN/2013/9/light_and_bed-p13.gif" width="17"></a></td>
+                                                                                        <td width="25"><a href="http://bit.ly/googleplus_mic"><img alt="" border="0" height="16" src="http://edm.made-in-china.com/MICEN/2013/9/light_and_bed-p15.gif" width="17"></a></td>
+                                                                                        <td width="25"><a href="http://bit.ly/linkedin_mic"><img alt="" border="0" height="16" src="http://edm.made-in-china.com/MICEN/2014/9/linkin.gif" width="17"></a></td>
+                                                                                    </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="padding:0px 0px 0px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">
+                                                                                Best regards,  <a href="http://www.made-in-china.com/" style="text-decoration:none; color:#246bb3;">Made-in-China.com</a>.
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td width="141">
+                                                                    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td style="padding:0px 0px 5px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">Made-in-China app</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="padding:0px 0px 10px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">
+                                                                                <a href="https://play.google.com/store/apps/details?id=com.micen.buyers.activity&amp;hl=en">
+                                                                                    <img src="http://edm.made-in-china.com/MICEN/2015/7/app-ad.png" border="0" width="141" height="35" alt="Get it on Google play" title="Get it on Google play">
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="padding:0px 0px 0px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">
+                                                                                <a href="https://itunes.apple.com/us/app/made-in-china-for-buyer/id554038220?ls=1&amp;mt=8">
+                                                                                    <img src="http://edm.made-in-china.com/MICEN/2015/7/app-os.png" border="0" width="141" height="35" alt="Download on the App Store" title="Download on the App Store">
+                                                                                </a>
+                                                                            </td>
                                                                         </tr>
                                                                         </tbody>
                                                                     </table>
                                                                 </td>
                                                             </tr>
-                                                            <tr>
-                                                                <td style="padding:0px 0px 0px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">
-                                                                    Best regards,  <a href="http://www.made-in-china.com/" style="text-decoration:none; color:#246bb3;">Made-in-China.com</a>.
-                                                                </td>
-                                                            </tr>
                                                             </tbody>
                                                         </table>
                                                     </td>
-                                                    <td width="141">
-                                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:20px 20px 40px;">
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                             <tbody>
                                                             <tr>
-                                                                <td style="padding:0px 0px 5px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">Made-in-China app</td>
+                                                                <td style="padding-bottom:10px;font-size:12px;font-family:Arial; color:#888; line-height:20px; text-align:center;">
+                                                                    The reason for this email is that you have registered Made-in-China.com.<br>
+                                                                    If you do not wish to receive future service-related email, please click to <a href="#{backHref_var}" style="text-decoration:underline; color:#555;">unsubscribe</a>.</td>
                                                             </tr>
                                                             <tr>
-                                                                <td style="padding:0px 0px 10px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">
-                                                                    <a href="https://play.google.com/store/apps/details?id=com.micen.buyers.activity&amp;hl=en">
-                                                                        <img src="http://edm.made-in-china.com/MICEN/2015/7/app-ad.png" border="0" width="141" height="35" alt="Get it on Google play" title="Get it on Google play">
-                                                                    </a>
-                                                                </td>
+                                                                <td style="padding-bottom:10px;font-size:12px;font-family:Arial; color:#888; line-height:20px; text-align:center;">
+                                                                    Made-in-China.com guarantees that we only send the promotion and service emails. We will protect your privacy.<br>
+                                                                    Please add the <a href="mailto:Mail-en@e.Made-in-China.com" style="text-decoration:underline; color:#555;">Mail-en@e.Made-in-China.com</a> as a contact in order to receive the special offer and service mail.</td>
                                                             </tr>
                                                             <tr>
-                                                                <td style="padding:0px 0px 0px 0px; font-size:14px;font-family:Arial; color:#888; line-height:24px;">
-                                                                    <a href="https://itunes.apple.com/us/app/made-in-china-for-buyer/id554038220?ls=1&amp;mt=8">
-                                                                        <img src="http://edm.made-in-china.com/MICEN/2015/7/app-os.png" border="0" width="141" height="35" alt="Download on the App Store" title="Download on the App Store">
-                                                                    </a>
-                                                                </td>
+                                                                <td style="padding-bottom:10px;font-size:12px;font-family:Arial; color:#888; line-height:20px; text-align:center;">
+                                                                    Find reliable suppliers audited by SGS - <a href="http://www.made-in-china.com/audited-suppliers/for-buyers/" style="color:#888;text-decoration:none;">Audited Supplier</a>. Browse <a href="http://www.made-in-china.com/audited-suppliers/for-buyers/browse-audit-reports.html" style="color:#888;text-decoration:none;">Audit Report</a>.<br>
+                                                                    Site Access: <a href="http://www.made-in-china.com/prod/catlist/" style="color:#888;text-decoration:none;">Search Products &amp; Suppliers</a> | <a href="http://membercenter.made-in-china.com/trade-service/quotation-request.html" style="color:#888;text-decoration:none;">Post Sourcing Request</a> | <a href="http://membercenter.made-in-china.com/catalogalert.do?xcase=subscrib" style="color:#888;text-decoration:none;">Alert</a> | <a href="http://www.made-in-china.com/help/faq/" style="color:#888;text-decoration:none;">FAQ</a> | <a href="http://www.made-in-china.com/trademessenger/" style="color:#888;text-decoration:none;">TradeMessenger</a> | <a href="http://membercenter.made-in-china.com/logon.do?xcase=getBackPassword" style="color:#888;text-decoration:none;">Forgot Password</a><br>
+                                                                    Multi-Language: <a href="http://es.made-in-china.com/" style="color:#888;text-decoration:none;">Español</a> | <a href="http://pt.made-in-china.com/" style="color:#888;text-decoration:none;">Português</a> | <a href="http://fr.made-in-china.com/" style="color:#888;text-decoration:none;">Français</a> | <a href="http://ru.made-in-china.com/" style="color:#888;text-decoration:none;">Русский язык</a> | <a href="http://www.made-in-china.com/multi-language/" style="color:#888;text-decoration:none;">More</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size:12px;font-family:Arial; color:#888; line-height:20px; text-align:center;">
+                                                                    Copyright © 2016 <a href="http://www.focuschina.com/html_en/" style="color:#888;text-decoration:none;">Focus Technology Co., Ltd.</a> All rights reserved.</td>
                                                             </tr>
                                                             </tbody>
                                                         </table>
                                                     </td>
                                                 </tr>
-                                                </tbody>
                                             </table>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td style="padding:20px 20px 40px;">
-                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tbody>
-                                                <tr>
-                                                    <td style="padding-bottom:10px;font-size:12px;font-family:Arial; color:#888; line-height:20px; text-align:center;">
-                                                        The reason for this email is that you have registered Made-in-China.com.<br>
-                                                        If you do not wish to receive future service-related email, please click to <a href="#{backHref_var}" style="text-decoration:underline; color:#555;">unsubscribe</a>.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding-bottom:10px;font-size:12px;font-family:Arial; color:#888; line-height:20px; text-align:center;">
-                                                        Made-in-China.com guarantees that we only send the promotion and service emails. We will protect your privacy.<br>
-                                                        Please add the <a href="mailto:Mail-en@e.Made-in-China.com" style="text-decoration:underline; color:#555;">Mail-en@e.Made-in-China.com</a> as a contact in order to receive the special offer and service mail.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding-bottom:10px;font-size:12px;font-family:Arial; color:#888; line-height:20px; text-align:center;">
-                                                        Find reliable suppliers audited by SGS - <a href="http://www.made-in-china.com/audited-suppliers/for-buyers/" style="color:#888;text-decoration:none;">Audited Supplier</a>. Browse <a href="http://www.made-in-china.com/audited-suppliers/for-buyers/browse-audit-reports.html" style="color:#888;text-decoration:none;">Audit Report</a>.<br>
-                                                        Site Access: <a href="http://www.made-in-china.com/prod/catlist/" style="color:#888;text-decoration:none;">Search Products &amp; Suppliers</a> | <a href="http://membercenter.made-in-china.com/trade-service/quotation-request.html" style="color:#888;text-decoration:none;">Post Sourcing Request</a> | <a href="http://membercenter.made-in-china.com/catalogalert.do?xcase=subscrib" style="color:#888;text-decoration:none;">Alert</a> | <a href="http://www.made-in-china.com/help/faq/" style="color:#888;text-decoration:none;">FAQ</a> | <a href="http://www.made-in-china.com/trademessenger/" style="color:#888;text-decoration:none;">TradeMessenger</a> | <a href="http://membercenter.made-in-china.com/logon.do?xcase=getBackPassword" style="color:#888;text-decoration:none;">Forgot Password</a><br>
-                                                        Multi-Language: <a href="http://es.made-in-china.com/" style="color:#888;text-decoration:none;">Español</a> | <a href="http://pt.made-in-china.com/" style="color:#888;text-decoration:none;">Português</a> | <a href="http://fr.made-in-china.com/" style="color:#888;text-decoration:none;">Français</a> | <a href="http://ru.made-in-china.com/" style="color:#888;text-decoration:none;">Русский язык</a> | <a href="http://www.made-in-china.com/multi-language/" style="color:#888;text-decoration:none;">More</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-size:12px;font-family:Arial; color:#888; line-height:20px; text-align:center;">
-                                                        Copyright © 2016 <a href="http://www.focuschina.com/html_en/" style="color:#888;text-decoration:none;">Focus Technology Co., Ltd.</a> All rights reserved.</td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </td>
-                                    </tr>
+
                                     </tbody>
                                 </table>
                             </td>
