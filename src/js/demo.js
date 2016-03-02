@@ -38,39 +38,25 @@ $(function () {
 
     function newEditor(box, placeholderID) {
         var settings = {
-            toolbar: [
-                'undo redo', //撤销
-                '|',
-                'bold', //加粗
-                'italic', //斜体
-                'underline', //下划线
-                '|',
-                'cleardoc', //清空文档
-                '|',
-                'link', //超链接
-                '|',
-                'justifyleft', //居左对齐
-                'justifyright', //居右对齐
-                'justifycenter', //居中对齐
-                '|',
-                'unlink',  //取消链接
-                'source', //源代码
-                'fontfamily', //字体
-                'fontsize' //字号
-                //'paragraph' //段落格式
+            toolbars: [
+                [   'undo','redo','|','bold', 'italic',  'underline',  'forecolor', '|', 'cleardoc',    '|','link',  '|', 'justifyleft', 'justifyright',  'justifycenter', '|', 'unlink'],
+                ['source', 'fontfamily', 'fontsize' ,'addbr']
             ]
+            ,wordCount:false
         };
-        var um = UM.getEditor(placeholderID, settings);
+        var um = UE.getEditor(placeholderID, settings);
         var text = box.html().trim();
         text = text.replace(/\s+|\n/g, " ").replace(/>\s</g, "><");
-        um.setContent(text);
-        um.addListener('contentChange', function (um) {
-            var inner = this.getContent();
-            box.html(inner);
-            var $links = box.find('a');
-            if ($links) {
-                $links.css({color: '#246bb3', textDecoration: 'none'})
-            }
+        um.ready(function(){
+            um.setContent(text);
+            um.addListener('contentChange', function (um) {
+                var inner = this.getContent();
+                box.html(inner);
+                var $links = box.find('a');
+                if ($links) {
+                    $links.css({color: '#246bb3', textDecoration: 'none'})
+                }
+            })
         })
     }
 
