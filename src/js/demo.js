@@ -44,12 +44,15 @@ $(function () {
             ]
             ,wordCount:false
         };
-        var um = UE.getEditor(placeholderID, settings);
+        var ue = UE.getEditor(placeholderID, settings);
         var text = box.html().trim();
+        var pID = placeholderID.substring(0,(placeholderID.length - 5));
+        $('#'+pID).append('<div class="J-ph">加载中...</div>');
         text = text.replace(/\s+|\n/g, " ").replace(/>\s</g, "><");
-        um.ready(function(){
-            um.setContent(text);
-            um.addListener('contentChange', function (um) {
+        ue.ready(function(){
+            $('#'+pID).find('.J-ph').hide();
+            ue.setContent(text);
+            ue.addListener('contentChange', function (ue) {
                 var inner = this.getContent();
                 box.html(inner);
                 var $links = box.find('a');
@@ -218,9 +221,8 @@ $(function () {
 
 
 
-    function gethtmlCode() {
+    function gethtmlCode(mailTable) {
         var mailTitle = $('#mailTitle').val();
-        var mailTable = $('#tableInner').html().trim().replace(/\s+|\n/g, " ").replace(/>\s</g, "><");
         var htmlCode = '<html>' +
                             '<head>' +
                                 '<meta content="text/html; charset=utf-8" http-equiv="Content-Type">' +
@@ -234,28 +236,83 @@ $(function () {
 
     //导出html
 
+    var codePop = $('.code-pop');
+    codePop.find('.close').click(function () {
+        codePop.hide()
+    });
     $('#exportMail').click(function () {
         var mailTitle = $('#mailTitle').val();
-        var htmlCode = gethtmlCode();
-        var codePop = $('.code-pop');
+        var mailTable = $('#tableInner').html().trim().replace(/\s+|\n/g, " ").replace(/>\s</g, "><");
+        var htmlCode = gethtmlCode(mailTable);
+        
         if (mailTitle === '') {
             alert('邮件主题不能为空')
         }
         else {
-            codePop.show();
             $('#codeCopy').val(htmlCode);
+            codePop.show();
         }
-        codePop.find('.close').click(function () {
-            codePop.hide()
-        });
+        
     });
+    //预览
 
-    $('#save').click(function () {
-        var htmlCode = gethtmlCode();
+    $('#priew').click(function () {
+        var mailTable = $('#tableInner').html().trim().replace(/\s+|\n/g, " ").replace(/>\s</g, "><");
+        var htmlCode = gethtmlCode(mailTable);
         var priew = window.open('', '');
         priew.document.write(htmlCode);
 
     });
+
+    $('#save').click(function() {
+        alert('等老曹~~')
+    });
+
+    $('#exportWebMail').click(function() {
+        var lang = JSON.parse($('#mailHFType').val()).lang;
+        var mailTitle = $('#mailTitle').val();
+        var mailTable = $('#tableInner').html().trim().replace(/\s+|\n/g, " ").replace(/>\s</g, "><");
+        if (mailTitle === '') {
+            alert('邮件主题不能为空')
+        }else{
+        $('body').append('<div id="webCode" style="display:none">'+ mailTable +'</div>')
+
+        $('#webCode .J-web').remove();
+
+        var $hello = $('#webCode .J-webHello');
+        if ($hello.length > 0) {
+            switch(lang){
+                case 'en':
+                    $hello.text('Dear Sir / Madam,');
+                    break;
+                case 'cn':
+                    $hello.text('尊敬的先生/女士，');
+                    break;
+                case 'ru':
+                    $hello.text('дравствуйте, Госпожа/Господин,');
+                    break;
+                case 'fr':
+                    $hello.text('Bonjour, Mesdames/Messieurs,');
+                    break;
+                case 'es':
+                    $hello.text('Hola, Señor/a,');
+                    break;
+                case 'pt':
+                    $hello.text('Prezado Sr./Sra.');
+                    break;
+
+            }
+        }
+        var webCode = $('#webCode').html();
+        var webCodeHtml = gethtmlCode(webCode);
+        $('#codeCopy').val(webCodeHtml);
+        codePop.show();
+
+        $('#webCode').remove();
+        }
+
+    });
+
 
     //切换mod
 
@@ -364,7 +421,7 @@ $(function () {
             setChange(mailType);
         });
     }
-    changeMailType()
+    changeMailType();
 
 
 
