@@ -148,6 +148,7 @@
     background: #9E7C72;
     font: 12px/24px Arial,'Microsoft Yahei';
     padding: 0 5px;
+    white-space: nowrap;
 }
 .mod-space:hover::before,.mod-space:hover::after {
     display: block;
