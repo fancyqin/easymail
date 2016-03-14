@@ -425,6 +425,29 @@ $(function () {
 
 
 
+    if($('.J-toggle').hasClass('hide')){
+        $('.J-toggle.hide').each(function(){
+            var a = $(this).attr('data-toggle');
+            var $target = $('.toggle-box[data-toggle="'+a+'"]');
+            $target.find('input[value="0"]').prop('checked',true);
+            console.log();
+        })
+
+    }
+
+    $('.toggle-box').on('change','input',function(e){
+        var toggle = $(e.target).parents('.toggle-box').attr('data-toggle');
+        var val = $('.toggle-box').find('input:checked').val();
+        console.log(val);
+        var $toggleItem = $('.J-toggle[data-toggle="'+toggle+'"]');
+        if(val === '0'){
+            $toggleItem.addClass('hide').hide();
+        }else{
+
+            $toggleItem.removeClass('hide').show();
+        }
+    })
+
 
 
 });

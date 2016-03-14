@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>市场报告邮件模板</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton" type="text/css">
+    <link rel="stylesheet" href="../../src/css/demo.css">
+
+</head>
+<body>
+<div class="wrap demo-edit">
+    <header>
+        <svg class="hidden" viewBox="-200 0 350 60">
+            <defs>
+                <clipPath id="cp_up">
+                    <polygon id="cp_poly_up" points="-200,0 350,0 350,60"></polygon>
+                </clipPath>
+                <clipPath id="cp_down">
+                    <polygon id="cp_poly_down" points="-200,0 0,60 350,60"></polygon>
+                </clipPath>
+            </defs>
+        </svg>
+        <div class="logo-wrap">
+            <h1 class="logo"><a class="link" href="" data-letters="Mail Maker">Mail Maker</a></h1>
+            <div class="demo-name">市场报告模板</div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="../list.html">邮件列表</a></li>
+                <li class="current"><a href="../choose-demo.html">制作邮件</a></li>
+            </ul>
+        </div>
+        <div class="login-box">
+            <!--<a href="login.html">登录</a>-->
+            <!--after login-->
+            Welcome, UserName. <a href="">logout</a>
+        </div>
+    </header>
+    <div class="content">
+        <div class="demo-wrap cf">
+            <div class="demo-sider">
+                <div class="demo-fixed">
+                    <div class="ctrl-box">
+                        <div class="form-item">
+                            <h4 class="form-title">邮件主题</h4>
+                            <div class="form-fill">
+                                <input id="mailTitle" type="text"/>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <h4 class="form-title">WEB版地址</h4>
+                            <div class="form-fill">
+                                <input id="inputWEBUrl" type="text">
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <h4 class="form-title">邮件类型</h4>
+                            <div class="mail-type" id="mailType">
+                                <div class="type cf"><span data-type="2a">2a</span><span data-type="2b">2b</span><span
+                                        data-type="2c">2c</span></div>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <h4 class="form-title">报告选项</h4>
+                            <div class="toggle-box" data-toggle="reportSub">
+                                <label><input type="radio" value="1" name="reportSub" checked>有细分报告</label>
+                                <label><input type="radio" value="0" name="reportSub">无细分报告</label>
+                            </div>
+                        </div>
+                        <div class="form-item"></div>
+                        <div class="form-item cf">
+                            <button id="save" class="btn btn-main">保存</button>
+                            <button id="priew" class="btn">预览邮件</button>
+                        </div>
+                        <div class="form-item cf">
+                            <button id="exportMail" class="btn">导出HTML代码</button>
+                            <button id="exportWebMail" class="btn">导出WEB代码</button>
+                        </div>
+                    </div>
+                    <div class="mod-box">
+                        <div class="mod-edit mod-banner">
+                            <div class="form-item">
+                                <h4 class="form-title">banner图片</h4>
+                                <div id="report-banner"></div>
+                            </div>
+                        </div>
+                        <div class="mod-edit mod-text">
+                            <div class="form-item">
+                                <h4 class="form-title">文本内容</h4>
+                                <div id="report-inner">
+                                    <script id="report-inner-edit" type="text/plain"
+                                            style="width:360px;height:50px;"></script>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">更多</h4>
+                                <div id="report-moreTxt">
+                                    <script id="report-moreTxt-edit" type="text/plain"
+                                            style="width:360px;height:50px;"></script>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">更多</h4>
+                                <div id="report-moreTxt-2">
+                                    <script id="report-moreTxt-2-edit" type="text/plain"
+                                            style="width:360px;height:50px;"></script>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">报告类型</h4>
+                                <div id="report-types"></div>
+                            </div>
+                        </div>
+                        <div class="mod-edit">
+                            <div class="form-item">
+                                <h4 class="form-title">按钮</h4>
+                                <div id="report-btn"></div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">报告图片1</h4>
+                                <div id="report-Img-1"></div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">产品1信息</h4>
+                                <div id="report-Txt-1">
+                                    <script id="report-Txt-1-edit" type="text/plain"
+                                            style="width:360px;height:50px;"></script>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">报告图片2</h4>
+                                <div id="report-Img-2"></div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">产品2信息</h4>
+                                <div id="report-Txt-2">
+                                    <script id="report-Txt-2-edit" type="text/plain"
+                                            style="width:360px;height:50px;"></script>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">报告图片3</h4>
+                                <div id="report-Img-3"></div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">产品3信息</h4>
+                                <div id="report-Txt-3">
+                                    <script id="report-Txt-3-edit" type="text/plain"
+                                            style="width:360px;height:50px;"></script>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">报告图片4</h4>
+                                <div id="report-Img-4"></div>
+                            </div>
+
+                            <div class="form-item">
+                                <h4 class="form-title">产品4信息</h4>
+                                <div id="report-Txt-4">
+                                    <script id="report-Txt-4-edit" type="text/plain"
+                                            style="width:360px;height:50px;"></script>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">报告图片5</h4>
+                                <div id="report-Img-5"></div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">产品5信息</h4>
+                                <div id="report-Txt-5">
+                                    <script id="report-Txt-5-edit" type="text/plain"
+                                            style="width:360px;height:50px;"></script>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mod-edit">
+                            <div class="form-item">
+                                <h4 class="form-title">相关报告1</h4>
+                                <div id="report-otherTxt-1">
+                                    <script id="report-otherTxt-1-edit" type="text/plain"
+                                            style="width:360px;height:50px;"></script>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">相关报告2</h4>
+                                <div id="report-otherTxt-2">
+                                    <script id="report-otherTxt-2-edit" type="text/plain"
+                                            style="width:360px;height:50px;"></script>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">相关报告3</h4>
+                                <div id="report-otherTxt-3">
+                                    <script id="report-otherTxt-3-edit" type="text/plain"
+                                            style="width:360px;height:50px;"></script>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">相关报告4</h4>
+                                <div id="report-otherTxt-4">
+                                    <script id="report-otherTxt-4-edit" type="text/plain"
+                                            style="width:360px;height:50px;"></script>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">相关报告5</h4>
+                                <div id="report-otherTxt-5">
+                                    <script id="report-otherTxt-5-edit" type="text/plain"
+                                            style="width:360px;height:50px;"></script>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">相关报告6</h4>
+                                <div id="report-otherTxt-6">
+                                    <script id="report-otherTxt-6-edit" type="text/plain"
+                                            style="width:360px;height:50px;"></script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="demo">
+                <div id="tableInner" class="demo-fixed">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody>
+
+                        <tr>
+                            <td style="background:#ebebeb; ">
+                                <input id="mailHFType" type="hidden" value='{"type":"2a","lang":"cn"}'>
+                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="700">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <table id="header" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td style="color:#777; padding:5px; text-align:center; font-size:12px; line-height:18px;">
+                                                        为保证您可以正常接收邮件，请将<a href="mailto:Cservice@e.Made-in-China.com"
+                                                                          style="font-family:Arial; font-size:12px; color:#246bb3; text-decoration:none;">Cservice@e.Made-in-China.com</a>加入到您的邮箱联系人中，或将其<a
+                                                            href="http://edm-gudie-cn.made-in-china.com/resource/mail/163.htm"
+                                                            style="font-family:Arial; font-size:12px; color:#246bb3; text-decoration:none;">设置白名单</a>。
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                                               width="100%">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td style="padding:20px 0px 15px">
+                                                                    <a href="http://www.made-in-china.com/"><img
+                                                                            alt="中国制造网,Made-in-China.com 弘扬中国制造 促进全球贸易，焦点进出口服务，Focus Imp &amp; Exp Service"
+                                                                            border="0" height="45"
+                                                                            src="http://edm.made-in-china.com/MICEN/2015/3/logo.jpg"
+                                                                            usemap="#Map" width="161"></a></td>
+                                                                <td align="right"
+                                                                    style="font-size:12px; color:#666; line-height:16px;font-family:'宋体';padding-bottom:15px; "
+                                                                    valign="bottom">
+                                                                    如果您无法正常阅读邮件内容，请<a id="WEBUrl"
+                                                                                      href="http://edm.made-in-china.com/MICEN/2015/12/3327.htm"
+                                                                                      style="color:#246bb3; text-decoration:none;">点此查看</a>。
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td style="border-bottom:0 none;">
+                                            <div class="mod-space" data-type="img" data-name="report-banner">
+                                                <img style="vertical-align: top" alt="2015年前三季度家用电器行业分析报告" border="0"
+                                                     height="520"
+                                                     src="http://edm.focuschina.com:80/MICEN/2015/12/3379.jpg"
+                                                     title="2015年前三季度家用电器行业分析报告" width="700">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:20px 40px 40px 40px; background:#fff;">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tbody>
+                                                <tr>
+                                                    <td style="padding-bottom:10px;line-height:24px;font-family:'微软雅黑'; font-size:14px; color:#222;">
+                                                        <div class="mod-space" data-type="richTxt"
+                                                             data-name="report-inner">
+                                                            <p style="margin: 0 0 10px;line-height:24px;font-family:'微软雅黑'; font-size:14px;">
+                                                                本研究报告摘要：2015年1-9月，家电行业产销率95.4%，较2014年同期下降1.4个百分点；累计出口交货值2646.3亿元，累计同比增长1.0%。2015年1-9月家用电器行业主营业务收入10562.0亿元，累计同比增长1.9%；利润总额659.6亿元，累计同比增长10.7%；税金总额300.9亿元，累计同比增长12.3%。</p>
+                                                            <p style="margin: 0;line-height:24px;font-family:'微软雅黑'; font-size:14px;">
+                                                                本研究报告主要包含的产品：燃气灶，吸油烟机，空调，冰箱，洗碗机，洗衣机，音响，电视机等</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:40px 0;">
+                                                        <div class="mod-space" data-type="btn" data-name="report-btn">
+                                                            <input class="btnDetail" type="hidden"
+                                                                   value='{"title":"免费下载","link":"http://service.made-in-china.com/market-analysis/market-analysis-report/618464.html","width":"150px"}'>
+                                                            <div class="btnWrap" style="margin:0; text-align: center;">
+                                                            </div>
+                                                            <script type="text/html" id="report-btn-tpl">
+                                                                <!--[if !mso]-->
+                                                                <a class="btnBase"
+                                                                   style="display: inline-block;padding:10px 30px 10px; font-family:'微软雅黑','Microsoft Yahei','宋体',SimSun,Arial,sans-serif; font-size:13px; line-height: 20px; color:#fff; text-align:center; background-color:#e64545; text-decoration:none !important; border-radius:3px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                                   href="{{= btnLink }}">{{= btnTxt}}</a>
+                                                                <!--[endif]-->
+                                                                <!--[if mso]-->
+                                                                <v:roundrect
+                                                                        xmlns:v="urn:schemas-microsoft-com:vml"
+                                                                        href="{{= btnLink }}"
+                                                                        style="width:{{= btnWidth}}"
+                                                                        arcsize="8%"
+                                                                        fillcolor="#e64545" stroke="f">
+                                                                    <v:textbox
+                                                                            style="mso-fit-shape-to-text:t"
+                                                                            inset="0px,5px,0px,5px">
+                                                                        <center style="font-size:13px;color:#FFFFFF;font-family:'微软雅黑','Microsoft Yahei','宋体',SimSun,Arial,sans-serif;mso-line-height-rule:exactly;mso-text-raise:4px">
+                                                                            {{= btnTxt }}
+                                                                        </center>
+                                                                    </v:textbox>
+                                                                </v:roundrect>
+                                                                <!--[endif]-->
+                                                            </script>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-bottom:20px;">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td style="line-height:24px;font-family:'微软雅黑'; font-size:16px; font-weight: bolder; color:#222; text-align:left;">
+                                                                    <div class="mod-space" data-type="txt" data-name="report-types" data-titlezh="报告类型">
+                                                                        <p class="txtBox" style="line-height:24px;font-family:'微软雅黑'; font-size:16px; font-weight: bolder; color:#222;">行业报告</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td style="padding:0 10px;line-height:20px;font-family:'微软雅黑'; font-size:16px; color:#ebebeb ; text-align:left;">
+                                                                    |
+                                                                </td>
+                                                                <td style="line-height:20px;font-family:'微软雅黑'; font-size:12px; ">
+                                                                    <div class="mod-space" data-type="richTxt"
+                                                                         data-name="report-moreTxt">
+                                                                        <p style="margin: 0;line-height:20px;font-family:'微软雅黑'; font-size:12px; text-align:left;">
+                                                                            <a href="http://service.made-in-china.com/market-analysis/market-analysis-report-1.html"
+                                                                               style="line-height:20px;font-family:'微软雅黑'; font-size:12px; color:#246bb3; text-align:left;text-decoration: none;">更多&gt;&gt;</a>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td style="padding:0 15px 0 0;" width="109">
+                                                                    <div class="mod-space" data-type="img"
+                                                                         data-name="report-Img-1">
+                                                                        <img alt="2014年消费电子行业分析年报" border="0"
+                                                                             height="134"
+                                                                             src="http://service.made-in-china.com/actives/guide/111/588264/guide.jpg"
+                                                                             width="100">
+                                                                    </div>
+                                                                </td>
+                                                                <td style="padding:0 15px;" width="109">
+                                                                    <div class="mod-space" data-type="img"
+                                                                         data-name="report-Img-2">
+                                                                        <img alt="2011-2014年大家电行业分析报告" border="0"
+                                                                             height="134"
+                                                                             src="http://service.made-in-china.com/actives/guide/111/528874/guide.jpg"
+                                                                             width="100">
+                                                                    </div>
+                                                                </td>
+                                                                <td style="padding:0 15px;" width="109">
+                                                                    <div class="mod-space" data-type="img"
+                                                                         data-name="report-Img-3">
+                                                                        <img alt="2014年前三季度热水器行业分析报告" border="0"
+                                                                             height="134"
+                                                                             src="http://service.made-in-china.com/actives/guide/111/564064/guide.jpg"
+                                                                             width="100">
+                                                                    </div>
+                                                                </td>
+                                                                <td style="padding:0 15px; " width="109">
+                                                                    <div class="mod-space" data-type="img"
+                                                                         data-name="report-Img-4">
+                                                                        <img alt="2013年消费电子行业分析年报" border="0"
+                                                                             height="134"
+                                                                             src="http://service.made-in-china.com/actives/guide/111/500064/guide.jpg"
+                                                                             width="100">
+                                                                    </div>
+                                                                </td>
+                                                                <td style="padding:0 0 0 15px;" width="109">
+                                                                    <div class="mod-space" data-type="img"
+                                                                         data-name="report-Img-5">
+                                                                        <img alt="2013年上半年数码电子行业分析报告" border="0"
+                                                                             height="134"
+                                                                             src="http://service.made-in-china.com/actives/guide/111/446804/guide.jpg"
+                                                                             width="100">
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="line-height: 20px; font-size: 12px; font-family:'微软雅黑'; padding:5px 15px 0 0;"
+                                                                    valign="top">
+                                                                    <div class="mod-space" data-type="richTxt"
+                                                                         data-name="report-Txt-1">
+                                                                        <p style="margin: 0;line-height: 20px; font-size: 12px; font-family:'微软雅黑';">
+                                                                            <a class="ng-binding"
+                                                                               href="http://service.made-in-china.com/market-analysis/industry-analysis-report/588264.html"
+                                                                               style="color:#246bb3; text-decoration:none;">2014年消费电子行业分析年报</a>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td style="line-height: 20px; font-size: 12px; font-family:'微软雅黑'; padding:5px 15px 0"
+                                                                    valign="top">
+                                                                    <div class="mod-space" data-type="richTxt"
+                                                                         data-name="report-Txt-2">
+                                                                        <p style="margin: 0;line-height: 20px; font-size: 12px; font-family:'微软雅黑';">
+                                                                            <a href="http://service.made-in-china.com/market-analysis/industry-analysis-report/528874.html"
+                                                                               style="color:#246bb3; text-decoration:none;">2011-2014年大家电行业分析报告</a>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td style="line-height: 20px; font-size: 12px; font-family:'微软雅黑'; padding:5px 15px 0"
+                                                                    valign="top">
+                                                                    <div class="mod-space" data-type="richTxt"
+                                                                         data-name="report-Txt-3">
+                                                                        <p style="margin: 0;line-height: 20px; font-size: 12px; font-family:'微软雅黑';">
+                                                                            <a href="http://service.made-in-china.com/market-analysis/industry-analysis-report/564064.html"
+                                                                               style="color:#246bb3; text-decoration:none;">2014年前三季度热水器行业分析报告</a>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td style="line-height: 20px; font-size: 12px;font-family:'微软雅黑'; padding:5px 15px 0"
+                                                                    valign="top">
+                                                                    <div class="mod-space" data-type="richTxt"
+                                                                         data-name="report-Txt-4">
+                                                                        <p style="margin: 0;line-height: 20px; font-size: 12px; font-family:'微软雅黑';">
+                                                                            <a href="http://service.made-in-china.com/market-analysis/industry-analysis-report/500064.html"
+                                                                               style="color:#246bb3; text-decoration:none;">2013年消费电子行业分析年报</a>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td style="line-height: 20px; font-size: 12px;font-family:'微软雅黑'; padding:5px 0 0 15px"
+                                                                    valign="top">
+                                                                    <div class="mod-space" data-type="richTxt"
+                                                                         data-name="report-Txt-5">
+                                                                        <p style="margin: 0;line-height: 20px; font-size: 12px; font-family:'微软雅黑';">
+                                                                            <a href="http://service.made-in-china.com/market-analysis/industry-analysis-report/446804.html"
+                                                                               style="color:#246bb3; text-decoration:none;">2013年上半年数码电子行业分析报告</a>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr class="J-toggle hide" data-toggle="reportSub">
+                                                    <td style="padding:40px 0 20px;">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td style="line-height:24px;font-family:'微软雅黑'; font-size:16px; font-weight: bolder; color:#222; text-align:left;">
+                                                                    相关细分报告
+                                                                </td>
+                                                                <td style="padding:0 10px;line-height:20px;font-family:'微软雅黑'; font-size:16px; color:#ebebeb ; text-align:left;">
+                                                                    |
+                                                                </td>
+                                                                <td style="line-height:20px;font-family:'微软雅黑'; font-size:12px; text-align:left;">
+                                                                    <div class="mod-space" data-type="richTxt"
+                                                                         data-name="report-moreTxt-2" data-titlezh="更多">
+                                                                        <p style="margin: 0;line-height:20px;font-family:'微软雅黑'; font-size:12px; text-align:left;">
+                                                                            <a href="http://service.made-in-china.com/market-analysis/subsector-analysis/Consumer-Electronics-1.html"
+                                                                               style="line-height:20px;font-family:'微软雅黑'; font-size:12px; color:#246bb3; text-align:left;text-decoration: none;">更多&gt;&gt;</a>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr class="J-toggle hide" data-toggle="reportSub">
+                                                    <td>
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td style="padding-bottom:5px;">
+                                                                    <span style="color:#999;">·</span>
+                                                                    <span class="mod-space"
+                                                                          style="display: inline-block;margin-left: 5px"
+                                                                          data-type="richTxt"
+                                                                          data-name="report-otherTxt-1"
+                                                                          data-titlezh="相关报告1"><a
+                                                                            href="http://service.made-in-china.com/market-analysis/subsector-analysis/412874.html"
+                                                                            style=" font-family:'微软雅黑'; font-size:14px; line-height:24px; color:#246bb3;text-decoration:none;">
+                                                                        家用净水器行业分析报告</a>
+                                                                    </span>
+                                                                </td>
+                                                                <td style="padding-bottom:5px;">
+                                                                    <span style="color:#999;">·</span>
+                                                                    <span class="mod-space"
+                                                                          style="display: inline-block;margin-left: 5px"
+                                                                          data-type="richTxt"
+                                                                          data-name="report-otherTxt-2"
+                                                                          data-titlezh="相关报告2"><a
+                                                                            href="http://service.made-in-china.com/market-analysis/subsector-analysis/416254.html"
+                                                                            style=" font-family:'微软雅黑'; font-size:14px; line-height:24px; color:#246bb3;text-decoration:none;">
+                                                                        电磁炉行业分析报告</a>
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="padding-bottom:5px;">
+                                                                    <span style="color:#999;">·</span>
+                                                                    <span class="mod-space"
+                                                                          style="display: inline-block;margin-left: 5px"
+                                                                          data-type="richTxt"
+                                                                          data-name="report-otherTxt-3"
+                                                                          data-titlezh="相关报告3"><a
+                                                                            href="http://service.made-in-china.com/market-analysis/subsector-analysis/412794.html"
+                                                                            style=" font-family:'微软雅黑'; font-size:14px; line-height:24px; color:#246bb3;text-decoration:none;">
+                                                                        太阳能热水器行业分析报告</a>
+                                                                    </span>
+                                                                </td>
+                                                                <td style="padding-bottom:5px;">
+                                                                    <span style="color:#999;">·</span>
+                                                                    <span class="mod-space"
+                                                                          style="display: inline-block;margin-left: 5px"
+                                                                          data-type="richTxt"
+                                                                          data-name="report-otherTxt-4"
+                                                                          data-titlezh="相关报告4"><a
+                                                                            href="http://service.made-in-china.com/market-analysis/subsector-analysis/412694.html"
+                                                                            style=" font-family:'微软雅黑'; font-size:14px; line-height:24px; color:#246bb3;text-decoration:none;">
+                                                                        冷藏或冷冻展示柜行业分析报告</a></span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="padding-bottom:5px;">
+                                                                    <span style="color:#999;">·</span>
+                                                                    <span class="mod-space"
+                                                                          style="display: inline-block;margin-left: 5px"
+                                                                          data-type="richTxt"
+                                                                          data-name="report-otherTxt-5"
+                                                                          data-titlezh="相关报告5"><a
+                                                                            href="http://service.made-in-china.com/market-analysis/subsector-analysis/416344.html"
+                                                                            style=" font-family:'微软雅黑'; font-size:14px; line-height:24px; color:#246bb3;text-decoration:none;">
+                                                                        家用自动面包机行业分析报告</a></span></td>
+                                                                <td style="padding-bottom:5px;">
+                                                                    <span style="color:#999;">·</span>
+                                                                    <span class="mod-space"
+                                                                          style="display: inline-block;margin-left: 5px"
+                                                                          data-type="richTxt"
+                                                                          data-name="report-otherTxt-6"
+                                                                          data-titlezh="相关报告6"><a
+                                                                            href="http://service.made-in-china.com/market-analysis/subsector-analysis/416294.html"
+                                                                            style=" font-family:'微软雅黑'; font-size:14px; line-height:24px; color:#246bb3;text-decoration:none;">
+                                                                        电锅、烧烤炉等电炉行业分析报告</a></span></td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:30px 40px 30px 40px; background:#fff; border-top:1px solid #ebebeb;">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tbody>
+                                                <tr>
+                                                    <td style="padding:0px 0px 0px 0px; font-family:'微软雅黑','Microsoft Yahei','宋体',SimSun,Arial,sans-serif; font-size:14px; line-height:24px; color:#888; text-align:left;">
+                                                        中国制造网行业分析专家组
+                                                        <br> (IAR Team)
+                                                        <br> 电话：025-6677-5112
+                                                    </td>
+                                                    <td align="right">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="69" style="padding:0px 10px 0px 0px;">
+                                                                    <img src="http://edm.focuschina.com:80/MICEN/2015/12/3316-code-1.png"
+                                                                         border="0" width="69" height="69" alt="微信二维码"
+                                                                         title="微信二维码">
+                                                                </td>
+                                                                <td style="font-family:'微软雅黑','宋体'; font-size:14px; line-height:24px; color:#888;text-align:left;">
+                                                                    中国制造网APP
+                                                                    <br> （供应商版）
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td align="right">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="69" style="padding:0px 10px 0px 0px;">
+                                                                    <img src="http://edm.focuschina.com:80/MICEN/2015/12/3316-code-2.png"
+                                                                         border="0" width="69" height="69" alt="微信二维码"
+                                                                         title="微信二维码">
+                                                                </td>
+                                                                <td style="padding:0px 0px 0px 0px; font-family:'微软雅黑','Microsoft Yahei','宋体',SimSun,Arial,sans-serif; font-size:14px; line-height:24px; color:#888; text-align:left;">
+                                                                    官方微信平台
+                                                                    <br> 微信号：
+                                                                    <font face="Arial">MIC-1998</font>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <table id="footer" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td>
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tr>
+                                                                <td align="center"
+                                                                    style="font-family:'微软雅黑'; color:#888; padding:20px 0px 0px; line-height:20px; font-size:12px">
+                                                                    您收到此邮件是因为曾用此邮箱注册为我网的会员，若您今后不想收到此类邮件，请<a
+                                                                        href="#{backHref_var}"
+                                                                        style="font-size: 12px; color:#555; text-decoration:underline;">点此退订</a>。
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"
+                                                                    style="font-family:'微软雅黑';color:#888; padding:10px 0px; line-height:20px; font-size:12px">
+                                                                    快速导航：
+                                                                    <a href="http://www.made-in-china.com/prod/catlist/"
+                                                                       style="color:#888; text-decoration:none;">产品信息</a>
+                                                                    |
+                                                                    <a href="http://sourcing.made-in-china.com/"
+                                                                       style="color:#888; text-decoration:none;">求购信息</a>
+                                                                    |
+                                                                    <a href="http://membercenter.made-in-china.com/messagecenter.do?xcase=subscription"
+                                                                       style="color:#888; text-decoration:none;">信息速递</a>
+                                                                    |
+                                                                    <a href="http://service.made-in-china.com/"
+                                                                       style="color:#888; text-decoration:none;">会员e家</a>
+                                                                    |
+                                                                    <a href="http://www.made-in-china.com/trademessenger/"
+                                                                       style="font-family:Arial;color:#888; text-decoration:none;">TradeMessenger</a>
+                                                                    |
+                                                                    <a href="http://www.made-in-china.com/aboutus/contact/"
+                                                                       style="color:#888; text-decoration:none;">联系我们</a>
+                                                                    |
+                                                                    <a href="http://membercenter.made-in-china.com/logon.do?xcase=getBackPassword"
+                                                                       style="color:#888; text-decoration:none;">找回密码</a><br>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"
+                                                                    style="font-family:'微软雅黑'; color:#888; padding:0px 0px 10px; line-height:20px; font-size:12px">
+                                                                    <font style="font-family:Arial;">Copyright ©
+                                                                        2016</font> 焦点科技 版权所有
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <footer><a href="mailto:qinfan@made-in-china.com">MIC UED</a> &copy; Copyright</footer>
+</div>
+
+<div class="code-pop">
+    <div class="code">
+        <div class="close">X</div>
+        <textarea id="codeCopy"></textarea>
+    </div>
+</div>
+
+<!--include "_script.html"-->
+
+<script type="text/javascript">
+    $(function () {
+        $.demoLoad([
+            'report-banner',
+            'report-inner',
+            'report-btn',
+            'report-Img-1',
+            'report-Img-2',
+            'report-Img-3',
+            'report-Img-4',
+            'report-Img-5',
+            'report-Txt-1',
+            'report-Txt-2',
+            'report-Txt-3',
+            'report-Txt-4',
+            'report-Txt-5',
+            'report-moreTxt',
+            'report-moreTxt-2',
+            'report-otherTxt-1',
+            'report-otherTxt-2',
+            'report-otherTxt-3',
+            'report-otherTxt-4',
+            'report-otherTxt-5',
+            'report-otherTxt-6',
+            'report-types'
+        ]);
+    })
+</script>
+</body>
+</html>

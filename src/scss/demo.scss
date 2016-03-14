@@ -178,7 +178,15 @@
         left: 0;
     }
 }
-
+.toggle-box{
+    label{
+        margin-right: 20px;
+        input{
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+    }
+}
 
 .code-pop{
     position: fixed;
@@ -224,4 +232,8 @@
             resize: none;
         }
     }
+}
+
+.hide{
+    display: none;
 }
