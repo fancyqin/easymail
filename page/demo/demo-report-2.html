@@ -67,7 +67,6 @@
                                 <label><input type="radio" value="0" name="reportSub">无细分报告</label>
                             </div>
                         </div>
-                        <div class="form-item"></div>
                         <div class="form-item cf">
                             <button id="save" class="btn btn-main">保存</button>
                             <button id="priew" class="btn">预览邮件</button>
@@ -84,14 +83,39 @@
                                 <div id="report-banner"></div>
                             </div>
                         </div>
-                        <div class="mod-edit mod-text">
+                        <div class="mod-edit">
                             <div class="form-item">
-                                <h4 class="form-title">文本内容</h4>
-                                <div id="report-inner">
-                                    <script id="report-inner-edit" type="text/plain"
+                                <h4 class="form-title">报告图片1</h4>
+                                <div id="report-mainImg-1"></div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">报告图片2</h4>
+                                <div id="report-mainImg-2"></div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">报告内容1</h4>
+                                <div id="report-mainTxt-1">
+                                    <script id="report-mainTxt-1-edit" type="text/plain"
                                             style="width:360px;height:50px;"></script>
                                 </div>
                             </div>
+                            <div class="form-item">
+                                <h4 class="form-title">报告内容2</h4>
+                                <div id="report-mainTxt-2">
+                                    <script id="report-mainTxt-2-edit" type="text/plain"
+                                            style="width:360px;height:50px;"></script>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">报告按钮1</h4>
+                                <div id="report-btn"></div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">报告按钮2</h4>
+                                <div id="report-btn-2"></div>
+                            </div>
+                        </div>
+                        <div class="mod-edit mod-text">
                             <div class="form-item">
                                 <h4 class="form-title">更多</h4>
                                 <div id="report-moreTxt">
@@ -113,60 +137,56 @@
                         </div>
                         <div class="mod-edit">
                             <div class="form-item">
-                                <h4 class="form-title">按钮</h4>
-                                <div id="report-btn"></div>
-                            </div>
-                            <div class="form-item">
-                                <h4 class="form-title">报告图片1</h4>
+                                <h4 class="form-title">其他报告图片1</h4>
                                 <div id="report-Img-1"></div>
                             </div>
                             <div class="form-item">
-                                <h4 class="form-title">产品1信息</h4>
+                                <h4 class="form-title">其他报告1信息</h4>
                                 <div id="report-Txt-1">
                                     <script id="report-Txt-1-edit" type="text/plain"
                                             style="width:360px;height:50px;"></script>
                                 </div>
                             </div>
                             <div class="form-item">
-                                <h4 class="form-title">报告图片2</h4>
+                                <h4 class="form-title">其他报告图片2</h4>
                                 <div id="report-Img-2"></div>
                             </div>
                             <div class="form-item">
-                                <h4 class="form-title">产品2信息</h4>
+                                <h4 class="form-title">其他报告2信息</h4>
                                 <div id="report-Txt-2">
                                     <script id="report-Txt-2-edit" type="text/plain"
                                             style="width:360px;height:50px;"></script>
                                 </div>
                             </div>
                             <div class="form-item">
-                                <h4 class="form-title">报告图片3</h4>
+                                <h4 class="form-title">其他报告图片3</h4>
                                 <div id="report-Img-3"></div>
                             </div>
                             <div class="form-item">
-                                <h4 class="form-title">产品3信息</h4>
+                                <h4 class="form-title">其他报告3信息</h4>
                                 <div id="report-Txt-3">
                                     <script id="report-Txt-3-edit" type="text/plain"
                                             style="width:360px;height:50px;"></script>
                                 </div>
                             </div>
                             <div class="form-item">
-                                <h4 class="form-title">报告图片4</h4>
+                                <h4 class="form-title">其他报告图片4</h4>
                                 <div id="report-Img-4"></div>
                             </div>
 
                             <div class="form-item">
-                                <h4 class="form-title">产品4信息</h4>
+                                <h4 class="form-title">其他报告4信息</h4>
                                 <div id="report-Txt-4">
                                     <script id="report-Txt-4-edit" type="text/plain"
                                             style="width:360px;height:50px;"></script>
                                 </div>
                             </div>
                             <div class="form-item">
-                                <h4 class="form-title">报告图片5</h4>
+                                <h4 class="form-title">其他报告图片5</h4>
                                 <div id="report-Img-5"></div>
                             </div>
                             <div class="form-item">
-                                <h4 class="form-title">产品5信息</h4>
+                                <h4 class="form-title">其他报告5信息</h4>
                                 <div id="report-Txt-5">
                                     <script id="report-Txt-5-edit" type="text/plain"
                                             style="width:360px;height:50px;"></script>
@@ -271,14 +291,160 @@
                                         </td>
                                     </tr>
                                     <tr>
-
                                         <td style="border-bottom:0 none;">
                                             <div class="mod-space" data-type="img" data-name="report-banner">
-                                                <img style="vertical-align: top" alt="2015年前三季度家用电器行业分析报告" border="0"
-                                                     height="520"
-                                                     src="http://edm.focuschina.com:80/MICEN/2015/12/3379.jpg"
-                                                     title="2015年前三季度家用电器行业分析报告" width="700">
+                                                <img style="vertical-align: top" alt="2015年前三季度汽摩配件、交通运输行业分析报告"
+                                                     border="0" height="220"
+                                                     src="http://edm.focuschina.com:80/MICEN/2016/3/3441.jpg"
+                                                     title="2015年前三季度汽摩配件、交通运输行业分析报告" width="700">
                                             </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:40px 40px 40px 40px; background:#f5f5f5;">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tbody>
+                                                <tr>
+                                                    <td style="padding:0px 20px 40px 0px;" valign="top">
+                                                        <div class="mod-space" data-type="img"
+                                                             data-name="report-mainImg-1" data-titlezh="报告配图1">
+                                                            <a href="http://service.made-in-china.com/market-analysis/industry-analysis-report/635864.html"><img
+                                                                    alt="2015年前三季度输变电设备" border="0" height="198"
+                                                                    src="http://edm.focuschina.com:80/MICEN/2016/3/3441-pic1.jpg"
+                                                                    width="140"></a>
+                                                        </div>
+                                                    </td>
+                                                    <td valign="top">
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td style="padding:0px 0px 10px 0px;line-height:24px;font-family:'微软雅黑'; font-size:14px; color:#555; text-align:left;">
+                                                                    <div class="mod-space" data-type="richTxt" data-name="report-mainTxt-1" data-titlezh="报告内容1">
+                                                                        <p style="margin:0;line-height:24px;font-family:'微软雅黑'; font-size:14px; color:#555;">2015年9月，汽车产销量比上月较快增长，产量同比降幅趋缓，销量呈小幅增长。1-9月，与上年同期相比，汽车产量略有下降，销量基本持平。汽车产销1709.16万辆和1705.65万辆，产量同比下降0.82%，销量增长0.31%。其中乘用车产销1460.63万辆和1454.78万辆，同比增长1.49%和2.75%；商用车产销248.53万辆和250.87万辆，同比下降12.48%和11.83%。<br>
+                                                                            主要包含产品：汽车零件，轮胎，摩托车，自行车，里程计等</p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="mod-space" data-type="btn" data-name="report-btn" data-titlezh="下载按钮1">
+                                                                        <input class="btnDetail" type="hidden" value='{"title":"免费下载","link":"http://service.made-in-china.com/market-analysis/industry-analysis-report/635864.html","width":"150px"}'>
+                                                                        <div class="btnWrap" style="margin:0; text-align: right;">
+                                                                            <!--[if !mso]-->
+                                                                            <a class="btnBase" style="display: inline-block;padding:10px 30px 10px; font-family:'微软雅黑','Microsoft Yahei','宋体',SimSun,Arial,sans-serif; font-size:14px; line-height: 20px; color:#fff; text-align:center; background-color:#e64545; text-decoration:none !important; border-radius:3px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" href="http://www.made-in-china.com/special/beauty-equipment/">免费下载</a>
+                                                                            <!--[endif]-->
+                                                                            <!--[if mso]-->
+                                                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="http://www.made-in-china.com/special/beauty-equipment/" style="width:150px" arcsize="8%" fillcolor="#e64545" stroke="f">
+                                                                                <v:textbox style="mso-fit-shape-to-text:t" inset="0px,5px,0px,5px">
+                                                                                    <center style="font-size:14px;color:#FFFFFF;font-family:'微软雅黑','Microsoft Yahei','宋体',SimSun,Arial,sans-serif;mso-line-height-rule:exactly;mso-text-raise:4px">
+                                                                                        免费下载
+                                                                                    </center>
+                                                                                </v:textbox>
+                                                                            </v:roundrect>
+                                                                            <!--[endif]-->
+                                                                        </div>
+                                                                        <script type="text/html" id="report-btn-tpl">
+                                                                            <!--[if !mso]-->
+                                                                            <a class="btnBase"
+                                                                               style="display: inline-block;padding:10px 30px 10px; font-family:'微软雅黑','Microsoft Yahei','宋体',SimSun,Arial,sans-serif; font-size:14px; line-height: 20px; color:#fff; text-align:center; background-color:#e64545; text-decoration:none !important; border-radius:3px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                                               href="{{= btnLink }}">{{= btnTxt}}</a>
+                                                                            <!--[endif]-->
+                                                                            <!--[if mso]-->
+                                                                            <v:roundrect
+                                                                                    xmlns:v="urn:schemas-microsoft-com:vml"
+                                                                                    href="{{= btnLink }}"
+                                                                                    style="width:{{= btnWidth}}"
+                                                                                    arcsize="8%"
+                                                                                    fillcolor="#e64545" stroke="f">
+                                                                                <v:textbox
+                                                                                        style="mso-fit-shape-to-text:t"
+                                                                                        inset="0px,5px,0px,5px">
+                                                                                    <center style="font-size:14px;color:#FFFFFF;font-family:'微软雅黑','Microsoft Yahei','宋体',SimSun,Arial,sans-serif;mso-line-height-rule:exactly;mso-text-raise:4px">
+                                                                                        {{= btnTxt }}
+                                                                                    </center>
+                                                                                </v:textbox>
+                                                                            </v:roundrect>
+                                                                            <!--[endif]-->
+                                                                        </script>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:0px 20px 0px 0px;" valign="top">
+                                                        <div class="mod-space" data-type="img"
+                                                             data-name="report-mainImg-2" data-titlezh="报告配图2">
+                                                            <a href="http://service.made-in-china.com/market-analysis/industry-analysis-report/635884.html"><img
+                                                                alt="2015年上半年波兰市场分析报告" border="0" height="198"
+                                                                src="http://edm.focuschina.com:80/MICEN/2016/3/3441-pic2.jpg"
+                                                                width="140"></a>
+                                                        </div>
+                                                    </td>
+                                                    <td valign="top">
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td style="padding:0px 0px 10px 0px;line-height:24px;font-family:'微软雅黑'; font-size:14px; color:#555; text-align:left;">
+                                                                    <div class="mod-space" data-type="richTxt" data-name="report-mainTxt-2" data-titlezh="报告内容2">
+                                                                        <p style="margin:0;line-height:24px;font-family:'微软雅黑'; font-size:14px; color:#555;">2015年9月，客车销量环比继续呈一定增长，同比降幅依然明显。1-9月，客车销量呈小幅下降，降幅比前8个月略有加大。2015年1-9月，客车销售39.36万辆，产销率为99.97%，同比下降2.84%，降幅比1-8月加大1.86个百分点。其中：大型客车销售5.72万辆，同比下降6.80%；中型客车销售5.01万辆，同比下降6.98%；轻型客车销售28.62万辆，同比下降1.22%。大、中和轻型客车产销率分别为98.37%、99.61%和100.35%。<br>
+                                                                            主要包含产品：10座以上客车、车身、车底盘、牵引车、拖拉机等</p></div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="mod-space" data-type="btn" data-name="report-btn-2" data-titlezh="下载按钮2">
+                                                                        <input class="btnDetail" type="hidden" value='{"title":"免费下载","link":"http://service.made-in-china.com/market-analysis/industry-analysis-report/635884.html","width":"150px"}'>
+                                                                        <div class="btnWrap" style="margin:0; text-align: right;">
+                                                                            <!--[if !mso]-->
+                                                                            <a class="btnBase" style="display: inline-block;padding:10px 30px 10px; font-family:'微软雅黑','Microsoft Yahei','宋体',SimSun,Arial,sans-serif; font-size:14px; line-height: 20px; color:#fff; text-align:center; background-color:#e64545; text-decoration:none !important; border-radius:3px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" href="http://www.made-in-china.com/special/beauty-equipment/">免费下载</a>
+                                                                            <!--[endif]-->
+                                                                            <!--[if mso]-->
+                                                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="http://www.made-in-china.com/special/beauty-equipment/" style="width:150px" arcsize="8%" fillcolor="#e64545" stroke="f">
+                                                                                <v:textbox style="mso-fit-shape-to-text:t" inset="0px,5px,0px,5px">
+                                                                                    <center style="font-size:14px;color:#FFFFFF;font-family:'微软雅黑','Microsoft Yahei','宋体',SimSun,Arial,sans-serif;mso-line-height-rule:exactly;mso-text-raise:4px">
+                                                                                        免费下载
+                                                                                    </center>
+                                                                                </v:textbox>
+                                                                            </v:roundrect>
+                                                                            <!--[endif]-->
+                                                                        </div>
+                                                                        <script type="text/html" id="report-btn-2-tpl">
+                                                                            <!--[if !mso]-->
+                                                                            <a class="btnBase"
+                                                                               style="display: inline-block;padding:10px 30px 10px; font-family:'微软雅黑','Microsoft Yahei','宋体',SimSun,Arial,sans-serif; font-size:14px; line-height: 20px; color:#fff; text-align:center; background-color:#e64545; text-decoration:none !important; border-radius:3px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                                               href="{{= btnLink }}">{{= btnTxt}}</a>
+                                                                            <!--[endif]-->
+                                                                            <!--[if mso]-->
+                                                                            <v:roundrect
+                                                                                    xmlns:v="urn:schemas-microsoft-com:vml"
+                                                                                    href="{{= btnLink }}"
+                                                                                    style="width:{{= btnWidth}}"
+                                                                                    arcsize="8%"
+                                                                                    fillcolor="#e64545" stroke="f">
+                                                                                <v:textbox
+                                                                                        style="mso-fit-shape-to-text:t"
+                                                                                        inset="0px,5px,0px,5px">
+                                                                                    <center style="font-size:14px;color:#FFFFFF;font-family:'微软雅黑','Microsoft Yahei','宋体',SimSun,Arial,sans-serif;mso-line-height-rule:exactly;mso-text-raise:4px">
+                                                                                        {{= btnTxt }}
+                                                                                    </center>
+                                                                                </v:textbox>
+                                                                            </v:roundrect>
+                                                                            <!--[endif]-->
+                                                                        </script>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
                                         </td>
                                     </tr>
                                     <tr>
@@ -286,56 +452,16 @@
                                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                 <tbody>
                                                 <tr>
-                                                    <td style="padding-bottom:10px;line-height:24px;font-family:'微软雅黑'; font-size:14px; color:#222;">
-                                                        <div class="mod-space" data-type="richTxt"
-                                                             data-name="report-inner">
-                                                            <p style="margin: 0 0 10px;line-height:24px;font-family:'微软雅黑'; font-size:14px;">
-                                                                本研究报告摘要：2015年1-9月，家电行业产销率95.4%，较2014年同期下降1.4个百分点；累计出口交货值2646.3亿元，累计同比增长1.0%。2015年1-9月家用电器行业主营业务收入10562.0亿元，累计同比增长1.9%；利润总额659.6亿元，累计同比增长10.7%；税金总额300.9亿元，累计同比增长12.3%。</p>
-                                                            <p style="margin: 0;line-height:24px;font-family:'微软雅黑'; font-size:14px;">
-                                                                本研究报告主要包含的产品：燃气灶，吸油烟机，空调，冰箱，洗碗机，洗衣机，音响，电视机等</p>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding:40px 0;">
-                                                        <div class="mod-space" data-type="btn" data-name="report-btn">
-                                                            <input class="btnDetail" type="hidden" value='{"title":"免费下载","link":"http://service.made-in-china.com/market-analysis/market-analysis-report/618464.html","width":"150px"}'>
-                                                            <div class="btnWrap" style="margin:0; text-align: center;">
-                                                            </div>
-                                                            <script type="text/html" id="report-btn-tpl">
-                                                                <!--[if !mso]-->
-                                                                <a class="btnBase"
-                                                                   style="display: inline-block;padding:10px 30px 10px; font-family:'微软雅黑','Microsoft Yahei','宋体',SimSun,Arial,sans-serif; font-size:13px; line-height: 20px; color:#fff; text-align:center; background-color:#e64545; text-decoration:none !important; border-radius:3px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
-                                                                   href="{{= btnLink }}">{{= btnTxt}}</a>
-                                                                <!--[endif]-->
-                                                                <!--[if mso]-->
-                                                                <v:roundrect
-                                                                        xmlns:v="urn:schemas-microsoft-com:vml"
-                                                                        href="{{= btnLink }}"
-                                                                        style="width:{{= btnWidth}}"
-                                                                        arcsize="8%"
-                                                                        fillcolor="#e64545" stroke="f">
-                                                                    <v:textbox
-                                                                            style="mso-fit-shape-to-text:t"
-                                                                            inset="0px,5px,0px,5px">
-                                                                        <center style="font-size:13px;color:#FFFFFF;font-family:'微软雅黑','Microsoft Yahei','宋体',SimSun,Arial,sans-serif;mso-line-height-rule:exactly;mso-text-raise:4px">
-                                                                            {{= btnTxt }}
-                                                                        </center>
-                                                                    </v:textbox>
-                                                                </v:roundrect>
-                                                                <!--[endif]-->
-                                                            </script>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
                                                     <td style="padding-bottom:20px;">
                                                         <table border="0" cellpadding="0" cellspacing="0">
                                                             <tbody>
                                                             <tr>
                                                                 <td style="line-height:24px;font-family:'微软雅黑'; font-size:16px; font-weight: bolder; color:#222; text-align:left;">
-                                                                    <div class="mod-space" data-type="txt" data-name="report-types" data-titlezh="报告类型">
-                                                                        <p class="txtBox" style="line-height:24px;font-family:'微软雅黑'; font-size:16px; font-weight: bolder; color:#222;">行业报告</p>
+                                                                    <div class="mod-space" data-type="txt"
+                                                                         data-name="report-types" data-titlezh="报告类型">
+                                                                        <p class="txtBox"
+                                                                           style="line-height:24px;font-family:'微软雅黑'; font-size:16px; font-weight: bolder; color:#222;">
+                                                                            行业报告</p>
                                                                     </div>
                                                                 </td>
                                                                 <td style="padding:0 10px;line-height:20px;font-family:'微软雅黑'; font-size:16px; color:#ebebeb ; text-align:left;">
@@ -463,7 +589,7 @@
                                                         </table>
                                                     </td>
                                                 </tr>
-                                                <tr class="J-toggle" data-toggle="reportSub">
+                                                <tr class="J-toggle hide" data-toggle="reportSub">
                                                     <td style="padding:40px 0 20px;">
                                                         <table border="0" cellpadding="0" cellspacing="0">
                                                             <tbody>
@@ -488,7 +614,7 @@
                                                         </table>
                                                     </td>
                                                 </tr>
-                                                <tr class="J-toggle" data-toggle="reportSub">
+                                                <tr class="J-toggle hide" data-toggle="reportSub">
                                                     <td>
                                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                             <tbody>
@@ -2084,8 +2210,12 @@
     $(function () {
         $.demoLoad([
             'report-banner',
-            'report-inner',
+            'report-mainImg-1',
+            'report-mainImg-2',
+            'report-mainTxt-1',
+            'report-mainTxt-2',
             'report-btn',
+            'report-btn-2',
             'report-Img-1',
             'report-Img-2',
             'report-Img-3',
