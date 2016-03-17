@@ -316,7 +316,7 @@ $(function () {
 
     //切换mod
 
-    $('.mod-space').click(function () {
+    $('#tableInner').on('click','.mod-space',function(){
         var id = $(this).attr('data-name');
         var $thisBox = $('#' + id).parents('.form-item:first');
         $('.form-item').removeClass('open');

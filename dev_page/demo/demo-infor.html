@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>市场报告邮件模板</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton" type="text/css">
+    <link rel="stylesheet" href="../../src/css/demo.css">
+
+</head>
+<body>
+<div class="wrap demo-edit">
+    <header>
+        <svg class="hidden" viewBox="-200 0 350 60">
+            <defs>
+                <clipPath id="cp_up">
+                    <polygon id="cp_poly_up" points="-200,0 350,0 350,60"></polygon>
+                </clipPath>
+                <clipPath id="cp_down">
+                    <polygon id="cp_poly_down" points="-200,0 0,60 350,60"></polygon>
+                </clipPath>
+            </defs>
+        </svg>
+        <div class="logo-wrap">
+            <h1 class="logo"><a class="link" href="" data-letters="Mail Maker">Mail Maker</a></h1>
+            <div class="demo-name">市场报告模板</div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="../list.html">邮件列表</a></li>
+                <li class="current"><a href="../choose-demo.html">制作邮件</a></li>
+            </ul>
+        </div>
+        <div class="login-box">
+            <!--<a href="login.html">登录</a>-->
+            <!--after login-->
+            Welcome, UserName. <a href="">logout</a>
+        </div>
+    </header>
+    <div class="content">
+        <div class="demo-wrap cf">
+            <div class="demo-sider">
+                <div class="demo-fixed">
+                    <div class="ctrl-box">
+                        <div class="form-item">
+                            <h4 class="form-title">邮件主题</h4>
+                            <div class="form-fill">
+                                <input id="mailTitle" type="text"/>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <h4 class="form-title">WEB版地址</h4>
+                            <div class="form-fill">
+                                <input id="inputWEBUrl" type="text">
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <h4 class="form-title">邮件类型</h4>
+                            <div class="mail-type" id="mailType">
+                                <div class="type cf"><span data-type="2a">2a</span><span data-type="2b">2b</span><span
+                                        data-type="2c">2c</span></div>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <h4 class="form-title">增加新闻数量</h4>
+                            <div class="add-ctrlbox" data-title="新闻" data-modSpace="infor-new">
+                                <span class="itm">新闻1</span><button class="J-addMod btn">增加</button>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <h4 class="form-title">增加故事数量</h4>
+                            <div class="add-ctrlbox" data-title="新闻" data-modSpace="infor-infor">
+                                <span class="itm">故事1</span><button class="J-addMod btn">增加</button>
+                            </div>
+                        </div>
+                        <div class="form-item cf">
+                            <button id="save" class="btn btn-main">保存</button>
+                            <button id="priew" class="btn">预览邮件</button>
+                        </div>
+                        <div class="form-item cf">
+                            <button id="exportMail" class="btn">导出HTML代码</button>
+                            <button id="exportWebMail" class="btn">导出WEB代码</button>
+                        </div>
+                    </div>
+                    <div class="mod-box">
+                        <div class="mod-edit">
+                            <div class="form-item">
+                                <h4 class="form-title">月份</h4>
+                                <div id="infor-month"></div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">头条动态 标题</h4>
+                                <div id="infor-firstTitle">
+                                    <script id="infor-firstTitle-edit" type="text/plain" style="width:360px;height:50px;"></script>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">头条动态 图片</h4>
+                                <div id="infor-firstImg"></div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">头条动态 内容</h4>
+                                <div id="infor-firstInner">
+                                    <script id="infor-firstInner-edit" type="text/plain" style="width:360px;height:50px;"></script>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mod-edit">
+                            <div class="form-item">
+                                <h4 class="form-title">最新动态1</h4>
+                                <div id="infor-new-1">
+                                    <script id="infor-new-1-edit" style="width:360px;height:50px;"></script>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">最新动态2</h4>
+                                <div id="infor-new-2">
+                                    <script id="infor-new-2-edit" style="width:360px;height:50px;"></script>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">最新动态3</h4>
+                                <div id="infor-new-3">
+                                    <script id="infor-new-3-edit" style="width:360px;height:50px;"></script>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">最新动态4</h4>
+                                <div id="infor-new-4">
+                                    <script id="infor-new-4-edit" style="width:360px;height:50px;"></script>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <h4 class="form-title">最新动态5</h4>
+                                <div id="infor-new-5">
+                                    <script id="infor-new-5-edit" style="width:360px;height:50px;"></script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="demo">
+                <div id="tableInner" class="demo-fixed">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody>
+
+                        <tr>
+                            <td style="background:#ebebeb; ">
+                                <input id="mailHFType" type="hidden" value='{"type":"2a","lang":"cn"}'>
+                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="700">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <table id="header" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td style="color:#777; padding:5px; text-align:center; font-size:12px; line-height:18px;">
+                                                        为保证您可以正常接收邮件，请将<a href="mailto:Cservice@e.Made-in-China.com"
+                                                                          style="font-family:Arial; font-size:12px; color:#246bb3; text-decoration:none;">Cservice@e.Made-in-China.com</a>加入到您的邮箱联系人中，或将其<a
+                                                            href="http://edm-gudie-cn.made-in-china.com/resource/mail/163.htm"
+                                                            style="font-family:Arial; font-size:12px; color:#246bb3; text-decoration:none;">设置白名单</a>。
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                                               width="100%">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td style="padding:20px 0px 15px">
+                                                                    <a href="http://www.made-in-china.com/"><img
+                                                                            alt="中国制造网,Made-in-China.com 弘扬中国制造 促进全球贸易，焦点进出口服务，Focus Imp &amp; Exp Service"
+                                                                            border="0" height="45"
+                                                                            src="http://edm.made-in-china.com/MICEN/2015/3/logo.jpg"
+                                                                            usemap="#Map" width="161"></a></td>
+                                                                <td align="right"
+                                                                    style="font-size:12px; color:#666; line-height:16px;font-family:'宋体';padding-bottom:15px; "
+                                                                    valign="bottom">
+                                                                    如果您无法正常阅读邮件内容，请<a id="WEBUrl"
+                                                                                      href="http://edm.made-in-china.com/MICEN/2015/12/3327.htm"
+                                                                                      style="color:#246bb3; text-decoration:none;">点此查看</a>。
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background:#29b529;">
+                                            <table bgcolor="#29b529" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tbody>
+                                                <tr>
+                                                    <td width="555">
+                                                        <img alt="中国制造网，资讯速递" border="0" height="74" src="http://edm.focuschina.com/MICEN/2015/5/info-banner.png" style="vertical-align: top" width="555"></td>
+                                                    <td style="font-size:24px; color:#fff; line-height:32px;font-family:Arial,'微软雅黑';font-weight:bold;text-align:center;" valign="middle">
+                                                        <div class="mod-space" data-type="txt" data-name="infor-month">
+                                                            <p style="margin: 0" class="txtBox">2016年2月</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:20px 0px 0px 0px; background:#fff;">
+                                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tbody>
+                                                <tr>
+                                                    <td style="padding:0px 20px 15px 20px; font-family: '宋体','SimSun','Microsoft YaHei'; line-height:20px;  font-weight:bolder; font-size:14px; color:#222;">
+                                                        最新动态</td>
+                                                    <td style="padding:0px 20px 15px 20px;">
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="200">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td style="font-family: '宋体','SimSun','Microsoft YaHei'; line-height:20px;  font-weight:bold; font-size:14px; color:#222;" valign="middle">
+                                                                    外贸学堂</td>
+                                                                <td style="line-height:20px;" valign="middle">
+                                                                    <img alt="外贸人必备技能" border="0" height="16" src="http://edm.focuschina.com:80/MICEN/2015/5/2970-pic5.png" title="外贸人必备技能" width="107"></td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="border-right:1px solid #ebebeb;" valign="top" width="329">
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td style="padding: 0px 20px 10px 20px; font-family: '宋体','SimSun','Microsoft YaHei'; line-height:20px;font-weight:bold; font-size:14px; color:#555;">
+                                                                    <div class="mod-space" data-type="richTxt" data-name="infor-firstTitle">
+                                                                        <h3 style="margin: 0;line-height:20px;font-weight:bold; font-size:14px;">
+                                                                            <a href="http://service.made-in-china.com/bulletin/service/4790.htm">第一季度海内外参展计划表</a>
+                                                                        </h3>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="padding: 0px 0px 0px 20px;">
+                                                                    <div class="mod-space" data-type="img" data-name="infor-firstImg">
+                                                                        <a href="http://service.made-in-china.com/bulletin/service/4790.htm"><img style="vertical-align: top" alt="第一季度海外参展计划表" border="0" height="150" src="http://edm.focuschina.com:80/MICEN/2016/2/3429-banner.png" title="第一季度海外参展计划表" width="329"> </a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="padding: 10px 20px 20px 20px;">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td style="padding:0px 0px 0px 0px; font-family: '宋体','SimSun','Microsoft YaHei'; line-height:20px; font-size:12px; color:#555;">
+                                                                                <div class="mod-space" data-type="richTxt" data-name="infor-firstInner">
+                                                                                    <p style="margin: 0;line-height:20px; font-size:12px; color:#555;">在全球贸易舞台上，我们和会员朋友并肩作战；在更多的行业展会中，我们坚持为中国制造之崛起而奋斗！第一季度海内外参展计划表，为您精彩呈现。<br>
+                                                                                        <a href="http://service.made-in-china.com/bulletin/service/4790.htm">查看详情&gt;&gt;</a></p>
+                                                                                </div>
+
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="J-infor-new" data-index="1">
+                                                                <td style="padding: 0px 20px 20px 20px;">
+                                                                    <div class="mod-space" data-type="richTxt" data-name="infor-new-1">
+                                                                        <h3 style="margin: 0 0 10px; font-family: '宋体','SimSun','Microsoft YaHei'; line-height: 20px; font-weight: bold; font-size: 12px; ">
+                                                                            <a href="http://service.made-in-china.com/bulletin/function/4788.htm">2016，国际站目录体系升级出新</a></h3>
+                                                                        <p style="margin: 0;line-height: 20px; font-family: '宋体','SimSun','Microsoft YaHei'; font-size: 12px;color: #555;">本次相关目录涵盖我网农业食品、工艺品、消费电子、工业设备及组件、轻工日用品等9个行业，请及时登录Virtual Office修改相关产品目录、属性，以保证您的信息正常展示。<br>
+                                                                            <a href="http://service.made-in-china.com/bulletin/function/4788.htm">查看详情&gt;&gt;</a></p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="padding:20px 20px 15px; font-family: '宋体','SimSun','Microsoft YaHei'; line-height:20px;  font-weight:bolder; font-size:14px; color:#222;border-top:1px solid #ebebeb;">
+                                                                    企业新闻</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="padding:0px 20px 20px 20px;">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td style="padding: 0px 0px 5px 0px;" valign="top" width="10">
+                                                                                <img border="0" src="http://edm.focuschina.com:80/MICEN/2015/3/ico-dot.png"></td>
+                                                                            <td style="padding: 0px 0px 5px 0px; font-family: '宋体','SimSun','Microsoft YaHei'; line-height: 20px; font-size:12px; color:#555;">
+                                                                                <a href="http://www.sojump.com/jq/7089323.aspx?source=zxsd">填问卷，抢红包，赢话费！</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="padding: 0px 0px 5px 0px;" valign="top" width="10">
+                                                                                <img border="0" src="http://edm.focuschina.com:80/MICEN/2015/3/ico-dot.png"></td>
+                                                                            <td style="padding: 0px 0px 5px 0px; font-family: '宋体','SimSun','Microsoft YaHei'; line-height: 20px; font-size:12px; color:#555;">
+                                                                                <a href="http://www.focuschina.com/news/20160122.html">焦点科技第五次蝉联最佳雇主</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="padding: 0px 0px 5px 0px;" valign="top" width="10">
+                                                                                <img border="0" src="http://edm.focuschina.com:80/MICEN/2015/3/ico-dot.png"></td>
+                                                                            <td style="padding: 0px 0px 5px 0px; font-family: '宋体','SimSun','Microsoft YaHei'; line-height: 20px; font-size:12px; color:#555;">
+                                                                                <a href="http://www.focuschina.com/news/20160124.html">焦点科技与三江学院签署校企合作协议</a></td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td valign="top">
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td style="padding:0px 20px 20px 20px;">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td style="padding: 0px 0px 5px 0px;" valign="top" width="10">
+                                                                                <img border="0" src="http://edm.focuschina.com:80/MICEN/2015/3/ico-dot.png"></td>
+                                                                            <td style="padding: 0px 0px 5px 0px; font-family: '宋体','SimSun','Microsoft YaHei'; line-height: 20px; font-size:12px; color:#555;">
+                                                                                <a href="http://www.shangjuyuan.com/forum/article-ykbspptroysk-1.html">春节后上班，外贸人该做点什么？</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="padding: 0px 0px 5px 0px;" valign="top" width="10">
+                                                                                <img border="0" src="http://edm.focuschina.com:80/MICEN/2015/3/ico-dot.png"></td>
+                                                                            <td style="padding: 0px 0px 5px 0px; font-family: '宋体','SimSun','Microsoft YaHei'; line-height: 20px; font-size:12px; color:#555;">
+                                                                                <a href="http://www.shangjuyuan.com/forum/article-ybdxtozwtmdd-1.html">2020年，中国的制造业会变好吗？</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="padding: 0px 0px 5px 0px;" valign="top" width="10">
+                                                                                <img border="0" src="http://edm.focuschina.com:80/MICEN/2015/3/ico-dot.png"></td>
+                                                                            <td style="padding: 0px 0px 5px 0px; font-family: '宋体','SimSun','Microsoft YaHei'; line-height: 20px; font-size:12px; color:#555;">
+                                                                                <a href="http://www.shangjuyuan.com/forum/article-rkbwoxrimrt8-1.html">如何让客户一定回复你</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="padding: 0px 0px 5px 0px;" valign="top" width="10">
+                                                                                <img border="0" src="http://edm.focuschina.com:80/MICEN/2015/3/ico-dot.png"></td>
+                                                                            <td style="padding: 0px 0px 5px 0px; font-family: '宋体','SimSun','Microsoft YaHei'; line-height: 20px; font-size:12px; color:#555;">
+                                                                                <a href="http://www.shangjuyuan.com/forum/article-8ktdrwdpdrbk-1.html">亚马逊入驻要先了解哪些？准备哪些？</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="padding: 0px 0px 5px 0px;" valign="top" width="10">
+                                                                                <img border="0" src="http://edm.focuschina.com:80/MICEN/2015/3/ico-dot.png"></td>
+                                                                            <td style="padding: 0px 0px 5px 0px; font-family: '宋体','SimSun','Microsoft YaHei'; line-height: 20px; font-size:12px; color:#555;">
+                                                                                <a href="http://www.shangjuyuan.com/forum/article-soyprrt0wrb0d-1.html">JAC外贸实战：2016年的工作思路</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="padding: 0px 0px 5px 0px;" valign="top" width="10">
+                                                                                <img border="0" src="http://edm.focuschina.com:80/MICEN/2015/3/ico-dot.png"></td>
+                                                                            <td style="padding: 0px 0px 5px 0px; font-family: '宋体','SimSun','Microsoft YaHei'; line-height: 20px; font-size:12px; color:#555;">
+                                                                                <a href="http://www.shangjuyuan.com/forum/article-rbbpc8xxxt0tc-1.html">2016，外贸人必须了解的外贸发展趋势</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="padding: 0px 0px 5px 0px;" valign="top" width="10">
+                                                                                <img border="0" src="http://edm.focuschina.com:80/MICEN/2015/3/ico-dot.png"></td>
+                                                                            <td style="padding: 0px 0px 5px 0px; font-family: '宋体','SimSun','Microsoft YaHei'; line-height: 20px; font-size:12px; color:#555;">
+                                                                                <a href="http://www.shangjuyuan.com/forum/article-ibspyki0dszd0-1.html">2016，外贸转内贸会有哪些转变？</a></td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="padding:20px 20px 15px 20px; font-family:'宋体';line-height:20px;  font-weight:bolder; font-size:14px; color:#222;border-top:1px solid #ebebeb;">
+                                                                    成功故事</td>
+                                                            </tr>
+                                                            <tr class="infor-story-1" data-index="1">
+                                                                <td style="padding: 0 20px 20px;">
+                                                                    <div class="mod-space" data-type="richTxt" data-name="infor-story-1">
+                                                                        <h3 style="margin: 0 0 10px; font-family: '宋体','SimSun','Microsoft YaHei'; line-height: 20px; font-weight: bold; font-size: 12px; color: #555;">
+                                                                            <a href="http://service.made-in-china.com/bulletin/function/4788.htm">2016，国际站目录体系升级出新</a></h3>
+                                                                        <p style="margin: 0;line-height: 20px; font-family: '宋体','SimSun','Microsoft YaHei'; font-size: 12px;">本次相关目录涵盖我网农业食品、工艺品、消费电子、工业设备及组件、轻工日用品等9个行业，请及时登录Virtual Office修改相关产品目录、属性，以保证您的信息正常展示。<br>
+                                                                            <a href="http://service.made-in-china.com/bulletin/function/4788.htm">查看详情&gt;&gt;</a></p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="padding: 0px 20px 20px 20px;">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td style="padding: 0px 0px 10px 0px; font-family: '宋体','SimSun','Microsoft YaHei'; line-height: 20px; font-weight: bold; font-size: 12px; color: #555;">
+                                                                                <a href="http://service.made-in-china.com/service/successful-story/FqvmOfPEaniU.html">与MIC的缘分开启于我人生第一个订单</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="padding:0px 0px 0px 0px; font-family: '宋体','SimSun','Microsoft YaHei'; line-height:20px; font-size:12px; color:#555;">
+                                                                                从MIC之前没成单的询盘中认真跟进,做成订单，至此和MIC结下了缘分。此后每个月，奥地利客人都会下一个柜，那种由希望到无望到绝望，偶尔再从绝望的等待和煎熬走出来的惊喜，相信只有真正经历过的人才能明白其中的酸甜苦辣。这算是在MIC平台里真正人生第一个单的成功故事。</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="padding:0px 0px 0px 0px; font-family: '宋体','SimSun','Microsoft YaHei'; line-height:20px; font-size:12px; color:#555;">
+                                                                                <a href="http://service.made-in-china.com/service/successful-story/FqvmOfPEaniU.html">查看详情&gt;&gt;</a></td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="padding:20px 0px 0px 20px;border-top:1px solid #ebebeb;">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td align="left" width="93">
+                                                                                <img alt="made-in-china.com" border="0" height="83" src="http://edm.focuschina.com:80/MICEN/2015/11/cli_img.png" width="83"></td>
+                                                                            <td valign="top">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                                    <tbody>
+                                                                                    <tr>
+                                                                                        <td style="font-family: '宋体','SimSun','Microsoft YaHei'; line-height:20px; font-size:12px; color:#555;">
+                                                                                            中国制造网APP（供应商版）</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td style="font-family: '宋体','SimSun','Microsoft YaHei'; line-height:20px; font-size:12px; color:#555;">
+                                                                                            商机随身带</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td style="font-family: '宋体','SimSun','Microsoft YaHei'; line-height:20px; font-size:12px; color:#555;">
+                                                                                            扫码下载，秒变外贸达人！</td>
+                                                                                    </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="padding:20px 0px 20px 20px;">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td align="left" width="93">
+                                                                                <img alt="made-in-china.com" border="0" height="83" src="http://edm.focuschina.com:80/MICEN/2015/3/qc-img.png" width="83"></td>
+                                                                            <td valign="top">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                                    <tbody>
+                                                                                    <tr>
+                                                                                        <td style="font-family: '宋体','SimSun','Microsoft YaHei'; line-height:20px; font-size:12px; color:#555;">
+                                                                                            中国制造网官方微信平台</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td style="font-family: '宋体','SimSun','Microsoft YaHei'; line-height:20px; font-size:12px; color:#555;">
+                                                                                            扫一扫，服务更周到</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td style="font-family: '宋体','SimSun','Microsoft YaHei'; line-height:20px; font-size:12px; color:#555;">
+                                                                                            微信号：MIC-1998</td>
+                                                                                    </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <table id="footer" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td>
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tr>
+                                                                <td align="center"
+                                                                    style="font-family:'微软雅黑'; color:#888; padding:20px 0px 0px; line-height:20px; font-size:12px">
+                                                                    您收到此邮件是因为曾用此邮箱注册为我网的会员，若您今后不想收到此类邮件，请<a
+                                                                        href="#{backHref_var}"
+                                                                        style="font-size: 12px; color:#555; text-decoration:underline;">点此退订</a>。
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"
+                                                                    style="font-family:'微软雅黑';color:#888; padding:10px 0px; line-height:20px; font-size:12px">
+                                                                    快速导航：
+                                                                    <a href="http://www.made-in-china.com/prod/catlist/"
+                                                                       style="color:#888; text-decoration:none;">产品信息</a>
+                                                                    |
+                                                                    <a href="http://sourcing.made-in-china.com/"
+                                                                       style="color:#888; text-decoration:none;">求购信息</a>
+                                                                    |
+                                                                    <a href="http://membercenter.made-in-china.com/messagecenter.do?xcase=subscription"
+                                                                       style="color:#888; text-decoration:none;">信息速递</a>
+                                                                    |
+                                                                    <a href="http://service.made-in-china.com/"
+                                                                       style="color:#888; text-decoration:none;">会员e家</a>
+                                                                    |
+                                                                    <a href="http://www.made-in-china.com/trademessenger/"
+                                                                       style="font-family:Arial;color:#888; text-decoration:none;">TradeMessenger</a>
+                                                                    |
+                                                                    <a href="http://www.made-in-china.com/aboutus/contact/"
+                                                                       style="color:#888; text-decoration:none;">联系我们</a>
+                                                                    |
+                                                                    <a href="http://membercenter.made-in-china.com/logon.do?xcase=getBackPassword"
+                                                                       style="color:#888; text-decoration:none;">找回密码</a><br>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"
+                                                                    style="font-family:'微软雅黑'; color:#888; padding:0px 0px 10px; line-height:20px; font-size:12px">
+                                                                    <font style="font-family:Arial;">Copyright ©
+                                                                        2016</font> 焦点科技 版权所有
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <footer><a href="mailto:qinfan@made-in-china.com">MIC UED</a> &copy; Copyright</footer>
+</div>
+
+<div class="code-pop">
+    <div class="code">
+        <div class="close">X</div>
+        <textarea id="codeCopy"></textarea>
+    </div>
+</div>
+
+<!--include "_script.html"-->
+<script type="text/javascript">
+    $(function(){
+
+        var $addCtrlbox = $('.add-ctrlbox');
+        $('.J-addMod').click(function(){
+            var box = $(this).parent();
+            var title = box.attr('data-title');
+            var num = box.find('.itm').length;
+            if (num < 5){
+
+                var $tpl = $('.J-infor-new:last');
+                var tplHTML = $tpl.html();
+                var newModSpace = 'infor-new-'+(num+1);
+                $tpl.after('<tr class="J-infor-new" data-index="'+ (num+1) +'">'+ tplHTML +'</tr>');
+                $tpl = $('.J-infor-new:last');
+                $tpl.find('.mod-space').attr('data-name',newModSpace);
+                $.demoLoad([newModSpace]);
+
+                $(this).siblings('.itm:last').find('.J-del').remove();
+                $(this).before('<span class="itm">'+ title + (num+1) +'<i class="J-del">X</i></span>');
+            }
+
+        });
+
+        $addCtrlbox.on('click','.J-del',function(){
+            var index = $(this).parent().index('.itm');
+            var num = $addCtrlbox.find('.itm').length;
+            if(num > 1){
+
+                $('.J-infor-new:[data-index='+ (index+1) +']').remove();
+
+                $addCtrlbox.find('.itm:last').remove();
+                if($addCtrlbox.find('.itm:last').index('.itm') > 0){
+                    $addCtrlbox.find('.itm:last').append('<i class="J-del">X</i>');
+                }
+            }
+
+
+        })
+    })
+
+</script>
+<script type="text/javascript">
+    $(function () {
+        $.demoLoad([
+                'infor-month',
+                'infor-firstTitle',
+                'infor-firstImg',
+                'infor-firstInner',
+                'infor-new-1',
+                'infor-story-1'
+        ]);
+    })
+</script>
+</body>
+</html>

@@ -237,3 +237,27 @@
 .hide{
     display: none;
 }
+
+
+.add-ctrlbox{
+    margin:10px 0 20px;
+    .btn{
+        width: 60px;
+        float:none;
+        display: inline-block;
+    }
+    .itm{
+        height: 28px;
+        display: inline-block;
+        padding: 0 8px;
+        background: #fff;
+        margin: 0 5px 5px 0;
+        line-height:28px;
+        border: 1px solid #ccc;
+        i{
+            margin-left: 10px;
+            font-style: normal;
+            cursor: pointer;
+        }
+    }
+}
